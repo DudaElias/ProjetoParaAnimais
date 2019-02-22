@@ -34,9 +34,6 @@ body
 #logo
 {
     background: url("Logo.png");
-    width: 30%;
-    height: 100px;
-    position: relative;
-    top: 20%;
-    overflow: hidden;
+    width: 12%;
+    height: 6em;
 }
