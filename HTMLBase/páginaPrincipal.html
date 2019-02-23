@@ -2,16 +2,23 @@
     <head>
         <link rel="stylesheet" type="text/css" href="estilo.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
     <body>
         <div id="faixaMenu">
-        <div id="logo">
+        <div id="logo"></div>
+        <input type="checkbox" id="chk">
+        <label  for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
         <ul id="menu">
             <li id="sobre"><a href="#">Sobre nós</a></li>
             <li id="contato"><a href="#">Contato</a></li>
             <li id="entrar"><a href="#">Entrar ou cadastrar</a></li>
-        </ul>
-    </div>
+        <label  for="chk" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+        </label>
+    </ul>
         </div>
         <div id="imagemAnimais"></div>
     </body>
