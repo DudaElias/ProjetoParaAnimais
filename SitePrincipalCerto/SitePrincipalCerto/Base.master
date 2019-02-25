@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Base.master.cs" Inherits="Base" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    </head>
+    <body>
+        <div class="header">
+
+            <div class="logo"></div>
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <ul class="menu">
+                <a href="#">Sobre nós</a>
+                <a href="#">Contato</a>
+                <a href="#">Entrar ou cadastrar</a> 
+            <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+            </label>
+            </ul>
+        </div>
+        <div class="content"><img src="Imagens\animais.jpg"></div>
+        <!--<div id="faixaMenu">
+
+        <input type="checkbox" id="chk">
+        <label  for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul id="menu">
+            <li id="sobre"><a href="#">Sobre nós</a></li>
+            <li id="contato"><a href="#">Contato</a></li>
+            <li id="entrar"><a href="#">Entrar ou cadastrar</a></li>
+        <label  for="chk" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+        </label>
+    </ul>
+        </div>
+        <div id="imagemAnimais"></div> -->
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
+
