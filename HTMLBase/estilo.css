@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
 }
 .header
 {
@@ -112,6 +113,14 @@
     {
         right: 0;
     }
+}
+
+.s-m 
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: 
 }
 /*body
 {
