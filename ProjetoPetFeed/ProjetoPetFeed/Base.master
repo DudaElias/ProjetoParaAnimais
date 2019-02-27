@@ -35,6 +35,21 @@
             </ul>
         </div>
         <div class="content"><img src="Imagens\animais.jpg"></div>
+                
+<div class="s-m">
+           
+ <a href="#"><i class="fab fa-facebook-f"></i></a>
+            
+<a href="#"><i class="fab fa-twitter"></i></a>
+            
+<a href="#"><i class="fab fa-google-plus-g"></i></a>
+            
+<a href="#"><i class="fab fa-youtube"></i></a>
+            
+<a href="#"><i class="fab fa-instagram"></i></a>
+<span>PetFeed <i class="far fa-copyright"></i> Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
+        
+</div>
         <!--<div id="faixaMenu">
 
         <input type="checkbox" id="chk">
