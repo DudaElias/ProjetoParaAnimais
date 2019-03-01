@@ -106,25 +106,49 @@
     #chk:checked ~ .menu {
         right: 0;
     }
-    .s-m
+    /*.s-m
     {
         height:100%;
-    }
+    }*/
 }
 .s-m {
     z-index: -2000;
-    position: relative;
+    position: absolute;
     top: 93%;
     left: 50%;
-    /*transform: translate(-50%,-50%);*/
+    transform: translate(-50%,-50%);
     background: #34495e;
-    height:auto;
+    height:200px;
     width: 100%;
     text-align:center;
+
     /*padding: 0 20px;*/
 }
+.menuFooter {
+    line-height: 150px;
+    padding:20px 30px;
+}
+    .menuFooter a:hover {
+        color: #e67e22;
+    }
+.menuFooter a {
+    float: left;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+    /*.s-m ul li{
 
-    .s-m a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 20px;
+        /*padding: 0 10px;
+    }*/
+
+    .icone{
         display: inline-flex;
         width: 60px;
         height: 60px;
@@ -135,12 +159,11 @@
         align-items: center;
         transition: 0.4s;
         font-size: 24px;
-        width: 100%;
-        max-width: 1000px;
-        margin: 20px auto;
+        float:right;
+        margin: 20px 8px;
     }
 
-        .s-m a:hover {
+        .s-m .icone:hover {
             background: #e67e22;
         }
 
@@ -160,11 +183,12 @@ span i {
 }
 
 span {
+    float:right;
     color: white;
-    /*position: absolute;
-    left: 25%;
-    top: 75%;*/
-    min-height:100px;
+    position: absolute;
+    /*left: 25%;*/
+    top: 75%;
+    /*min-height:100px;*/
     line-height: 20px;
     /*width: 50%;*/
     text-align: justify;
