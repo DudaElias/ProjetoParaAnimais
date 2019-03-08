@@ -1,4 +1,8 @@
-﻿* {
+﻿
+/*BASE DO DESIGN DA PÁGINA*/
+
+
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -60,17 +64,6 @@
     visibility: hidden;
     z-index: -1111;
 }
-
-
-.content {
-    padding: 0 25%;
-}
-
-    .content img {
-        width: 100%;
-        max-width: 1000px;
-        margin: 20px auto;
-    }
 
 @media screen and (max-width: 800px) 
 {
@@ -193,6 +186,87 @@ span {
     /*width: 50%;*/
     text-align: justify;
 }
+
+/*PÁGINA PRINCIPAL*/
+
+.content {
+    padding: 0 25%;
+}
+
+.content img {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/*PÁGINA DE LOGIN*/
+
+.box
+{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+
+}
+
+#Label1
+{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type = "text"], .box input[ type = "password"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus, .box input[ type = "password"]:focus 
+{
+    width:280px;
+    border-color: #2ecc71;
+}
+
+.btn
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.btn:hover 
+{
+    background: #2ecc71;
+
+}
+        
+        
+        
 /*body
 {
     margin: 0;

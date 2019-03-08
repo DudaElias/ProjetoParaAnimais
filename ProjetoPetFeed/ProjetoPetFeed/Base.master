@@ -18,7 +18,6 @@
     </head>
     <body>
         <div class="header">
-
             <div class="logo"></div>
             <input type="checkbox" id="chk">
             <label for="chk" class="show-menu-btn">
@@ -34,7 +33,7 @@
             </label>
             </ul>
         </div>
-        <div class="content"><img src="Imagens\animais.jpg"></div>
+
                 
 <footer class="s-m">
     <ul class="menuFooter">
