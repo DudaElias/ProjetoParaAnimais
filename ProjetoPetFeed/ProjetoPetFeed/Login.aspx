@@ -5,10 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
              <link rel="stylesheet" type="text/css" href="estilo.css" />
     <div class="box">
-        <asp:Label ID="Label1" runat="server" Text="Login"></asp:Label>
-        <input id="Text1" type="text" placeholder="Username"/>
-        <input id="Password1" type="password" placeholder="Password" />
-        <input id="Button1" type="button" value="Login" class="btn"/>
+        <asp:Label ID="Label1" runat="server" Text="Já sou cadastrado:" CssClass="lblLogin"></asp:Label>
+        <input id="Text1" type="text" placeholder="Usuário"/>
+        <input id="Password1" type="password" placeholder="Senha" />
+        <input id="Button1" type="button" value="Entrar" class="btn"/>
     </div>
+<div class="linha-vertical"></div>
 </asp:Content>
 

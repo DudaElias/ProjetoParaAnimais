@@ -201,68 +201,83 @@ span {
 
 /*PÁGINA DE LOGIN*/
 
-.box
+.box 
 {
     width: 300px;
     padding: 40px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 43%;
+    left: 30%;
     transform: translate(-50%, -50%);
-    background: #191919;
     text-align: center;
-
+    /*background: #34495e;*/
 }
 
-#Label1
+.lblLogin 
 {
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500;
+    width: 400px;
+    font-family: Courier New, Courier, monospace;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 0%;
+    left: 10%;
 }
 
-.box input[type = "text"], .box input[ type = "password"]
-{
+.box input[type = "text"], .box input[ type = "password"] {
     border: 0;
     background: none;
     display: block;
-    margin: 20px auto;
+    margin: 30px auto;
     text-align: center;
-    border: 2px solid #3498db;
+    border: 2px solid #5B5A5E;
     padding: 14px 10px;
-    width: 200px;
+    width: 250px;
+    font-size: 20px;
+    font-weight: 500;
     outline: none;
-    color: white;
+    color: black;
     border-radius: 24px;
     transition: 0.25s;
 }
 
-.box input[type = "text"]:focus, .box input[ type = "password"]:focus 
-{
-    width:280px;
-    border-color: #2ecc71;
-}
+    .box input[type = "text"]:focus, .box input[ type = "password"]:focus {
+        width: 280px;
+        border-color: #34495e;
+    }
 
-.btn
+.btn 
 {
     border: 0;
     background: none;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #2ecc71;
+    border: 2px solid #34495e;
     padding: 14px 40px;
+    width: 200px;
     outline: none;
-    color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
 }
 
-.btn:hover 
-{
-    background: #2ecc71;
+    .btn:hover {
+        background: #34495e;
+        color: white;
+    }
 
+
+.linha-vertical {
+    height: 500px; /*Altura da linha*/
+    border-left: 2px solid; /* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    border-color: black;
+    width: 0px;
+    margin: 0 0;
 }
         
         
