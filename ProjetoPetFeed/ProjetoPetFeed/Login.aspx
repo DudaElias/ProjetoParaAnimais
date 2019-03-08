@@ -10,6 +10,9 @@
         <input id="Password1" type="password" placeholder="Senha" />
         <input id="Button1" type="button" value="Entrar" class="btn"/>
     </div>
-<div class="linha-vertical"></div>
+<hr>
+    <div class="box-btn">
+        <asp:Label ID="Label2" runat="server" Text="Quero me cadastrar: " CssClass="lblCadastrar"></asp:Label>
+    </div>
 </asp:Content>
 

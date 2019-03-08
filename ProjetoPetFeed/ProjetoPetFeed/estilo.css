@@ -244,17 +244,16 @@ span {
 
     .box input[type = "text"]:focus, .box input[ type = "password"]:focus {
         width: 280px;
-        border-color: #34495e;
+        border-color: #753B3B;
     }
 
-.btn 
-{
+.btn {
     border: 0;
     background: none;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #34495e;
+    border: 2px solid #753B3B;
     padding: 14px 40px;
     width: 200px;
     outline: none;
@@ -267,7 +266,7 @@ span {
 }
 
     .btn:hover {
-        background: #34495e;
+        background: #753B3B;
         color: white;
     }
 
@@ -278,6 +277,32 @@ span {
     border-color: black;
     width: 0px;
     margin: 0 0;
+}
+
+hr 
+{
+    height: 500px;
+    width: 1px;
+    background: #5B5A5E;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+
+.box-btn
+{
+
+}
+
+#Label2 {
+    width: 400px;
+    font-family: Courier New, Courier, monospace;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 0%;
+    left: 60%;
 }
         
         
