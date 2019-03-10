@@ -51,11 +51,11 @@
     float: right;
 }
 
-    .show-menu-btn i {
+.show-menu-btn i {
         line-height: 150px;
     }
 
-    .menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+.menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
         color: #e67e22;
     }
 
@@ -85,10 +85,10 @@
         transition: 0.7s;
     }
 
-        .menu a {
-            display: block;
-            padding: 20px;
-        }
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
 
     .hide-menu-btn {
         position: absolute;
@@ -99,11 +99,22 @@
     #chk:checked ~ .menu {
         right: 0;
     }
+
+    .content{
+        padding: 0 15%;
+    }
+
+    .content img 
+    {
+        width: 1000px;
+    }
+
     /*.s-m
     {
         height:100%;
     }*/
 }
+
 .s-m {
     z-index: -2000;
     position: absolute;
@@ -117,13 +128,17 @@
 
     /*padding: 0 20px;*/
 }
+
 .menuFooter {
     line-height: 150px;
     padding:20px 30px;
+    max-width: 600px;
 }
-    .menuFooter a:hover {
+
+.menuFooter a:hover {
         color: #e67e22;
     }
+
 .menuFooter a {
     float: left;
     color: #fff;
@@ -133,7 +148,8 @@
     padding: 0 10px;
     transition: 0.4s;
 }
-    /*.s-m ul li{
+
+/*.s-m ul li{
 
         color: #fff;
         text-transform: uppercase;
@@ -141,7 +157,7 @@
         /*padding: 0 10px;
     }*/
 
-    .icone{
+.icone{
         display: inline-flex;
         width: 60px;
         height: 60px;
@@ -156,26 +172,24 @@
         margin: 20px 8px;
     }
 
-        .s-m .icone:hover {
+.s-m .icone:hover {
             background: #e67e22;
         }
 
-        .s-m a i {
+.s-m a i {
             transition: 0.4s all;
         }
 
 
-
-        .s-m a:hover > i {
+.s-m a:hover > i {
             transform: scale(1.4) rotate(25deg)
         }
 
-
-span i {
+.s-m span i {
     color: white;
 }
 
-span {
+.s-m span {
     float:right;
     color: white;
     position: absolute;
@@ -195,7 +209,7 @@ span {
 
 .content img {
     width: 100%;
-    max-width: 1000px;
+    max-width: 100%;
     margin: 20px auto;
 }
 
@@ -222,7 +236,7 @@ span {
     font-size: 30px;
     position: absolute;
     top: 0%;
-    left: 10%;
+    left: 0%;
 }
 
 .box input[type = "text"], .box input[ type = "password"] {
@@ -242,12 +256,13 @@ span {
     transition: 0.25s;
 }
 
-    .box input[type = "text"]:focus, .box input[ type = "password"]:focus {
+.box input[type = "text"]:focus, .box input[ type = "password"]:focus {
         width: 280px;
         border-color: #753B3B;
     }
 
-.btn {
+.btn 
+{
     border: 0;
     background: none;
     display: block;
@@ -265,18 +280,10 @@ span {
     cursor: pointer;
 }
 
-    .btn:hover {
+.btn:hover 
+{
         background: #753B3B;
         color: white;
-    }
-
-
-.linha-vertical {
-    height: 500px; /*Altura da linha*/
-    border-left: 2px solid; /* Adiciona borda esquerda na div como ser fosse uma linha.*/
-    border-color: black;
-    width: 0px;
-    margin: 0 0;
 }
 
 hr 
@@ -289,22 +296,44 @@ hr
     left: 50%;
 }
 
-.box-btn
+.box-btn 
 {
-
+    width: 100px;
+    padding: 40px;
+    position: absolute;
+    top: 37%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-#Label2 {
+.lblCadastrar {
     width: 400px;
     font-family: Courier New, Courier, monospace;
     color: black;
     font-weight: bold;
     font-size: 30px;
     position: absolute;
-    top: 0%;
-    left: 60%;
+    top: -100%;
+    left: 0%;
 }
-        
+
+#Button2, #Button3
+{
+    position: absolute;
+    top: 25%;
+    width: 150px;
+}
+     
+#Button2
+{
+    left: 5%;
+}
+
+#Button3 {
+    left: 130%;
+    padding: 14px 20px;
+}
         
         
 /*body
