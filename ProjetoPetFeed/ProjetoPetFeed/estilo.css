@@ -261,7 +261,7 @@
         border-color: #753B3B;
     }
 
-.btn 
+.btn, .Button2, .Button3
 {
     border: 0;
     background: none;
@@ -280,7 +280,7 @@
     cursor: pointer;
 }
 
-.btn:hover 
+.btn:hover, .Button2:hover, .Button3:hover 
 {
         background: #753B3B;
         color: white;
@@ -318,19 +318,19 @@ hr
     left: 0%;
 }
 
-#Button2, #Button3
+.Button2, .Button3
 {
     position: absolute;
     top: 25%;
     width: 150px;
 }
      
-#Button2
+.Button2
 {
     left: 5%;
 }
 
-#Button3 {
+.Button3 {
     left: 130%;
     padding: 14px 20px;
 }

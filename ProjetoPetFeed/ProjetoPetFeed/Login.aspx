@@ -15,7 +15,26 @@
 <hr>
     <div class="box-btn">
         <asp:Label ID="Label2" runat="server" Text="Quero me cadastrar: " CssClass="lblCadastrar"></asp:Label>
-         <input id="Button2" type="button" value="Loja" onclick="RecarregarLoja()" class="btn" /><input id="Button3" type="button" value="Cliente" onclick="RecarregarCliente()" class="btn"/>
+        <asp:Button ID="btnLoja" CssClass="Button2" runat="server" Text="Loja" OnClick="btnLoja_Click" /><asp:Button CssClass="Button3" ID="btnCliente" OnClick="btnCliente_Click" runat="server" Text="Cliente" />
+        
+        <asp:TextBox ID="txtEmailLoja" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtCelularLoja" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtNomeLoja" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtCPFLoja" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtRGLoja" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtOrgaoLoja" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:Button ID="btnCadastrarLoja" CssClass="btnCadastrar" runat="server" Text="Cadastrar" Visible="false"/>
+
+        <asp:TextBox ID="txtNomeCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtEmailCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtSenhaCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtSenhaNovCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:Label ID="lblPreferencia" CssClass="txtLoja" runat="server" Visible="false"></asp:Label>
+        <asp:TextBox ID="txtDDDCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtCelularCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:CheckBox ID="chkTermos" CssClass="txtLoja" runat="server" Visible="false"/>
+        <asp:Label ID="lblTermos" CssClass="txtLoja" runat="server" Visible="false"></asp:Label>
+        <asp:Button ID="btnCadastrarCliente" CssClass="btnCadastrar" Text="Cadastrar" runat="server" Visible="false"/>
     </div>
 </asp:Content>
 
