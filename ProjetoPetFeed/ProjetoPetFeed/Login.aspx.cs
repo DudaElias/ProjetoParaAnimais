@@ -15,36 +15,25 @@ public partial class Login : System.Web.UI.Page
 
     }
 
-    protected void btnLoja_Click(object sender, EventArgs e)
+    protected void btnEmpresa_Click(object sender, EventArgs e)
     {
-        Label2.Text = "Sobre a Loja: ";
-        btnLoja.Visible = false;
+        
+        Label2.Text = "Sobre a Empresa: ";
+        btnEmpresa.Visible = false;
         btnCliente.Visible = false;
-        txtEmailLoja.Text = "Qual o e-mail da loja?";
-        txtEmailLoja.ForeColor = Color.Silver;
-        txtEmailLoja.Visible = true;
-        txtCelularLoja.Text = "Qual o celular da loja?";
-        txtCelularLoja.ForeColor = Color.Silver;
-        txtCelularLoja.Visible = true;
-        txtNomeLoja.Text = "Qual o nome da loja?";
-        txtNomeLoja.ForeColor = Color.Silver;
-        txtNomeLoja.Visible = true;
-        txtCPFLoja.Text = "Qual o CPF do dono da loja?";
-        txtCPFLoja.ForeColor = Color.Silver;
-        txtCPFLoja.Visible = true;
-        txtRGLoja.Text = "Qual o RG do dono da loja?";
-        txtRGLoja.ForeColor = Color.Silver;
-        txtRGLoja.Visible = true;
-        txtOrgaoLoja.Text = "Qual o órgão emissor da loja?";
-        txtOrgaoLoja.ForeColor = Color.Silver;
-        txtOrgaoLoja.Visible = true;
-        btnCadastrarLoja.Visible = true;
+        txtEmailEmpresa.Visible = true;
+        txtCelularEmpresa.Visible = true;
+        txtNomeEmpresa.Visible = true;
+        txtCPFEmpresa.Visible = true;
+        txtRGEmpresa.Visible = true;
+        txtOrgaoEmpresa.Visible = true;
+        btnCadastrarEmpresa.Visible = true;
     }
 
     protected void btnCliente_Click(object sender, EventArgs e)
     {
         Label2.Text = "Sobre o cliente: ";
-        btnLoja.Visible = false;
+        btnEmpresa.Visible = false;
         btnCliente.Visible = false;
         txtEmailCliente.Text = "Digite seu e-mail";
         txtEmailCliente.ForeColor = Color.Silver;
@@ -52,6 +41,9 @@ public partial class Login : System.Web.UI.Page
         txtCelularCliente.Text = "Digite seu telefone";
         txtCelularCliente.ForeColor = Color.Silver;
         txtCelularCliente.Visible = true;
+        txtCPFCliente.Text = "Digite seu CPF";
+        txtCPFCliente.ForeColor = Color.Silver;
+        txtCPFCliente.Visible = true;
         txtNomeCliente.Text = "Digite seu nome";
         txtNomeCliente.ForeColor = Color.Silver;
         txtNomeCliente.Visible = true;
