@@ -26,6 +26,7 @@
         <asp:Button ID="btnCadastrarLoja" CssClass="btnCadastrar" runat="server" Text="Cadastrar" Visible="false"/>
 
         <asp:TextBox ID="txtNomeCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtCpfCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
         <asp:TextBox ID="txtEmailCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
         <asp:TextBox ID="txtSenhaCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
         <asp:TextBox ID="txtSenhaNovCliente" CssClass="txtLoja" runat="server" Visible="false"></asp:TextBox>
