@@ -118,7 +118,7 @@
 .s-m {
     z-index: -2000;
     position: absolute;
-    top: 93%;
+    top: 103%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: #34495e;
@@ -298,13 +298,22 @@ hr
 
 .box-btn 
 {
+    width: 500px;
+    padding: 50px;
+    position: absolute;
+    top: 53%;
+    left:65%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index:-100;
+}
+
+.btns {
     width: 100px;
     padding: 40px;
     position: absolute;
-    top: 40%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    top:34%;
+    left: 79%;
 }
 
 .lblCadastrar {
@@ -314,8 +323,8 @@ hr
     font-weight: bold;
     font-size: 30px;
     position: absolute;
-    top: -100%;
-    left: 0%;
+    top: -130%;
+    left: -215%;
 }
 
 .Button2, .Button3
@@ -324,14 +333,17 @@ hr
     top: 25%;
     width: 150px;
 }
-     
-.Button2
-{
-    left: 5%;
+
+.Button2 {
+    left: -220%;
+    top: -70%;
+    text-align: center;
+    padding: 14px 35px;
 }
 
 .Button3 {
-    left: 130%;
+    left: -110%;
+    top: -70%;
     padding: 14px 20px;
 }
 
@@ -345,7 +357,7 @@ hr
     border: 2px solid #5B5A5E;
     padding: 14px 10px;
     width: 250px;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     outline: none;
     color: black;
@@ -357,8 +369,54 @@ hr
 {
     content: "";
 }
-        
-        
+
+.btnCadastrar {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid #753B3B;
+    padding: 10px 40px;
+    width: 200px;
+    outline: none;
+    position: relative;
+    top: 80%;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+
+.btnCadastrar:hover {
+        background: #753B3B;
+        color: white;
+    }
+
+.box-btn2 {
+    width: 500px;
+    padding: 50px;
+    position: absolute;
+    top: 57%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: -100;
+}
+
+.lblCliente {
+    color: #70AD47;
+}
+
+
+.chkCliente {
+    border: 2px solid #70AD47;
+    visibility:hidden;
+}
+
 /*body
 {
     margin: 0;

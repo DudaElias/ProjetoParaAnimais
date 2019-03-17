@@ -41,9 +41,9 @@ public partial class Login : System.Web.UI.Page
         txtCelularCliente.Text = "Digite seu telefone";
         txtCelularCliente.ForeColor = Color.Silver;
         txtCelularCliente.Visible = true;
-        txtCPFCliente.Text = "Digite seu CPF";
-        txtCPFCliente.ForeColor = Color.Silver;
-        txtCPFCliente.Visible = true;
+        txtCpfCliente.Text = "Digite seu CPF";
+        txtCpfCliente.ForeColor = Color.Silver;
+        txtCpfCliente.Visible = true;
         txtNomeCliente.Text = "Digite seu nome";
         txtNomeCliente.ForeColor = Color.Silver;
         txtNomeCliente.Visible = true;
@@ -59,11 +59,9 @@ public partial class Login : System.Web.UI.Page
 
         chkTermos.Visible = true;
         lblPreferencia.Text = "Entraremos em contato em caso de problemas (Dê preferência pelo cadastro do seu celular)";
-        lblPreferencia.ForeColor = Color.Silver;
         lblPreferencia.Visible = true;
 
         lblTermos.Text = "Li e aceito os termos de uso e as políticas de privacidade";
-        lblTermos.ForeColor = Color.LightGreen;
         lblTermos.Visible = true;
 
         btnCadastrarCliente.Visible = true;
