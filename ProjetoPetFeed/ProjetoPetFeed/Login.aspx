@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
              <link rel="stylesheet" type="text/css" href="estilo.css" />
     <script type="text/javascript" src="login.js"></script>
-    <body>
+    
     <div class="box">
         <asp:Label ID="Label1" runat="server" Text="Já sou cadastrado:" CssClass="lblLogin"></asp:Label>
         <input id="Text1" type="text" placeholder="Usuário"/>
@@ -40,7 +40,7 @@
         <asp:Label ID="lblTermos" CssClass="lblCliente" runat="server" Visible="false"></asp:Label>
         <asp:Button ID="btnCadastrarCliente" CssClass="btnCadastrar" Text="Cadastrar" runat="server" Visible="false"/>
     </div>
-    <footer class="s-m">
+    <footer class="s-mLogin">
     <!--<ul class="menuFooter">
                 <a href="#">Sobre nós</a>
                 <a href="#">Contato</a>
@@ -58,6 +58,6 @@
 <a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
 <span >PetFeed <i class="far fa-copyright"></i> Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
         
-</footer></body>
+</footer></>
 </asp:Content>
 

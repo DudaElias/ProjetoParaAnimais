@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
              <link rel="stylesheet" type="text/css" href="estilo.css" />
             <div class="content"><img src="Imagens\animais.jpg"></div>
-    <footer class="s-m">
+    <footer class="s-mPrincipal">
     <!--<ul class="menuFooter">
                 <a href="#">Sobre nós</a>
                 <a href="#">Contato</a>

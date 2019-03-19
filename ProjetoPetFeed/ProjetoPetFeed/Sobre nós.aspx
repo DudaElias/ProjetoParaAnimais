@@ -39,7 +39,7 @@
                 </span>
             </div>
         </section>
-        <footer class="s-m">
+        <footer class="s-mSobre">
     <!--<ul class="menuFooter">
                 <a href="#">Sobre nós</a>
                 <a href="#">Contato</a>
