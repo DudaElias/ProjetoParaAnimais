@@ -35,41 +35,7 @@
         </div>
 
                 
-<footer class="s-m">
-    <!--<ul class="menuFooter">
-                <a href="#">Sobre nós</a>
-                <a href="#">Contato</a>
-                <a href="#">Entrar ou cadastrar</a> 
-        </ul>-->
-           
- <a class="icone" href="https://www.facebook.com/petfeed.shoping/?epa=SEARCH_BOX"><i class="fab fa-facebook-f"></i></a>
-            
-<a href="#" class="icone"><i class="fab fa-twitter"></i></a>
-            
-<!--<a href="#"><i class="fab fa-google-plus-g"></i></a>
-            
-<a href="#"><i class="fab fa-youtube"></i></a>-->
-            
-<a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
-<span >PetFeed <i class="far fa-copyright"></i> Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
-        
-</footer>
-        <!--<div id="faixaMenu">
 
-        <input type="checkbox" id="chk">
-        <label  for="chk" class="show-menu-btn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <ul id="menu">
-            <li id="sobre"><a href="#">Sobre nós</a></li>
-            <li id="contato"><a href="#">Contato</a></li>
-            <li id="entrar"><a href="#">Entrar ou cadastrar</a></li>
-        <label  for="chk" class="hide-menu-btn">
-            <i class="fas fa-times"></i>
-        </label>
-    </ul>
-        </div>
-        <div id="imagemAnimais"></div> -->
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
