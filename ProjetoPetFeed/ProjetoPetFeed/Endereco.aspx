@@ -21,5 +21,5 @@
         <input id="btnVoltar" type="button" value="Voltar" class="btn"/>
         <input id="btnCadastrarEndereco" type="button" value="Cadastrar endereço" class="btn"/>
     </div>
-<hr>      
+     
 </asp:Content>
