@@ -7,24 +7,23 @@
     <script type="text/javascript" src="pergunta.js"></script>
 
     <a class="collapsible">aaaaaaaaaaa</a>
-    <div class="content">
+    <div class="conteudo">
       <p>aaaaaaaaaaaaaa</p>
     </div>
     <a class="collapsible">vbbbbbbbbbbbbb</a>
-    <div class="content">
+    <div class="conteudo">
       <p>BBBBBBBBBBBBBBBBBBBBBBBBBBB</p>
     </div>
     <a class="collapsible">cccccccccccccccc</a>
-    <div class="content">
+    <div class="conteudo">
       <p>cccccccccccccccc</p>
     </div>
     <a class="collapsible">dddddddddddddddddd</a>
-    <div class="content">
+    <div class="conteudo">
       <p>ddddddddddddddddddddddddd</p>
     </div>
     
     <script>
-
         var coll = document.getElementsByClassName("collapsible");
         var i;
 
@@ -32,10 +31,10 @@
             coll[i].addEventListener("click", function () {
                 this.classList.toggle("active");
                 var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
                 } else {
-                    content.style.display = "block";
+                    content.style.maxHeight = content.scrollHeight + "px";
                 }
             });
         }
