@@ -5,12 +5,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <link rel="stylesheet" type="text/css" href="estilo.css" />
     <script type="text/javascript" src="pergunta.js"></script>
-
-    <a class="collapsible">aaaaaaaaaaa</a>
+    <div class="faq">
+    <a class="collapsible">Formas de Pagamento aceitas?</a>
     <div class="conteudo">
-      <p>aaaaaaaaaaaaaa</p>
+      <p>Isso dependeria da empresa da qual você está pedindo o produto, nosso site é apenas o intermédio entre você, cliente, e a empresa contratada.</p>
     </div>
-    <a class="collapsible">vbbbbbbbbbbbbb</a>
+    <a class="collapsible"></a>
     <div class="conteudo">
       <p>BBBBBBBBBBBBBBBBBBBBBBBBBBB</p>
     </div>
@@ -22,6 +22,7 @@
     <div class="conteudo">
       <p>ddddddddddddddddddddddddd</p>
     </div>
+        </div>
     
     <script>
         var coll = document.getElementsByClassName("collapsible");

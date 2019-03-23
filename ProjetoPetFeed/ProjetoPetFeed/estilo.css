@@ -576,14 +576,13 @@ hr
 }
 
 
-/* CONTATO*/
+/* FAQ*/
 
 .collapsible {
-    background-color: #777;
-    color: white;
+    /*background-color: #777;*/
+    color: black;
     cursor: pointer;
     padding: 18px;
-    width: 97.75%;
     border: none;
     text-align: left;
     outline: none;
@@ -592,12 +591,12 @@ hr
 }
 
     .active, .collapsible:hover {
-        background-color: #555;
+        /*background-color: #555;*/
     }
 
     .collapsible:after {
         content: '\002B';
-        color: white;
+        color: black;
         font-weight: bold;
         float: right;
         margin-left: 5px;
@@ -612,5 +611,11 @@ hr
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
+    /*background-color: #f1f1f1;*/
+}
+
+.faq {
+    position: absolute;
+    top: 20%;
+    width: 100%;
 }
