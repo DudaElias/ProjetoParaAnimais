@@ -3,11 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="meio">
-        <form class="search-box" method="post">
-            <input type="text" class="pesquisaTexto" name="" value="">
-            <button type="button" class="btnPes"></button>
-    </form>
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search" />
+        <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+        </a>
             </div>
 
 </asp:Content>
