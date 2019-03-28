@@ -622,19 +622,20 @@ hr
 
 /*BASE PÓS LOGIN*/
 
-.imagem-perfil{
+/*.menu-perfil{
     position: absolute;
     top: 4%;
-    left: 3%;
-    width: 70px;
-    height:70px;
+    left: 93%;
+    width: 20px;
+    height:20px;
 }
+
 
 .menu-perfil
 {
     height: 150px;
     color: black;
-}
+}*/
 
 
 /*PESQUISA*/
@@ -666,6 +667,10 @@ hr
     justify-content: center;
     align-items: center;
 }
+.search-btn i{
+    width: 40px;
+    height: 40px;
+}
 .search-txt{
     border: none;
     background: none;
@@ -676,4 +681,48 @@ hr
     transition: 0.4s;
     line-height: 40px;
     width: 0px;
+}
+.show-menu-btn-perfil {
+    position: absolute;
+    top: 5%;
+    left: 90%;
+}
+.show-menu-btn-perfil img {
+    float: right;
+    width: 70px;
+    height: 70px;
+}
+.menu-perfil {
+    position: fixed;
+    height: 100vh;
+    background: #34495e;
+    right: -200%;
+    width: 200px;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+    z-index: 999;
+}
+
+#chk-perfil {
+    position: absolute;
+    visibility: hidden;
+    top: 5%;
+    left: 90%;
+    z-index: -1111;
+}
+
+#chk-perfil:checked ~ .menu-perfil {
+    right: 0;
+}
+
+#chk-perfil:checked ~ .show-menu-btn-perfil {
+    z-index: 1000;
+    transition: 0.7s;
+}
+.show-menu-btn-perfil {
+    cursor: pointer;
+    display: block;
 }
