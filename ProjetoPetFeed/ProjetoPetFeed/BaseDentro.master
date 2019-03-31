@@ -25,7 +25,10 @@
             </label>
 
             <ul class="menu-perfil">
-                
+                <a href="#">Perfil</a>
+                <a href="#">Pedidos</a>
+                <a href="Pergunta.aspx">Ajuda</a>
+                <a href="#">Sair</a> 
             </ul>
         </div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
