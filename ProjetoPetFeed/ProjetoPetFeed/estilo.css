@@ -651,16 +651,14 @@ hr
     padding: 10px;
 }
 
-.search-box:hover > .search-txt{
-    width: 240px;
-    padding: 0 6px;
-}
 
 .search-btn {
     color: #34495e;
     float: right;
     width: 40px;
-    height: 40px;
+    position: relative;
+    top: 35%;
+    height: 30px;
     border-radius: 50%;
     background: darkgrey;
     display: flex;
@@ -680,12 +678,24 @@ hr
     font-size: 16px;
     transition: 0.4s;
     line-height: 40px;
-    width: 0px;
+    width: 240px;
+}
+.menu-perfil a {
+    color: #fff;
+    display: block;
+    /*text-transform: uppercase;*/
+    text-decoration: none;
+    position: relative;
+    top: 10%;
+    font-size: 20px;
+    padding: 10px 10px;
+    transition: 0.4s;
 }
 .show-menu-btn-perfil {
     position: absolute;
     top: 5%;
-    left: 90%;
+    left: 93%;
+    transition:0.7s;
 }
 .show-menu-btn-perfil img {
     float: right;
@@ -716,6 +726,7 @@ hr
 
 #chk-perfil:checked ~ .menu-perfil {
     right: 0;
+    transition:0.7s;
 }
 
 #chk-perfil:checked ~ .show-menu-btn-perfil {
