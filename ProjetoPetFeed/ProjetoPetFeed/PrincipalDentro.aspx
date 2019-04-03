@@ -15,12 +15,12 @@
             </label>
 
 
-    <div class="filtros">
-        <div class="filtro"><a class="qualFiltro">aaa<i class="fas fa-times-circle"></i></a></div>
-        <div class="filtro"><a class="qualFiltro">bbb<i class="fas fa-times-circle"></i></a></div>
-        <div class="filtro"><a class="qualFiltro">ccc<i class="fas fa-times-circle"></i></a></div>
-        <div class="filtro"><a class="qualFiltro">ddd<i class="fas fa-times-circle"></i></a></div>
-    </div>
+    <ul id="filtros">
+        <li class="filtro"><a class="qualFiltro">aaa   <i class="fas fa-times-circle"></i></a></li>
+        <li class="filtro"><a class="qualFiltro">bbb   <i class="fas fa-times-circle"></i></a></li>
+        <li class="filtro"><a class="qualFiltro">ccc   <i class="fas fa-times-circle"></i></a></li>
+        <li class="filtro"><a class="qualFiltro">ddd   <i class="fas fa-times-circle"></i></a></li>
+    </ul>
 
 </asp:Content>
 
