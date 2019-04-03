@@ -19,18 +19,20 @@
     <body>
 <div class="header">
             <div class="logo"></div>
+    <div class="menu-perfil">
             <input type="checkbox" id="chk-perfil">
             <label for="chk-perfil" class="show-menu-btn-perfil">
                 <img src="Imagens/perfil.png">
             </label>
 
-            <ul class="menu-perfil">
+            <ul class="lateral">
                 <a href="#">Perfil</a>
                 <a href="#">Pedidos</a>
                 <a href="Pergunta.aspx">Ajuda</a>
                 <a href="#">Sair</a> 
             </ul>
         </div>
+    </div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>

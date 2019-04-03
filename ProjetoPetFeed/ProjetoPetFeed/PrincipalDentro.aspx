@@ -8,7 +8,19 @@
         <a class="search-btn" href="#">
             <i class="fas fa-search"></i>
         </a>
-            </div>
+    </div>
+        <input type="checkbox" id="chk-filtro">
+            <label for="chk-filtro" class="aa">
+                <a class="img-filtro"><i class="fas fa-filter fa-2x"></i></a>
+            </label>
+
+
+    <div class="filtros">
+        <div class="filtro"><a class="qualFiltro">aaa<i class="fas fa-times-circle"></i></a></div>
+        <div class="filtro"><a class="qualFiltro">bbb<i class="fas fa-times-circle"></i></a></div>
+        <div class="filtro"><a class="qualFiltro">ccc<i class="fas fa-times-circle"></i></a></div>
+        <div class="filtro"><a class="qualFiltro">ddd<i class="fas fa-times-circle"></i></a></div>
+    </div>
 
 </asp:Content>
 
