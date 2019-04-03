@@ -35,7 +35,7 @@
 .search-box {
     position: absolute;
     top: 10%;
-    left: 45%;
+    left: 50%;
     transform: translate(-50%,-50%);
     background: darkgrey;
     height: 40px;
@@ -146,8 +146,8 @@
     height: 200px;
     position: absolute;
     cursor: pointer;
-    left: 57%;
-    top: 8.5%;
+    left: 62%;
+    top: 8%;
 }
 #chk-filtro {
     position: absolute;
@@ -157,22 +157,29 @@
     z-index: -1111;
 }
 
-#chk-filtro:checked ~ .filtros {
+#chk-filtro:checked ~ #filtros {
     top: 15%;
     position: absolute;
     display: inline-block;
     transition: 0.7s;
 }
 
-.filtros {
-    background: black;
+#filtros {
+    background: #666F77;
     position: fixed;
-    height: 25px;
     color: white;
     top: -200%;
+    height: 75px;
     width: 1580px;
     z-index: -3000;
     text-align: center;
-    padding: 80px 10px;
+    padding: 20px 10px;
     transition: 0.7s;
+}
+
+
+.filtro{
+    position:relative;
+    top: 50%;
+    display:inline-block;
 }
