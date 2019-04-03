@@ -41,6 +41,16 @@
         <asp:Button ID="btnCadastrarCliente" CssClass="btnCadastrar" Text="Cadastrar" runat="server" Visible="false"/>
     </div>
     <footer class="s-mLogin">
+        <ul class="menuFooter">
+            <li><a href="Sobre nós.aspx">Sobre nós</a></li>
+            <li><a href="Pergunta.aspx">Fale conosco</a></li>
+            </ul>
+        <ul>
+            <li><a href="#">Como pedir</a></li>
+            <li><a href="#">Cadastre sua loja</a></li>
+            <li><a href="#">Cadastre-se</a></li>
+
+        </ul>
     <!--<ul class="menuFooter">
                 <a href="#">Sobre nós</a>
                 <a href="#">Contato</a>
