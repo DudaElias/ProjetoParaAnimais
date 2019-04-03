@@ -126,9 +126,18 @@
     height: 150px;
     position: relative;
     clear: both;
-    /*padding: 0 20px;*/
+    top: 1413px;
+    left: -1px;
 }
-
+.s-mPer {
+    background: #34495e;
+    height: 150px;
+    clear: both;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 .s-mPrincipal {
     background: #34495e;
     width: 100%;
@@ -264,6 +273,32 @@
     /*min-height:100px;*/
     line-height: 100px;
 
+    /*width: 50%;*/
+    text-align: justify;
+}
+.s-mPer .icone:hover {
+    background: #e67e22;
+}
+
+.s-mPer a i {
+    transition: 0.4s all;
+}
+
+
+.s-mPer a:hover > i {
+    transform: scale(1.4) rotate(25deg)
+}
+
+.s-mPer span i {
+    color: white;
+}
+
+.s-mPer span {
+    float: right;
+    color: white;
+    /*left: 25%;*/
+    /*min-height:100px;*/
+    line-height: 250px;
     /*width: 50%;*/
     text-align: justify;
 }
