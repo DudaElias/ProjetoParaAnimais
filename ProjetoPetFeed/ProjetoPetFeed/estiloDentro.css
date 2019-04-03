@@ -75,7 +75,7 @@
     width: 240px;
 }
 
-.menu-perfil a {
+.lateral a {
     color: #fff;
     display: block;
     /*text-transform: uppercase;*/
@@ -102,7 +102,7 @@
         z-index: 2000px;
     }
 
-.menu-perfil {
+.lateral {
     position: fixed;
     height: 100vh;
     background: #34495e;
@@ -124,17 +124,55 @@
     z-index: -1111;
 }
 
-    #chk-perfil:checked ~ .menu-perfil {
-        right: 0;
-        transition: 0.7s;
-    }
+#chk-perfil:checked ~ .lateral {
+    right: 0;
+    transition: 0.7s;
+}
 
-    #chk-perfil:checked ~ .show-menu-btn-perfil {
-        z-index: 1000;
-        transition: 0.7s;
-    }
+#chk-perfil:checked ~ .show-menu-btn-perfil {
+    z-index: 1000;
+    transition: 0.7s;
+}
 
 .show-menu-btn-perfil {
     cursor: pointer;
     display: block;
+}
+
+
+.img-filtro i {
+    color: white;
+    width:200px;
+    height: 200px;
+    position: absolute;
+    cursor: pointer;
+    left: 57%;
+    top: 8.5%;
+}
+#chk-filtro {
+    position: absolute;
+    visibility: hidden;
+    top: 8.5%;
+    left: 57%;
+    z-index: -1111;
+}
+
+#chk-filtro:checked ~ .filtros {
+    top: 15%;
+    position: absolute;
+    display: inline-block;
+    transition: 0.7s;
+}
+
+.filtros {
+    background: black;
+    position: fixed;
+    height: 25px;
+    color: white;
+    top: -200%;
+    width: 1580px;
+    z-index: -3000;
+    text-align: center;
+    padding: 80px 10px;
+    transition: 0.7s;
 }
