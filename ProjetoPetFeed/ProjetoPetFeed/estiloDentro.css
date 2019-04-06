@@ -166,11 +166,11 @@
 
 #filtros {
     background: #666F77;
-    position: fixed;
+    position: absolute;
     color: white;
     top: -200%;
     height: 75px;
-    width: 1580px;
+    width: 98.95%;
     z-index: -3000;
     text-align: center;
     padding: 20px 10px;
