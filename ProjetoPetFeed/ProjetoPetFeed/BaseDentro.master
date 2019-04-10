@@ -26,7 +26,8 @@
             </label>
 
             <ul class="lateral">
-                <a href="#">Perfil</a>
+                <a href="Perfil.aspx">Editar Dados</a>
+                <a href="PrincipalDentro.aspx">Pesquisa</a>
                 <a href="#">Pedidos</a>
                 <a href="Pergunta.aspx">Ajuda</a>
                 <a href="#">Sair</a> 

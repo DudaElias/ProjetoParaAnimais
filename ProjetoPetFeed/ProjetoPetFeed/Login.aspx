@@ -25,7 +25,7 @@
         <asp:TextBox ID="txtCPFEmpresa" placeholder="Digite o CPF do dono da empresa" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
         <asp:TextBox ID="txtRGEmpresa" placeholder="Digite o RG do dono da empresa" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
         <asp:TextBox ID="txtOrgaoEmpresa" placeholder="Digite o órgão emissor da empresa" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
-        <asp:Button ID="btnCadastrarEmpresa" CssClass="btnCadastrar" runat="server" Text="Cadastrar" Visible="false"/>
+        <asp:Button ID="btnCadastrarEmpresa" CssClass="btnCadastrar" runat="server" Text="Cadastrar" Visible="false" PostBackUrl="PrincipalDentroEmpresa.aspx"/>
                 </div>
     <div class="box-btn2">
         <asp:TextBox ID="txtNomeCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
@@ -38,7 +38,7 @@
         <asp:TextBox ID="txtCelularCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
         <asp:CheckBox ID="chkTermos" CssClass="chkCliente" runat="server" Visible="false"/>
         <asp:Label ID="lblTermos" CssClass="lblCliente" runat="server" Visible="false"></asp:Label>
-        <asp:Button ID="btnCadastrarCliente" CssClass="btnCadastrar" Text="Cadastrar" runat="server" Visible="false"/>
+        <asp:Button ID="btnCadastrarCliente" CssClass="btnCadastrar" Text="Cadastrar" runat="server" Visible="false" PostBackUrl="PrincipalDentro.aspx"/>
     </div>
     <footer class="s-mLogin">
         <ul class="menuFooter">

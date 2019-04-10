@@ -17,7 +17,7 @@ public partial class Login : System.Web.UI.Page
 
     protected void btnEmpresa_Click(object sender, EventArgs e)
     {
-        
+
         Label2.Text = "Sobre a Empresa: ";
         btnEmpresa.Visible = false;
         btnCliente.Visible = false;
