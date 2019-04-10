@@ -7,11 +7,11 @@
     <div class="content">
         <img src="Imagens/animais.jpg"></div>
     <footer class="s-mPrincipal">
-        <ul class="menuFooter">
+        <ul class="menuFooterP">
             <li><a href="Sobre nós.aspx">Sobre nós</a></li>
             <li><a href="Pergunta.aspx">Fale conosco</a></li>
         </ul>
-        <ul>
+        <ul class="menuFooterP">
             <li><a href="#">Como pedir</a></li>
             <li><a href="#">Cadastre sua loja</a></li>
             <li><a href="#">Cadastre-se</a></li>
