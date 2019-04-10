@@ -145,15 +145,52 @@
     position: absolute;
     bottom:0%;
 }
-.menuFooterP{
-    position: relative;
-    top: 10%;
-    left: 5%;
+.menuFooterP {
+    position: absolute;
+    top: 20%;
+    float: left;
+    
     padding: 0px 10px;
     list-style-type: none;
     display: inline-block;
     text-decoration: none;
+
+
+
 }
+
+.menuFooterD {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    padding: 0px 10px;
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none;
+    
+}
+
+.creditosFooter
+{
+    position:absolute; 
+    top:75%;
+    left:40%;
+}
+
+.fPetFeed {
+    position: absolute;
+    font-family: Century Gothic;
+    font-size: 130%;
+    left: 2%;
+}
+
+.fDescubra {
+    position: absolute;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 130%;
+    left:17%;
+}
+
 .s-mLogin {
     background: #34495e;
     width: 100%;
@@ -171,8 +208,23 @@
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     transition: 0.4s;
+    font-family:Calibri;
+}
+
+    .menuFooterD a:hover {
+        color: #e67e22;
+    }
+
+.menuFooterD a {
+    float: left;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.4s;
+    font-family:Calibri;
 }
 
 /*.s-m ul li{
