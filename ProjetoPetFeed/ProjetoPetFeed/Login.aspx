@@ -18,7 +18,7 @@
         <div class="btns">
         <asp:Label ID="Label2" runat="server" Text="Quero me cadastrar: " CssClass="lblCadastrar"></asp:Label>
         <asp:Button ID="btnEmpresa" CssClass="Button2" runat="server" Text="Empresa" OnClick="btnEmpresa_Click" /><asp:Button CssClass="Button3" ID="btnCliente" OnClick="btnCliente_Click" runat="server" Text="Cliente" /></div>
-            <div class="box-btn">
+            <div class="box-btn" id="box1" runat="server">
         <asp:TextBox ID="txtEmailEmpresa" placeholder="Digite o e-mail da empresa" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
         <asp:TextBox ID="txtCelularEmpresa" placeholder="Digite o telefone da empresa" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
         <asp:TextBox ID="txtNomeEmpresa" placeholder="Digite o nome da empresa" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
@@ -27,7 +27,7 @@
         <asp:TextBox ID="txtOrgaoEmpresa" placeholder="Digite o órgão emissor da empresa" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
         <asp:Button ID="btnCadastrarEmpresa" CssClass="btnCadastrar" runat="server" Text="Cadastrar" Visible="false" PostBackUrl="PrincipalDentroEmpresa.aspx"/>
                 </div>
-    <div class="box-btn2">
+    <div class="box-btn2" id="box2" runat="server">
         <asp:TextBox ID="txtNomeCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
         <asp:TextBox ID="txtEmailCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
         <asp:TextBox ID="txtCpfCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>
@@ -51,12 +51,6 @@
             <li><a href="#">Cadastre-se</a></li>
 
         </ul>
-    <!--<ul class="menuFooter">
-                <a href="#">Sobre nós</a>
-                <a href="#">Contato</a>
-                <a href="#">Entrar ou cadastrar</a> 
-        </ul>-->
-           
  <a class="icone" href="https://www.facebook.com/petfeed.shoping/?epa=SEARCH_BOX"><i class="fab fa-facebook-f"></i></a>
             
 <a href="#" class="icone"><i class="fab fa-twitter"></i></a>
