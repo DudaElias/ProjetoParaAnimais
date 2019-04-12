@@ -145,6 +145,31 @@
     position: absolute;
     bottom:0%;
 }
+/*
+.rodape{
+    
+    width:100%;
+    float: left;
+    padding: 3% 4%; 
+    text-align: center;
+    background: linear-gradient(to right, #ce2e3c, #da6709);
+}
+
+.social-icons a 
+{
+    font-size: 1.5em;
+    color: rgba(255,255,255,0.7);
+    margin-right: 3%;
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+.social-icons a:hover {
+    color: rgb(255,255,255);
+}
+*/
 .menuFooterP {
     position: absolute;
     top: 20%;
@@ -154,11 +179,15 @@
     list-style-type: none;
     display: inline-block;
     text-decoration: none;
-
-
-
 }
 
+.hrFooter {
+    position: absolute;
+    top: 79%;
+    left: 0%;
+    width: 99.8%;
+    border-color: #A9A9F5;
+}
 .menuFooterD {
     position: absolute;
     top: 20%;
@@ -167,14 +196,15 @@
     list-style-type: none;
     display: inline-block;
     text-decoration: none;
-    
 }
 
 .creditosFooter
 {
     position:absolute; 
-    top:75%;
-    left:40%;
+    float: left;
+    top:85%;
+    left:1%;
+    float:left;
 }
 
 .fPetFeed {
@@ -227,13 +257,13 @@
     font-family:Calibri;
 }
 
-/*.s-m ul li{
+.s-m ul li{
 
         color: #fff;
         text-transform: uppercase;
         font-size: 20px;
-        /*padding: 0 10px;
-    }*/
+        padding: 0 10px;
+    }
 
 .icone{
         display: inline-flex;
@@ -303,13 +333,17 @@
     text-align: justify;
 }
 .s-mPrincipal .icone:hover {
-    background: #e67e22;
+    background: black;
 }
 
 .s-mPrincipal a i {
     transition: 0.4s all;
 }
 
+.s-mPrincipal {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
 
 .s-mPrincipal a:hover > i {
     transform: scale(1.4) rotate(25deg)
@@ -320,13 +354,8 @@
 }
 
 .s-mPrincipal span {
-    float: right;
+    float: left;
     color: white;
-    /*left: 25%;*/
-    /*min-height:100px;*/
-    line-height: 100px;
-
-    /*width: 50%;*/
     text-align: justify;
 }
 .s-mPer .icone:hover {
@@ -443,7 +472,7 @@
         color: white;
 }
 
-hr 
+.hrCadastro 
 {
     height: 500px;
     width: 1px;

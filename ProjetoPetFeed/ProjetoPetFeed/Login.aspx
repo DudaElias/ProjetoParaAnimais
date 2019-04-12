@@ -13,7 +13,7 @@
         <input id="Password1" type="password" placeholder="Senha" />
         <input id="Button1" type="button" value="Entrar" class="btn"/>
     </div>
-<hr>
+<hr class=".hrCadastro ">
 
         <div class="btns">
         <asp:Label ID="Label2" runat="server" Text="Quero me cadastrar: " CssClass="lblCadastrar"></asp:Label>
