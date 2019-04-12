@@ -199,10 +199,10 @@
     align-items: center;
 }
 
-    .search-btn i {
-        width: 40px;
-        height: 40px;
-    }
+.search-btn i {
+    width: 40px;
+    height: 40px;
+}
 
 .search-txt {
     border: none;
