@@ -1,12 +1,12 @@
 ﻿
 /*BASE DO DESIGN DA PÁGINA*/
-
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Comfortaa', Courier, monospace !important;
 }
 
 .sobre {
@@ -185,7 +185,7 @@
     top: 79%;
     left: 0%;
     width: 99.8%;
-    border-color: #A9A9F5;
+    border-color: grey;
 }
 
 .menuFooterD {
@@ -196,6 +196,7 @@
     list-style-type: none;
     display: inline-block;
     text-decoration: none;
+
 }
 
 .creditosFooter {
