@@ -1,0 +1,5 @@
+Passar parte de dentro para cshtml
+Encaminhar uma página para outra em cshtml
+Banco de Dados
+Footer
+Responsividade
