@@ -20,6 +20,6 @@ function Cadastrar(i) {
     }
 
     else {
-        window.location.href = "ProjetoPraticaOficial\Views\PerfilUsu\Perfil.cshtml";
+        window.location.href = "PerfilUsu\Perfil";
     }
 }
