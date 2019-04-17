@@ -9,12 +9,23 @@ namespace ProjetoPraticaOficial.DAO
 {
     public class ClienteDAO
     {
+
         public void Adiciona(Cliente c)
         {
             using (var context = new LoginContext())
             {
+                c.Id = 0;
                 context.Cliente.Add(c);
                 context.SaveChanges();
+            }
+        }
+        public Cliente BuscaPorNome(string nome)
+        {
+            using (var contexto = new LoginContext())
+            {
+                return contexto.Cliente
+                .Where(p => p.Nome == nome)
+                .FirstOrDefault();
             }
         }
         public IList<Cliente> Lista()
@@ -23,15 +34,6 @@ namespace ProjetoPraticaOficial.DAO
             {
                 return contexto.Cliente.ToList();
             }
-        }
-        public Cliente BuscaPorRa(int cod)
-         {
-             using (var contexto = new LoginContext())
-             {
-                 return contexto.Cliente
-                 .Where(p => p.codCliente == cod)
-                .FirstOrDefault();
-             }
         }
         public void Atualiza(Cliente Cliente)
         {

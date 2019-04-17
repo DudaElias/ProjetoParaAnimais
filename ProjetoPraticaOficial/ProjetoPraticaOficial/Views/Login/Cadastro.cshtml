@@ -32,9 +32,10 @@
     </div>
     <div class="box">
         <label ID="Label1" Text="Já sou cadastrado:" class="lblLogin">Já sou cadastrado:</label>
-        <input id="Text1" type="text" placeholder="Usuário" />
-        <input id="Password1" type="password" placeholder="Senha" />
-        <input id="Button1" type="button" value="Entrar" class="btn" />
+        <form method="post" action="Login/Login">
+        <input id="Text1" name="c.Nome" type="text" placeholder="Usuário" />
+        <input id="Password1" name="c.Senha" type="password" placeholder="Senha" />
+        <input id="Button1" type="submit" value="Entrar" class="btn" /></form>
     </div>
     <hr class="hrCadastro">
     <label ID="Label2" value="Quero me cadastrar: " class="lblCadastrar">Quero me cadastrar:</label>
@@ -42,7 +43,7 @@
 
         <input type="button" ID="btnEmpresa" class="Button2" runat="server" value="Empresa" onclick="Cadastro(1)" /><input type="button" class="Button3" ID="btnCliente" onclick="Cadastro(2)" runat="server" value="Cliente" />
     </div>
-    <form action="/Cliente/Adiciona" method="post">
+    <form action="/Login/CadastroEm" method="get">
     <div class="box-btn" id="box1" runat="server">
         <input type="text" ID="txtEmailEmpresa" placeholder="Digite o e-mail da empresa" class="txtEmpresa" runat="server" Visible="false">
         <input type="text" ID="txtCelularEmpresa" placeholder="Digite o telefone da empresa" class="txtEmpresa" runat="server" Visible="false">
@@ -53,16 +54,16 @@
         <input type="button" ID="btnCadastrarEmpresa" class="btnCadastrar" runat="server" value="Cadastrar" Visible="false" <!--onclick="PrincipalDentroEmpresa.aspx" -->/>
     </div>
         </form>
-    <form action="~/Cliente/Login" method="post">
+    <form action="~/Login/CadastroCli" method="post">
         <div class="box-btn2" id="box2" runat="server">
-            <input type="text" ID="txtNomeCliente" placeholder="Digite o nome do cliente" class="txtEmpresa" runat="server" Visible="false">
-            <input type="text" ID="txtEmailCliente" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" Visible="false">
-            <input type="text" ID="txtCpfCliente" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" Visible="false">
-            <input type="text" ID="txtSenhaCliente" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtNomeCliente" name="c.Nome" placeholder="Digite o nome do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtEmailCliente" name="c.Email" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtCpfCliente" name="c.Cpf" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtSenhaCliente" name="c.Senha" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" Visible="false">
             <input type="text" ID="txtSenhaNovCliente" placeholder="Digite a senha novamente do cliente" class="txtEmpresa" runat="server" Visible="false">
             <!--<asp:Label ID="lblPreferencia" CssClass="lblCliente" runat="server" Visible="false"></asp:Label>
     <asp:TextBox ID="txtDDDCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>-->
-            <input type="text" ID="txtCelularCliente" placeholder="Digite o celular do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtCelularCliente" name="c.Telefone" placeholder="Digite o celular do cliente" class="txtEmpresa" runat="server" Visible="false">
             <input type="checkbox" ID="chkTermos" class="chkCliente" runat="server" Visible="false" />
             <label ID="lblTermos" class="lblCliente" runat="server" Visible="false"></label>
             <!--<input type="button" ID="btnCadastrarCliente" class="btnCadastrar" value="Cadastrar" runat="server" Visible="false" <!--onclick="Cadastrar(2)"-->

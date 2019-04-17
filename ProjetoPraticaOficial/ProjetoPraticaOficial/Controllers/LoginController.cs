@@ -15,14 +15,24 @@ namespace ProjetoPraticaOficial.Controllers
         {
             return View();
         }
-
         [HttpPost]
-        public ActionResult Login(string n, string e, string cpf, string s, string s2, string cel)
+        public ActionResult CadastroCli(Cliente c)
         {
             ClienteDAO dao = new ClienteDAO();
-            dao.Adiciona(new Cliente(1, n, e,cpf,s,cel));
+            dao.Adiciona(c);
             //redirecionar para a camada de visualização
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(Cliente c)
+        {
+            ClienteDAO dao = new ClienteDAO();
+            Cliente retorno = dao.BuscaPorNome(c.Nome);
+            if (retorno.Senha == c.Senha)
+                return View();
+            else
+                return View();
         }
     }
 }
