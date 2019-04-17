@@ -1,12 +1,12 @@
 ﻿
 /*BASE DO DESIGN DA PÁGINA*/
-@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Acme|Inconsolata|Poiret+One|Signika|Slabo+27px');
 
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Comfortaa', Courier, monospace !important;
+    font-family: 'Slabo 27px', serif;
 }
 
 .sobre {
@@ -196,7 +196,6 @@
     list-style-type: none;
     display: inline-block;
     text-decoration: none;
-
 }
 
 .creditosFooter {
@@ -209,16 +208,29 @@
 
 .fPetFeed {
     position: absolute;
-    font-family: Century Gothic;
-    font-size: 130%;
+    font-size: 150%;
     left: 2%;
+    font-weight: bold;
+    top: 3%;
+    color: snow;
 }
 
 .fDescubra {
     position: absolute;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 130%;
+    font-size: 150%;
     left: 17%;
+    font-weight: bold;
+    top: 3%;
+    color:snow;
+}
+
+.fSociais {
+    position: absolute;
+    font-size: 150%;
+    left: 81%;
+    font-weight: bold;
+    top: 14%;
+    color: snow;
 }
 
 .s-mLogin {
@@ -230,31 +242,34 @@
 }
 
 .menuFooterP a:hover {
-    color: #e67e22;
+    color: lightseagreen;
 }
 
 .menuFooterP a {
+    position: relative;
     float: left;
-    color: #fff;
-    text-transform: uppercase;
+    color: snow;
     text-decoration: none;
-    font-size: 18px;
-    transition: 0.4s;
-    font-family: Calibri;
+    font-size: 125%;
+    transition: 0.2s;
+    left: 19%;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .menuFooterD a:hover {
-    color: #e67e22;
+    color: lightseagreen;
+    
 }
 
 .menuFooterD a {
+    position: relative;
     float: left;
-    color: #fff;
-    text-transform: uppercase;
+    color: snow;
     text-decoration: none;
-    font-size: 18px;
-    transition: 0.4s;
-    font-family: Calibri;
+    font-size: 125%;
+    transition: 0.2s;
+    left: 14%;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .s-m ul li {
@@ -334,7 +349,7 @@
 }
 
 .s-mPrincipal .icone:hover {
-    background: black;
+    background: lightseagreen;
 }
 
 .s-mPrincipal a i {
@@ -488,14 +503,14 @@
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: -100;
-    visibility:hidden;
+    visibility: hidden;
 }
 
 .btns {
     width: 100px;
     padding: 40px;
     position: absolute;
-    transition:0.0s;
+    transition: 0.0s;
     top: 34%;
     left: 79%;
 }
@@ -509,7 +524,7 @@
     position: absolute;
     top: 20%;
     left: 55%;
-    height:50px;
+    height: 50px;
 }
 
 .Button2, .Button3 {
@@ -748,6 +763,3 @@
     height: 150px;
     color: black;
 }*/
-
-
-

@@ -31,6 +31,8 @@
             <li><a href="#">Cadastre-se</a></li>
         </ul>
 
+        <p class="fSociais">Sociais:</p>
+
         <a class="icone" href="https://www.facebook.com/petfeed.shoping/?epa=SEARCH_BOX"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
         <a href="#" class="icone"><i class="fab fa-twitter"></i></a>
