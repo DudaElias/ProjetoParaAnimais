@@ -166,7 +166,7 @@
     position: absolute;
     top: 3%;
     float: left;
-    background: url("Imagens/Logo.png");
+    background-image: url("../Imagens/Logo.png");
     width: 200px;
     height: 7em;
 }

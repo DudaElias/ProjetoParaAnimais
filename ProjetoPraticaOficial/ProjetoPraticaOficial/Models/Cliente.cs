@@ -7,20 +7,16 @@ namespace ProjetoPraticaOficial.Models
 {
     public class Cliente
     {
-        public Cliente(int i, string n, string e, string c, string s, string cel)
+
+        public Cliente()
         {
-            codCliente = i;
-            nome = n;
-            email = e;
-            cpf = c;
-            senha = s;
-            telefone = cel;
+
         }
-        public int codCliente { get; set; }
-        public string nome { get; set; }
-        public string email { get; set; }
-        public string cpf { get; set; }
-        public string senha { get; set; }
-        public string telefone { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public string Cpf { get; set; }
+        public string Senha { get; set; }
+        public string Telefone { get; set; }
     }
 }

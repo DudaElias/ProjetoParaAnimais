@@ -216,6 +216,8 @@
     <Content Include="Views\PerfilUsu\Perfil.cshtml" />
     <Content Include="Views\PerfilEm\PerfilEmpresa.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\LoginEfetudo.cshtml" />
+    <Content Include="Views\Login\CadastroCli.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
