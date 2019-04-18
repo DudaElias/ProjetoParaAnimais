@@ -10,6 +10,7 @@ namespace ProjetoPraticaOficial.DAO
     public class LoginContext : DbContext
     {
         public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Loja> Loja { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=regulus.cotuca.unicamp.br;Initial Catalog='PR118343'; User ID ='PR118343'; Password ='PR118343'");

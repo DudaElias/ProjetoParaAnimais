@@ -8,32 +8,32 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-
+    <title>EditarDadosCli</title>
     <link rel="stylesheet" type="text/css" href="~/Content/estiloDentro.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <title>Perfil</title>
+
 </head>
 <body>
-    <div class="header">
-        <div class="logo"></div>
-        <div class="menu-perfil">
-            <input type="checkbox" id="chk-perfil">
-            <label for="chk-perfil" class="show-menu-btn-perfil">
-                <img src="Imagens/perfil.png">
-            </label>
-
-            <ul class="lateral">
-                <a href="Perfil.aspx">Editar Dados</a>
-                <a href="PrincipalDentro.aspx">Pesquisa</a>
-                <a href="#">Pedidos</a>
-                <a href="Pergunta.aspx">Ajuda</a>
-                <a href="#">Sair</a>
-            </ul>
-        </div>
-    </div>
     <div>
+        <div class="header">
+            <div class="logo"></div>
+            <div class="menu-perfil">
+                <input type="checkbox" id="chk-perfil">
+                <label for="chk-perfil" class="show-menu-btn-perfil">
+                    <img src="~/Imagens/perfil.png">
+                </label>
+
+                <ul class="lateral">
+                    <a href="EditarDadosCli">Editar Dados</a>
+                    <a href="LoginCli">Pesquisa</a>
+                    <a href="#">Pedidos</a>
+                    <a href="Pergunta">Ajuda</a>
+                    <a href="Principal">Sair</a>
+                </ul>
+            </div>
+        </div>
         <div class="box">
-            <label ID="Label1" runat="server" Text="Editar Dados:" class="lblLogin">Editar Dados:</label>
+            <label ID="Label1" runat="server" Text="Editar Dados:" CssClass="lblLogin">Editar Dados:</label>
             <input id="txtNomeUsu" type="text" placeholder="Usuário" />
             <input id="txtCpf" type="text" placeholder="CPF" />
             <input id="txtEmail" type="email" placeholder="E-mail" />

@@ -24,36 +24,42 @@
         <ul class="menu">
             <a href="~/Layout/Sobre nós.aspx">Sobre nós</a>
             <a href="~/Layout/Pergunta.aspx">FAQ</a>
-            <a href="~/Views/Login/Cadastro.cshtml">Entrar ou cadastrar</a>
+            <a href="Cadastro">Entrar ou cadastrar</a>
             <label for="chk" class="hide-menu-btn">
                 <i class="fas fa-times"></i>
             </label>
         </ul>
     </div>
-    <div class="box">
+    <div class="box" id="boxCli" style="visibility: hidden">
         <label ID="Label1" Text="Já sou cadastrado:" class="lblLogin">Já sou cadastrado:</label>
-        <form method="post" action="Login/Login">
-        <input id="Text1" name="c.Nome" type="text" placeholder="Usuário" />
-        <input id="Password1" name="c.Senha" type="password" placeholder="Senha" />
-        <input id="Button1" type="submit" value="Entrar" class="btn" /></form>
+        <form method="post" action="/Login/LoginCli">
+            <input id="Text1" name="c.Nome" type="text" placeholder="Usuário" />
+            <input id="Password1" name="c.Senha" type="text" placeholder="Senha" />
+            <input id="Button1" type="submit" value="Entrar" class="btn" />
+        </form>
     </div>
-    <hr class="hrCadastro">
-    <label ID="Label2" value="Quero me cadastrar: " class="lblCadastrar">Quero me cadastrar:</label>
+    <div class="box" id="boxEm" style="visibility: hidden">
+        <label ID="Label1" Text="Já sou cadastrado:" class="lblLogin">Já sou cadastrado:</label>
+        <form method="post" action="/Login/LoginEm">
+            <input id="Text1" name="e.Nome" type="text" placeholder="Usuário" />
+            <input id="Password1" name="e.CpfDono" type="text" placeholder="CPF" />
+            <input id="Button1" type="submit" value="Entrar" class="btn" />
+        </form>
+    </div>
+    <hr class="hrCadastro" id="linha" style="visibility: hidden">
+    <label style="visibility:hidden" ID="Label2" value="Quero me cadastrar: " class="lblCadastrar">Quero me cadastrar:</label>
     <div class="btns" id="btns">
-
         <input type="button" ID="btnEmpresa" class="Button2" runat="server" value="Empresa" onclick="Cadastro(1)" /><input type="button" class="Button3" ID="btnCliente" onclick="Cadastro(2)" runat="server" value="Cliente" />
     </div>
-    <form action="/Login/CadastroEm" method="get">
-    <div class="box-btn" id="box1" runat="server">
-        <input type="text" ID="txtEmailEmpresa" placeholder="Digite o e-mail da empresa" class="txtEmpresa" runat="server" Visible="false">
-        <input type="text" ID="txtCelularEmpresa" placeholder="Digite o telefone da empresa" class="txtEmpresa" runat="server" Visible="false">
-        <input type="text" ID="txtNomeEmpresa" placeholder="Digite o nome da empresa" class="txtEmpresa" runat="server" Visible="false">
-        <input type="text" ID="txtCPFEmpresa" placeholder="Digite o CPF do dono da empresa" class="txtEmpresa" runat="server" Visible="false">
-        <input type="text" ID="txtRGEmpresa" placeholder="Digite o RG do dono da empresa" class="txtEmpresa" runat="server" Visible="false">
-        <input type="text" ID="txtOrgaoEmpresa" placeholder="Digite o órgão emissor da empresa" class="txtEmpresa" runat="server" Visible="false">
-        <input type="button" ID="btnCadastrarEmpresa" class="btnCadastrar" runat="server" value="Cadastrar" Visible="false" <!--onclick="PrincipalDentroEmpresa.aspx" -->/>
-    </div>
-        </form>
+    <form action="/Login/CadastroEm" method="post">
+        <div class="box-btn" id="box1" runat="server">
+            <input type="text" ID="txtEmailEmpresa" name="e.Email" placeholder="Digite o e-mail da empresa" class="txtEmpresa" runat="server" Visible="false">        <input type="text" ID="txtNomeEmpresa" name="e.Nome" placeholder="Digite o nome da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtCPFEmpresa" name="e.CpfDono" placeholder="Digite o CPF do dono da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtRGEmpresa" name="e.RgDono" placeholder="Digite o RG do dono da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtOrgaoEmpresa" name="e.OrgaoEmissor" placeholder="Digite o órgão emissor da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="submit" ID="btnCadastrarEmpresa" class="btnCadastrar" runat="server" value="Cadastrar" Visible="false"/>
+        </div>
+    </form>
     <form action="~/Login/CadastroCli" method="post">
         <div class="box-btn2" id="box2" runat="server">
             <input type="text" ID="txtNomeCliente" name="c.Nome" placeholder="Digite o nome do cliente" class="txtEmpresa" runat="server" Visible="false">
@@ -62,14 +68,14 @@
             <input type="text" ID="txtSenhaCliente" name="c.Senha" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" Visible="false">
             <input type="text" ID="txtSenhaNovCliente" placeholder="Digite a senha novamente do cliente" class="txtEmpresa" runat="server" Visible="false">
             <!--<asp:Label ID="lblPreferencia" CssClass="lblCliente" runat="server" Visible="false"></asp:Label>
-    <asp:TextBox ID="txtDDDCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>-->
+            <asp:TextBox ID="txtDDDCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>-->
             <input type="text" ID="txtCelularCliente" name="c.Telefone" placeholder="Digite o celular do cliente" class="txtEmpresa" runat="server" Visible="false">
             <input type="checkbox" ID="chkTermos" class="chkCliente" runat="server" Visible="false" />
             <label ID="lblTermos" class="lblCliente" runat="server" Visible="false"></label>
             <!--<input type="button" ID="btnCadastrarCliente" class="btnCadastrar" value="Cadastrar" runat="server" Visible="false" <!--onclick="Cadastrar(2)"-->
             <input type="submit" value="Cadastrar" />
         </div>
-        </form>
+    </form>
     <footer class="s-mLogin">
         <ul class="menuFooter">
             <li><a href="Sobre nós.aspx">Sobre nós</a></li>

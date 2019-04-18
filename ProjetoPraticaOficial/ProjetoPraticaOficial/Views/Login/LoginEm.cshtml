@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LoginEmpresa</title>
+    <link rel="stylesheet" href="~/Content/estiloDentro.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo"></div>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="menu">
+            <a href="~/Controllers/LoginController.cs">Editar Dados</a>
+            <a href="Pergunta.aspx">Adicionar Produto</a>
+            <a href="Login.aspx">Pedidos a Realizar</a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+            <form method="post" action="/Login/EditarDadosEm">
+                <label ID="Label1" runat="server" Text="Editar Dados da Empresa:" Width=440px CssClass="lblLogin"></label>
+                <input id="txtNomeEm" type="text" name="e.Nome" placeholder="Nome" />
+                <input id="txtCpf" type="text" name="e.CpfDono" placeholder="CPF" />
+                <input id="txtEmail" type="text" name="e.Email" placeholder="E-mail" />
+                <input id="txtRg" type="text" name="e.RgDono" placeholder="RG" />
+                <input id="txtOrgao" type="text" name="e.OrgaoEmissor" placeholder="Orção Emissor" />
+                <input id="Button2" onclick="Cancelar(1)" type="button" value="Cancelar" class="btn" />
+                <input id="Button1" type="submit" value="Aplicar" class="btn" />
+            </form>
+        </ul>
+    </div>
+</body>
+</html>

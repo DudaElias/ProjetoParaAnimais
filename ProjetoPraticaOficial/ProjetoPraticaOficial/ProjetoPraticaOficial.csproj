@@ -173,10 +173,7 @@
     <Content Include="Imagens\perfil.png" />
     <Content Include="Imagens\racao-cachorro-gato-escolha-600x399.jpg" />
     <Content Include="Content\estilo.css" />
-    <Content Include="Layout\Pergunta.aspx" />
-    <Content Include="Layout\Principal.aspx" />
     <Content Include="Script\cadastro.js" />
-    <Content Include="Layout\Sobre nós.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -185,39 +182,31 @@
     <Compile Include="Controllers\PerfilEmController.cs" />
     <Compile Include="Controllers\PerfilUsuController.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\LojaDAO.cs" />
     <Compile Include="DAO\LoginContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Layout\Base.master.cs">
-      <DependentUpon>Base.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Layout\Pergunta.aspx.cs">
-      <DependentUpon>Pergunta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Layout\Principal.aspx.cs">
-      <DependentUpon>Principal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Loja.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Layout\Sobre nós.aspx.cs">
-      <DependentUpon>Sobre nós.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="Layout\Base.master" />
     <None Include="packages.config" />
     <Content Include="Views\Login\Cadastro.cshtml" />
-    <Content Include="Views\PerfilUsu\Perfil.cshtml" />
-    <Content Include="Views\PerfilEm\PerfilEmpresa.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\LoginCli.cshtml" />
     <Content Include="Views\Login\LoginEfetudo.cshtml" />
     <Content Include="Views\Login\CadastroCli.cshtml" />
+    <Content Include="Views\Login\CadastroEm.cshtml" />
+    <Content Include="Views\Login\LoginEm.cshtml" />
+    <Content Include="Views\Login\EditarEm.cshtml" />
+    <Content Include="Views\Login\EditarDadosEm.cshtml" />
+    <Content Include="Views\Login\Principal.cshtml" />
+    <Content Include="Views\Login\Base.cshtml" />
+    <Content Include="Views\Login\Pergunta.cshtml" />
+    <Content Include="Views\Login\SobreNos.cshtml" />
+    <Content Include="Views\Login\EditarDadosCli.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
