@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ProjetoPraticaOficial.DAO;
-using ProjetoPraticaOficial.Models;
+using ProjetoPraticaOficial.Models;
+
 
 namespace ProjetoPraticaOficial.Controllers
 {
@@ -106,7 +107,7 @@ namespace ProjetoPraticaOficial.Controllers
             return View();
         }
 
-        public ActionResult AdicionarProduto()
+        public ActionResult AdicionarProduto(Produto p)
         {
             return View();
         }
