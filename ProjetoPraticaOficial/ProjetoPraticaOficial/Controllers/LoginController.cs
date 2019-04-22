@@ -49,7 +49,7 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult LoginEm(Loja e)
         {
             LojaDAO dao = new LojaDAO();
-            Loja lo = dao.BuscaPorNome(e.Nome);
+            lo = dao.BuscaPorNome(e.Nome);
             if (lo.CpfDono == e.CpfDono)
                 return View();
             return null;
@@ -107,8 +107,16 @@ namespace ProjetoPraticaOficial.Controllers
             return View();
         }
 
-        public ActionResult AdicionarProduto(Produto p)
+        public ActionResult AdicionarProduto(Produto p, string n)
         {
+            FiltroDAO fDao = new FiltroDAO();
+            ProdutoDAO dao = new ProdutoDAO();
+            p.CodLoja = lo.Id;
+            if (fDao.BuscaPorNome(n) != null)
+            {
+                p.CodFiltro = fDao.BuscaPorNome(n).Id;
+                dao.Adiciona(p);
+            }
             return View();
         }
     }
