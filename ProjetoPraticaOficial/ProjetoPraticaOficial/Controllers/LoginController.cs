@@ -40,6 +40,8 @@ namespace ProjetoPraticaOficial.Controllers
         {
             ClienteDAO dao = new ClienteDAO();
             cli = dao.BuscaPorNome(c.Nome);
+            HttpCookie cookie = new HttpCookie("cli", cli.Nome);
+            Response.Cookies.Add(cookie);
             if (cli.Senha == c.Senha)
                 return View();
             return null;
@@ -50,6 +52,9 @@ namespace ProjetoPraticaOficial.Controllers
         {
             LojaDAO dao = new LojaDAO();
             lo = dao.BuscaPorNome(e.Nome);
+            HttpCookie cookie = new HttpCookie("lo", lo.Id.ToString());
+            cookie.Expires = DateTime.Now.AddHours(1);
+            Request.Cookies.Add(cookie);
             if (lo.CpfDono == e.CpfDono)
                 return View();
             return null;
@@ -107,11 +112,17 @@ namespace ProjetoPraticaOficial.Controllers
             return View();
         }
 
-        public ActionResult AdicionarProduto(Produto p, string n)
+        public ActionResult AdicionarProduto()
         {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AdicionarProdutoVerdade(Produto p, string n)
+        {
+
             FiltroDAO fDao = new FiltroDAO();
             ProdutoDAO dao = new ProdutoDAO();
-            p.CodLoja = lo.Id;
+            p.CodLoja = Convert.ToInt32(Request.Cookies.Get("lo"));
             if (fDao.BuscaPorNome(n) != null)
             {
                 p.CodFiltro = fDao.BuscaPorNome(n).Id;
