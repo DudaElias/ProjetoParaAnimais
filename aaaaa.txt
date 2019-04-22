@@ -1,5 +1,10 @@
-Passar parte de dentro para cshtml
-Encaminhar uma página para outra em cshtml
-Banco de Dados
-Footer
-Responsividade
+Adicionar Produto
+Editar Dados Cliente e Empresa
+Pesquisa
+Filtros
+Pedido
+Aparecer pedidos para a Empresa
+Footer (cadastro e parte interna)
+Responsividade (cadastro e parte interna)
+
+Gráfico de Pareto

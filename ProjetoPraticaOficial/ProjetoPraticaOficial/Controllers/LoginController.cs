@@ -100,5 +100,15 @@ namespace ProjetoPraticaOficial.Controllers
         {
             return View();
         }
+
+        public ActionResult EditarDadosEm()
+        {
+            return View();
+        }
+
+        public ActionResult AdicionarProduto()
+        {
+            return View();
+        }
     }
 }
