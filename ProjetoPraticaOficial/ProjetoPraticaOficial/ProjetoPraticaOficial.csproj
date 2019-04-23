@@ -210,6 +210,7 @@
     <Content Include="Views\Login\EditarDadosCli.cshtml" />
     <Content Include="Views\Login\CadastroEm.cshtml" />
     <Content Include="Views\Login\AdicionarProduto.cshtml" />
+    <Content Include="Views\Login\AdicionarProdutoVerdade.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

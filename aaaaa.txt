@@ -1,4 +1,4 @@
-Adicionar Produto
+Cookies Cliente e Empresa
 Editar Dados Cliente e Empresa
 Pesquisa
 Filtros

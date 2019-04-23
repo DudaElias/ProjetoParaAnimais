@@ -130,5 +130,12 @@ namespace ProjetoPraticaOficial.Controllers
             }
             return View();
         }
+
+        public ActionResult FazerPesquisa(string pesquisa)
+        {
+            ProdutoDAO dao = new ProdutoDAO();
+            Produto p = dao.BuscaPorNome(pesquisa);
+            return View();
+        }
     }
 }
