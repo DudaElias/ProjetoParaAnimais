@@ -97,6 +97,22 @@ namespace ProjetoPraticaOficial.Controllers
             return View();
         }
 
+        public ActionResult CadastroLoja()
+        {
+            return View();
+        }
+        public ActionResult CriarLoginLoja()
+        {
+            return View();
+        }
+        public ActionResult CadastroCliente()
+        {
+            return View();
+        }
+        public ActionResult CriarLoginCliente()
+        {
+            return View();
+        }
         public ActionResult LoginCli()
         {
             return View();

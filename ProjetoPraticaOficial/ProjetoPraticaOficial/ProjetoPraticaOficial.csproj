@@ -211,6 +211,10 @@
     <Content Include="Views\Login\CadastroEm.cshtml" />
     <Content Include="Views\Login\AdicionarProduto.cshtml" />
     <Content Include="Views\Login\AdicionarProdutoVerdade.cshtml" />
+    <Content Include="Views\Login\CadastroLoja.cshtml" />
+    <Content Include="Views\Login\CriarLoginLoja.cshtml" />
+    <Content Include="Views\Login\CadastroCliente.cshtml" />
+    <Content Include="Views\Login\CriarLoginCliente.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

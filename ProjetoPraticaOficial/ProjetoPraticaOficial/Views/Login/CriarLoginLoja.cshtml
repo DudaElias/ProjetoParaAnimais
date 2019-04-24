@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CriarLoginLoja</title>
+
+    <script type="text/javascript" src="~/Script/cadastro.js"></script>
+    <link rel="stylesheet" href="~/Content/estilo.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo"></div>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="menu">
+            <a href="SobreNos">Sobre nós</a>
+            <a href="Pergunta">FAQ</a>
+            <a href="CadastroLoja">Loja</a>
+            <a href="CadastroCliente">Cliente</a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </div>
+
+    <form action="/Login/CadastroEm" method="post">
+        <div class="box-btn" id="box1" runat="server">
+            <label ID="Label2" value="Quero me cadastrar: " class="lblCadastrar">Quero me cadastrar:</label>
+
+            <input type="text" ID="txtEmailEmpresa" name="e.Email" placeholder="Digite o e-mail da empresa" class="txtEmpresa" runat="server" Visible="false">        <input type="text" ID="txtNomeEmpresa" name="e.Nome" placeholder="Digite o nome da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtCPFEmpresa" name="e.CpfDono" placeholder="Digite o CPF do dono da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtRGEmpresa" name="e.RgDono" placeholder="Digite o RG do dono da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtOrgaoEmpresa" name="e.OrgaoEmissor" placeholder="Digite o órgão emissor da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="submit" ID="btnCadastrarEmpresa" class="btnCadastrar" runat="server" value="Cadastrar" Visible="false" />
+        </div>
+    </form>
+</body>
+</html>
