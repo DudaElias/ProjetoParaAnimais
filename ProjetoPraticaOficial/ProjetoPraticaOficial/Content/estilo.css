@@ -392,9 +392,8 @@
 .box {
     width: 300px;
     padding: 40px;
-    position: absolute;
-    top: 55%;
-    left: 30%;
+    margin-top:25em;
+    margin-left: 50em;
     transform: translate(-50%, -50%);
     text-align: center;
     padding-bottom: 150px;
@@ -457,25 +456,14 @@
         color: white;
     }
 
-.hrCadastro {
-    height: 500px;
-    width: 1px;
-    background: #5B5A5E;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-}
-
 .box-btn {
     width: 500px;
     padding: 50px;
-    position: absolute;
-    top: 55%;
-    left: 65%;
+    margin-top: 20em;
+    margin-left:50em;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: -100;
-    visibility: hidden;
 }
 
 .btns {
@@ -493,9 +481,6 @@
     color: black;
     font-weight: bold;
     font-size: 30px;
-    position: absolute;
-    top: 20%;
-    left: 55%;
     height: 50px;
 }
 
@@ -568,12 +553,10 @@
 .box-btn2 {
     width: 500px;
     padding: 50px;
-    position: absolute;
-    top: 55%;
-    left: 65%;
+    margin-left: 50em;
+    margin-top: 20em;
     transform: translate(-50%, -50%);
     text-align: center;
-    visibility: hidden;
     z-index: -100;
 }
 

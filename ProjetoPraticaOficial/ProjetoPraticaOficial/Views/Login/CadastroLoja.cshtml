@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CadastroLoja</title>
+
+    <script type="text/javascript" src="~/Script/cadastro.js"></script>
+    <link rel="stylesheet" href="~/Content/estilo.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo"></div>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="menu">
+            <a href="SobreNos">Sobre nós</a>
+            <a href="Pergunta">FAQ</a>
+            <a href="CadastroLoja">Loja</a>
+            <a href="CadastroCliente">Cliente</a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </div>
+    <div class="box" id="boxEm">
+        <label ID="Label1" Text="Já sou cadastrado:" class="lblLogin">Já sou cadastrado:</label>
+        <form method="post" action="/Login/LoginEm">
+            <input id="Text1" name="e.Nome" type="text" placeholder="Usuário" />
+            <input id="Password1" name="e.CpfDono" type="text" placeholder="CPF" />
+            <input id="Button1" type="submit" value="Entrar" class="btn" />
+            <a href="CriarLoginLoja">Ainda não tenho um cadastro</a>
+        </form>
+    </div>
+</body>
+</html>

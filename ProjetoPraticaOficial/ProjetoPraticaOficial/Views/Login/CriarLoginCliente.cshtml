@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CriarLoginCliente</title>
+
+    <script type="text/javascript" src="~/Script/cadastro.js"></script>
+    <link rel="stylesheet" href="~/Content/estilo.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo"></div>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="menu">
+            <a href="SobreNos">Sobre nós</a>
+            <a href="Pergunta">FAQ</a>
+            <a href="CadastroLoja">Loja</a>
+            <a href="CadastroCliente">Cliente</a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </div>
+    <form action="~/Login/CadastroCli" method="post">
+        <div class="box-btn2" id="box2" runat="server">
+            <label ID="Label2" value="Quero me cadastrar: " class="lblCadastrar">Quero me cadastrar:</label>
+
+            <input type="text" ID="txtNomeCliente" name="c.Nome" placeholder="Digite o nome do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtEmailCliente" name="c.Email" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtCpfCliente" name="c.Cpf" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtSenhaCliente" name="c.Senha" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtSenhaNovCliente" placeholder="Digite a senha novamente do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <!--<asp:Label ID="lblPreferencia" CssClass="lblCliente" runat="server" Visible="false"></asp:Label>
+    <asp:TextBox ID="txtDDDCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>-->
+            <input type="text" ID="txtCelularCliente" name="c.Telefone" placeholder="Digite o celular do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="checkbox" ID="chkTermos" class="chkCliente" runat="server" Visible="false" />
+            <label ID="lblTermos" class="lblCliente" runat="server" Visible="false"></label>
+            <!--<input type="button" ID="btnCadastrarCliente" class="btnCadastrar" value="Cadastrar" runat="server" Visible="false" <!--onclick="Cadastrar(2)"-->
+            <input type="submit" value="Cadastrar" class="btnCadastrar" />
+        </div>
+    </form>
+</body>
+</html>
