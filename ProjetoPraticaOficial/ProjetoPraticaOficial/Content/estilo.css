@@ -136,40 +136,12 @@
 .s-mPrincipal {
     background: #34495e;
     width: 100%;
-    height: 250px;
-    position: absolute;
-    bottom: 0%;
-}
-/*
-.rodape{
-    
-    width:100%;
-    float: left;
-    padding: 3% 4%; 
-    text-align: center;
-    background: linear-gradient(to right, #ce2e3c, #da6709);
+   height:250px;
 }
 
-.social-icons a 
-{
-    font-size: 1.5em;
-    color: rgba(255,255,255,0.7);
-    margin-right: 3%;
-}
-
-.social-icons a:last-child {
-    margin-right: 0;
-}
-
-.social-icons a:hover {
-    color: rgb(255,255,255);
-}
-*/
 .menuFooterP {
-    position: absolute;
-    top: 20%;
-    float: left;
     padding: 0px 10px;
+    margin-top: 2em;
     list-style-type: none;
     display: inline-block;
     text-decoration: none;
@@ -182,7 +154,12 @@
     border-color: grey;
 }
 .menuFooterD {
-    position: absolute; top: 20%; left: 15%; padding: 0px 10px; list-style-type: none; display: inline-block; text-decoration: none;
+     
+     padding: 0px 10px;
+     margin-top: 0em;
+     list-style-type: none; 
+     display: inline-block; 
+     text-decoration: none;
 }
 
 .creditosFooter {
@@ -190,28 +167,17 @@
 }
 
 .fPetFeed {
-    margin-top: 0.5em;
+    margin-bottom: -1em;
     margin-left:2%;
     font-size: 150%;
-    left: 2%;
     font-weight: bold;
-    top: 3%;
     color: snow;
-}
-
-.fDescubra {
-    margin-top: -1.2em;
-    margin-left: 15%;
-    font-size: 150%;
-    font-weight: bold;
-    color:snow;
 }
 
 .fSociais {
     margin-left:86.5%;
-    margin-top:-1em;
+    margin-top:-5em;
     font-size: 150%;
-    left: 81%;
     font-weight: bold;
     top: 14%;
     color: snow;
@@ -235,13 +201,10 @@
 }
 
 .menuFooterP a {
-    position: relative;
-    float: left;
     color: snow;
     text-decoration: none;
     font-size: 125%;
     transition: 0.2s;
-    left: 19%;
     text-shadow: black 0.1em 0.1em 0.2em;
 }
 
@@ -251,9 +214,6 @@
 }
 
 .menuFooterD a {
-    margin-left: -0.5em;
-    position: relative;
-    float: left;
     color: snow;
     text-decoration: none;
     font-size: 125%;
@@ -329,8 +289,11 @@
 }
 
 .s-mPrincipal {
-    grid-row-start: 2;
-    grid-row-end: 3;
+}
+
+.s-mPrincipal ul{
+
+
 }
 
     .s-mPrincipal a:hover > i {
