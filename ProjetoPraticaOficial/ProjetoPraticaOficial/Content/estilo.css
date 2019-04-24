@@ -129,9 +129,7 @@
     background: #34495e;
     height: 150px;
     clear: both;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    margin-bottom: 0em;
     width: 100%;
 }
 
@@ -178,29 +176,22 @@
 }
 
 .hrFooter {
-    margin-bottom:1em;
+    margin-top:7em;
     height:2px;
     width: 99.8%;
     border-color: grey;
 }
-
 .menuFooterD {
-    position: absolute;
-    top: 20%;
-    left: 15%;
-    padding: 0px 10px;
-    list-style-type: none;
-    display: inline-block;
-    text-decoration: none;
+    position: absolute; top: 20%; left: 15%; padding: 0px 10px; list-style-type: none; display: inline-block; text-decoration: none;
 }
 
 .creditosFooter {
-   margin-top:-100em;
    color:white;
 }
 
 .fPetFeed {
-    position: absolute;
+    margin-top: 0.5em;
+    margin-left:2%;
     font-size: 150%;
     left: 2%;
     font-weight: bold;
@@ -209,14 +200,16 @@
 }
 
 .fDescubra {
-    margin-top: 1em;
+    margin-top: -1.2em;
+    margin-left: 15%;
     font-size: 150%;
     font-weight: bold;
     color:snow;
 }
 
 .fSociais {
-    position: absolute;
+    margin-left:86.5%;
+    margin-top:-1em;
     font-size: 150%;
     left: 81%;
     font-weight: bold;
@@ -230,6 +223,11 @@
     height: 150px;
     position: absolute;
     bottom: -10%;
+}
+
+
+@media screen and (max-width: 900px) {
+
 }
 
 .menuFooterP a:hover {
@@ -253,13 +251,13 @@
 }
 
 .menuFooterD a {
+    margin-left: -0.5em;
     position: relative;
     float: left;
     color: snow;
     text-decoration: none;
     font-size: 125%;
     transition: 0.2s;
-    left: 14%;
     text-shadow: black 0.1em 0.1em 0.2em;
 }
 
@@ -343,10 +341,10 @@
         color: white;
     }
 
-    .s-mPrincipal span {
-        margin-top: 0.2em;
+    .creditosFooter
+    {
         color: white;
-        text-align: justify;
+        margin-top: 10em;
     }
 
 .s-mPer .icone:hover {
@@ -716,7 +714,6 @@
 }
 
 .faq {
-    position: absolute;
-    top: 20%;
+    margin-top: 5em;
     width: 100%;
 }
