@@ -40,8 +40,9 @@ namespace ProjetoPraticaOficial.Controllers
         {
             ClienteDAO dao = new ClienteDAO();
             cli = dao.BuscaPorNome(c.Nome);
-            HttpCookie cookie = new HttpCookie("cli", cli.Nome);
-            Response.Cookies.Add(cookie);
+            FiltroDAO daoF = new FiltroDAO();
+            IList<Filtro> lista = daoF.Lista();
+            ViewBag.Filtro = lista;
             if (cli.Senha == c.Senha)
                 return View();
             return null;
@@ -115,6 +116,9 @@ namespace ProjetoPraticaOficial.Controllers
         }
         public ActionResult LoginCli()
         {
+            FiltroDAO dao = new FiltroDAO();
+            IList<Filtro> lista = dao.Lista();
+            ViewBag.Filtro = lista;
             return View();
         }
 
