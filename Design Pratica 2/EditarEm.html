@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditarEm</title>
+
+    <link rel="stylesheet" href="~/Content/estiloDentro.css" />
+</head>
+<body>
+    <div>
+        <div class="box">
+            <form method="post" action="/Cadastro/EditarDadosEm">
+                <label ID="Label1" runat="server" Text="Editar Dados da Empresa:" Width=440px CssClass="lblLogin"></label>
+                <input id="txtNomeEm" type="text" name="e.Nome" placeholder="Nome" />
+                <input id="txtCpf" type="text" name="e.CpfDono" placeholder="CPF" />
+                <input id="txtEmail" type="text" name="e.Email" placeholder="E-mail" />
+                <input id="txtRg" type="text" name="e.RgDono" placeholder="RG" />
+                <input id="txtOrgao" type="text" name="e.OrgaoEmissor" placeholder="Orção Emissor" />
+                <input id="Button2" onclick="Cancelar(1)" type="button" value="Cancelar" class="btn" />
+                <input id="Button1" type="submit" value="Aplicar" class="btn" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

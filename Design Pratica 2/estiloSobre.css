@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Inconsolata|Poiret+One|Signika|Slabo+27px');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Slabo 27px', serif;
+}
+
+.sobre {
+    height: 100%;
+}
+
+.header {
+    height: 150px;
+    background: #34495e;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.logo {
+    line-height: 100px;
+    position: absolute;
+    margin-top: 0em;
+    float: left;
+    background-image: url("Imagens/Logo.png");
+    width: 200px;
+    height: 7em;
+}
+
+.menu {
+    float: right;
+    line-height: 150px;
+    z-index: 90;
+}
+
+    .menu a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 0 10px;
+        transition: 0.4s;
+    }
+
+.show-menu-btn, .hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn {
+    float: right;
+    margin-top: -1em;
+}
+
+    .show-menu-btn i {
+        line-height: 150px;
+    }
+
+    .menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+        color: #e67e22;
+    }
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+@media screen and (max-width: 800px) {
+    .show-menu-btn, .hide-menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+
+        .menu a {
+            display: block;
+            padding: 20px;
+        }
+
+    .hide-menu-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #chk:checked ~ .menu {
+        right: 0;
+    }
+
+}
+
+
+.s-mSobre {
+    background: #34495e;
+    width: 100%;
+    overflow: hidden;
+    height: 150px;
+    clear: both;
+    margin-bottom: 0em;
+}
+.menuFooterP {
+    position: absolute;
+    top: 20%;
+    float: left;
+    padding: 0px 10px;
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.hrFooter {
+    position: absolute;
+    top: 79%;
+    left: 0%;
+    width: 99.8%;
+    border-color: grey;
+}
+
+.menuFooterD {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    padding: 0px 10px;
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.creditosFooter {
+    position: absolute;
+    float: left;
+    top: 85%;
+    left: 1%;
+    float: left;
+}
+
+.fPetFeed {
+    position: absolute;
+    font-size: 150%;
+    left: 2%;
+    font-weight: bold;
+    top: 3%;
+    color: snow;
+}
+
+.fDescubra {
+    position: absolute;
+    font-size: 150%;
+    left: 17%;
+    font-weight: bold;
+    top: 3%;
+    color:snow;
+}
+
+.fSociais {
+    position: absolute;
+    font-size: 150%;
+    left: 81%;
+    font-weight: bold;
+    top: 14%;
+    color: snow;
+}
+.s-m ul li {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.icone {
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    background: white;
+    color: #34495e;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-size: 24px;
+    float: right;
+    margin: 20px 8px;
+}
+
+.s-mSobre .icone:hover {
+    background: #e67e22;
+}
+
+.s-mSobre a i {
+    transition: 0.4s all;
+}
+
+
+.s-mSobre a:hover > i {
+    transform: scale(1.4) rotate(25deg)
+}
+
+.s-mSobre span i {
+    color: white;
+}
+
+.s-mSobre span {
+    float: right;
+    color: white;
+    /*left: 25%;*/
+    /*min-height:100px;*/
+    line-height: 250px;
+    /*width: 50%;*/
+    text-align: justify;
+}
+
+
+
+.sobreNos {
+    width: 100%;
+    height: 680px;
+    position: absolute;
+    top: 15%;
+}
+
+.primeiroSobre {
+    background: url("Imagens/racao-cachorro-gato-escolha-600x399.jpg");
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lema {
+    background: #5375A3;
+    border-radius: 24px;
+    border: 1px solid #34495e;
+    width: 500px;
+    height: 400px;
+    margin: 40px auto;
+    padding: 40px 30px;
+}
+
+.span1 {
+    color: #74C4E3;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.span2 {
+    color: white;
+    font-size: 17px;
+}
+
+
+.segundoSobre {
+    background: white;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    height: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primeiroDepoimento {
+    background: #5375A3;
+    border-radius: 10px;
+    border: 1px solid #34495e;
+    width: 300px;
+    height: 300px;
+    margin: 40px 20px;
+    padding: 40px 30px;
+}
+
+.segundoDepoimento {
+    background: #5375A3;
+    border-radius: 10px;
+    border: 1px solid #34495e;
+    width: 300px;
+    height: 300px;
+    margin: 40px 0em;
+    padding: 40px 30px;
+}
+
+    .primeiroDepoimento span, .segundoDepoimento span {
+        font-size: 20px;
+    }
+
+.span3 {
+    color: #596163;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px)
+{
+    
+    .primeiroDepoimento
+    {
+        height: 350px;
+    }
+    .segundoDepoimento
+    {
+        height: 350px;
+    }
+}
