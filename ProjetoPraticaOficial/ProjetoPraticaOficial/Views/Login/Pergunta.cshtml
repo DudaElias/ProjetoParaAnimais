@@ -11,10 +11,10 @@
     <title>Perguntas</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <link rel="stylesheet" type="text/css" href="../Content/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/estiloPergunta.css" />
 </head>
 <body>
-    <div>
+    <div class="geral">
         <div class="header">
             <div class="logo"></div>
             <input type="checkbox" id="chk">
@@ -25,8 +25,7 @@
             <ul class="menu">
                 <a href="SobreNos">Sobre nós</a>
                 <a href="Pergunta">FAQ</a>
-                <a href="CadastroLoja">Loja</a>
-                <a href="CadastroCliente">Cliente</a>
+                <a href="Cadastro">Entrar ou cadastrar</a>
                 <label for="chk" class="hide-menu-btn">
                     <i class="fas fa-times"></i>
                 </label>
@@ -118,30 +117,33 @@
                 <!--link "Saber mais sobre a gente" e abrir o sobre nos -->
             </div>
         </div>
-        <footer class="s-mPer">
-            <ul class="menuFooter">
+
+
+        <div class="s-mPer">
+            <p class="fPetFeed">PetFeed</p>
+            <ul class="menuFooterP">
                 <li><a href="Sobre nós.aspx">Sobre nós</a></li>
                 <li><a href="Pergunta.aspx">Fale conosco</a></li>
             </ul>
-            <ul>
+
+            <p class="fDescubra">Descubra</p>
+            <ul class="menuFooterD">
                 <li><a href="#">Como pedir</a></li>
                 <li><a href="#">Cadastre sua loja</a></li>
                 <li><a href="#">Cadastre-se</a></li>
-
             </ul>
-
             <a class="icone" href="https://www.facebook.com/petfeed.shoping/?epa=SEARCH_BOX"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
 
             <a href="#" class="icone"><i class="fab fa-twitter"></i></a>
+            <!--
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a> -->
 
-            <!--<a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <hr class="hrFooter" />
+            <span class="creditosFooter" id="creditos">PetFeed <i class="far fa-copyright"></i>Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
 
-            <a href="#"><i class="fab fa-youtube"></i></a>-->
-
-            <a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
-            <span>PetFeed <i class="far fa-copyright"></i>Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
-
-        </footer>
+        </div>
         <script>
             var coll = document.getElementsByClassName("collapsible");
             var i;

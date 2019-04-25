@@ -165,7 +165,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\estiloCadastro.css" />
     <Content Include="Content\estiloDentro.css" />
+    <Content Include="Content\estiloPergunta.css" />
+    <Content Include="Content\estiloPrincipal.css" />
+    <Content Include="Content\estiloSobre.css" />
     <Content Include="Global.asax" />
     <Content Include="Imagens\animais.jpg" />
     <Content Include="Imagens\graos-481.jpg" />

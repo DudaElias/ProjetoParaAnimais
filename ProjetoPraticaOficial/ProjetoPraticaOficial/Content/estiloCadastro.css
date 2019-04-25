@@ -1,0 +1,437 @@
+
+/*BASE DO DESIGN DA PÁGINA*/
+@import url('https://fonts.googleapis.com/css?family=Acme|Inconsolata|Poiret+One|Signika|Slabo+27px');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Slabo 27px', serif;
+}
+
+.sobre {
+    height: 100%;
+}
+
+.header {
+    height: 150px;
+    background: #34495e;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.logo {
+    line-height: 100px;
+    position: absolute;
+    top: 3%;
+    float: left;
+    background-image: url("Imagens/Logo.png");
+    width: 200px;
+    height: 7em;
+}
+
+.menu {
+    float: right;
+    line-height: 150px;
+    z-index: 90;
+}
+
+    .menu a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 0 10px;
+        transition: 0.4s;
+    }
+
+.show-menu-btn, .hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+    .show-menu-btn i {
+        line-height: 150px;
+    }
+
+    .menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+        color: #e67e22;
+    }
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+
+@media screen and (max-width: 800px) {
+    .show-menu-btn, .hide-menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+
+        .menu a {
+            display: block;
+            padding: 20px;
+        }
+
+    .hide-menu-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #chk:checked ~ .menu {
+        right: 0;
+    }
+}
+
+.menuFooterP {
+    position: absolute;
+    top: 20%;
+    float: left;
+    padding: 0px 10px;
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.hrFooter {
+    position: absolute;
+    top: 79%;
+    left: 0%;
+    width: 99.8%;
+    border-color: grey;
+}
+
+.menuFooterD {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    padding: 0px 10px;
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.creditosFooter {
+    position: absolute;
+    float: left;
+    top: 85%;
+    left: 1%;
+    float: left;
+}
+
+.fPetFeed {
+    position: absolute;
+    font-size: 150%;
+    left: 2%;
+    font-weight: bold;
+    top: 3%;
+    color: snow;
+}
+
+.fDescubra {
+    position: absolute;
+    font-size: 150%;
+    left: 17%;
+    font-weight: bold;
+    top: 3%;
+    color:snow;
+}
+
+.fSociais {
+    position: absolute;
+    font-size: 150%;
+    left: 81%;
+    font-weight: bold;
+    top: 14%;
+    color: snow;
+}
+
+.s-mLogin {
+    background: #34495e;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: -10%;
+}
+
+.menuFooterP a:hover {
+    color: lightseagreen;
+}
+
+.menuFooterP a {
+    position: relative;
+    float: left;
+    color: snow;
+    text-decoration: none;
+    font-size: 125%;
+    transition: 0.2s;
+    left: 19%;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.menuFooterD a:hover {
+    color: lightseagreen;
+    
+}
+
+.menuFooterD a {
+    position: relative;
+    float: left;
+    color: snow;
+    text-decoration: none;
+    font-size: 125%;
+    transition: 0.2s;
+    left: 14%;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+
+.s-mLogin .icone:hover {
+    background: #e67e22;
+}
+
+.s-mLogin a i {
+    transition: 0.4s all;
+}
+
+
+.s-mLogin a:hover > i {
+    transform: scale(1.4) rotate(25deg)
+}
+
+.s-mLogin span i {
+    color: white;
+}
+
+.s-mLogin span {
+    float: right;
+    color: white;
+    /*left: 25%;*/
+    /*min-height:100px;*/
+    line-height: 150px;
+    /*width: 50%;*/
+    text-align: justify;
+}
+
+
+/*PÁGINA DE LOGIN*/
+
+.box {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-bottom: 150px;
+    /*background: #34495e;*/
+}
+
+.lblLogin {
+    width: 400px;
+    font-family: Courier New, Courier, monospace;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: -8%;
+    left: 0%;
+}
+
+.box input[type = "text"], .box input[ type = "password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    border: 2px solid #5B5A5E;
+    padding: 14px 10px;
+    width: 250px;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+    .box input[type = "text"]:focus, .box input[ type = "password"]:focus {
+        width: 280px;
+        border-color: #753B3B;
+    }
+
+.btn, .Button2, .Button3 {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #753B3B;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+    .btn:hover, .Button2:hover, .Button3:hover {
+        background: #753B3B;
+        color: white;
+    }
+
+.hrCadastro {
+    height: 500px;
+    width: 1px;
+    background: #5B5A5E;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+
+.box-btn {
+    width: 500px;
+    padding: 50px;
+    position: absolute;
+    top: 55%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: -100;
+    visibility: hidden;
+}
+
+.btns {
+    width: 100px;
+    padding: 40px;
+    position: absolute;
+    transition: 0.0s;
+    top: 34%;
+    left: 50%;
+}
+
+.lblCadastrar {
+    width: 400px;
+    font-family: Courier New, Courier, monospace;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    height: 50px;
+}
+
+.Button2, .Button3 {
+    position: absolute;
+    top: 25%;
+    width: 150px;
+}
+
+.Button2 {
+    left: -210%;
+    top: -70%;
+    text-align: center;
+    padding: 14px 35px;
+}
+
+.Button3 {
+    left: -100%;
+    top: -70%;
+    padding: 14px 20px;
+}
+
+.txtEmpresa {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    border: 2px solid #5B5A5E;
+    padding: 14px 10px;
+    width: 250px;
+    font-size: 12px;
+    font-weight: 500;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+    .txtEmpresa:focus {
+        content: "";
+    }
+
+.btnCadastrar {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid #753B3B;
+    padding: 10px 40px;
+    width: 200px;
+    outline: none;
+    position: relative;
+    top: 80%;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+
+.btnCadastrar:hover {
+    background: #753B3B;
+    color: white;
+}
+
+.box-btn2 {
+    width: 500px;
+    padding: 50px;
+    position: absolute;
+    top: 55%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    visibility: hidden;
+    z-index: -100;
+}
+
+.lblCliente {
+    color: #70AD47;
+}
+
+
+.chkCliente {
+    border: 2px solid #70AD47;
+    visibility: hidden;
+}
