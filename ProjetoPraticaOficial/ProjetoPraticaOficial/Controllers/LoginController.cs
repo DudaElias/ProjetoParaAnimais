@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.SessionState;
 using ProjetoPraticaOficial.DAO;
 using ProjetoPraticaOficial.Models;
 
@@ -40,6 +41,7 @@ namespace ProjetoPraticaOficial.Controllers
         {
             ClienteDAO dao = new ClienteDAO();
             cli = dao.BuscaPorNome(c.Nome);
+            HttpContext.Session.Add("cliente", cli);
             FiltroDAO daoF = new FiltroDAO();
             IList<Filtro> lista = daoF.Lista();
             ViewBag.Filtro = lista;
@@ -53,9 +55,7 @@ namespace ProjetoPraticaOficial.Controllers
         {
             LojaDAO dao = new LojaDAO();
             lo = dao.BuscaPorNome(e.Nome);
-            HttpCookie cookie = new HttpCookie("lo", lo.Id.ToString());
-            cookie.Expires = DateTime.Now.AddHours(1);
-            Request.Cookies.Add(cookie);
+            Session["loja"] = lo;
             if (lo.CpfDono == e.CpfDono)
                 return View();
             return null;
@@ -142,13 +142,16 @@ namespace ProjetoPraticaOficial.Controllers
 
             FiltroDAO fDao = new FiltroDAO();
             ProdutoDAO dao = new ProdutoDAO();
-            p.CodLoja = Convert.ToInt32(Request.Cookies.Get("lo"));
-            if (fDao.BuscaPorNome(n) != null)
+            p.CodLoja = ((Loja)Session["loja"]).Id;
+            if (fDao.BuscaPorNome(n) == null)
             {
-                p.CodFiltro = fDao.BuscaPorNome(n).Id;
-                dao.Adiciona(p);
+                Filtro f = new Filtro();
+                f.Animal = n;
+                fDao.Adiciona(f);
             }
-            return View();
+            p.CodFiltro = fDao.BuscaPorNome(n).Id;
+            dao.Adiciona(p);
+            return RedirectToAction("AdicionarProduto", "Login");
         }
 
         public ActionResult FazerPesquisa(string pesquisa)

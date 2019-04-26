@@ -14,7 +14,6 @@ namespace ProjetoPraticaOficial.DAO
             using (var context = new LoginContext())
             {
                 c.Id = 0;
-                c.CodLoja = 2;
                 context.Produto.Add(c);
                 context.SaveChanges();
             }
