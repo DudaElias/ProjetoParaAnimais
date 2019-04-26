@@ -111,17 +111,17 @@
 
 .menuFooterD {
     position: absolute;
+    margin-top: 0.5em;
     top: 20%;
-    left: 15%;
-    padding: 0px 10px;
+    left: 16.9%;
     list-style-type: none;
-    display: inline-block;
     text-decoration: none;
-
+    display: inline-block;
 }
 .menuFooterP {
     position: absolute;
-    top: 20%;
+    left: 1.3%;
+    margin-top: 0.5em;
     float: left;
     padding: 0px 10px;
     list-style-type: none;
@@ -133,7 +133,7 @@
     position: absolute;
     float: left;
     font-size: 0.9em;
-    top: 85%;
+    top: 86%;
     left: 1%;
     float: left;
 }
@@ -167,25 +167,7 @@
 
 
 
-@media screen and (max-width: 600px)
-{
-    .fDescubra
-    {
-        visibility: hidden;
-    }
-    .fPetFeed
-    {
-        visibility: hidden;
-    }
-    .menuFooterD
-    {
-        visibility: hidden;
-    }
-    .menuFooterP
-    {
-        visibility: hidden;
-    }
-}
+
 
 
 .s-mPrincipal {
@@ -214,16 +196,6 @@
     left: 0%;
     width: 99.8%;
     border-color: grey;
-}
-
-.menuFooterD {
-    position: absolute;
-    top: 20%;
-    left: 15%;
-    padding: 0px 10px;
-    list-style-type: none;
-    display: inline-block;
-    text-decoration: none;
 }
 
 .fPetFeed {
@@ -313,3 +285,42 @@
         max-width: 100%;
         margin: 20px auto;
     }
+@media screen and (max-width: 600px) {
+    .fDescubra {
+        position: absolute;
+        font-size: 150%;
+        left: 2%;
+        font-weight: bold;
+        top: 39%;
+        color: snow;
+    }
+
+    .menuFooterP {
+        position: absolute;
+        top: 12%;
+        left: 0.5%;
+        float: left;
+        padding: 0px 10px;
+        list-style-type: none;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .menuFooterD {
+        position: absolute;
+        top: 48%;
+        left: 0.5%;
+        float: left;
+        padding: 0px 10px;
+        list-style-type: none;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .s-mPrincipal {
+        background: #34495e;
+        width: 100%;
+        height: 250px;
+        margin-bottom: 0em;
+    }
+}
