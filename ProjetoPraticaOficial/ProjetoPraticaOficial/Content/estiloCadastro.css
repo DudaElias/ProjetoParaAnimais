@@ -241,13 +241,22 @@
 .box {
     width: 300px;
     padding: 40px;
-    position: absolute;
-    top: 55%;
-    left: 30%;
+    margin-top: 25em;
+    margin-left: 50em;
     transform: translate(-50%, -50%);
     text-align: center;
     padding-bottom: 150px;
     /*background: #34495e;*/
+}
+
+.boxEditar {
+    width: 300px;
+    padding: 40px;
+    margin-top: 20em;
+    margin-left: 50em;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-bottom: 150px;
 }
 
 .lblLogin {

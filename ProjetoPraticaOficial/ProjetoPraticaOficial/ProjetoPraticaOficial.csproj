@@ -200,10 +200,8 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Login\Cadastro.cshtml" />
     <Content Include="Views\Login\LoginCli.cshtml" />
     <Content Include="Views\Login\LoginEfetudo.cshtml" />
-    <Content Include="Views\Login\CadastroCli.cshtml" />
     <Content Include="Views\Login\LoginEm.cshtml" />
     <Content Include="Views\Login\EditarEm.cshtml" />
     <Content Include="Views\Login\EditarDadosEm.cshtml" />
@@ -212,7 +210,6 @@
     <Content Include="Views\Login\Pergunta.cshtml" />
     <Content Include="Views\Login\SobreNos.cshtml" />
     <Content Include="Views\Login\EditarDadosCli.cshtml" />
-    <Content Include="Views\Login\CadastroEm.cshtml" />
     <Content Include="Views\Login\AdicionarProduto.cshtml" />
     <Content Include="Views\Login\AdicionarProdutoVerdade.cshtml" />
     <Content Include="Views\Login\CadastroLoja.cshtml" />
