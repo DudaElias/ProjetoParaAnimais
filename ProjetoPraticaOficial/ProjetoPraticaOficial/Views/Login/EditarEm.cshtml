@@ -9,13 +9,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>EditarEm</title>
-
     <link rel="stylesheet" href="~/Content/estiloDentro.css" />
+    <link rel="stylesheet" href="~/Content/estiloCadastro.css" />
 </head>
 <body>
     <div>
         <div class="boxEditar">
-            <form method="post" action="/Cadastro/EditarDadosEm">
+            <form method="post" action="EditarDadosEm">
                 <label ID="Label1" runat="server" Text="Editar Dados da Empresa:" Width=440px class="lblLogin">Editar Dados da Loja:</label>
                 <input id="txtNomeEm" type="text" name="e.Nome" placeholder="Nome" />
                 <input id="txtCpf" type="text" name="e.CpfDono" placeholder="CPF" />

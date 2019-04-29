@@ -41,7 +41,7 @@ namespace ProjetoPraticaOficial.Controllers
         {
             ClienteDAO dao = new ClienteDAO();
             cli = dao.BuscaPorNome(c.Nome);
-            HttpContext.Session.Add("cliente", cli);
+            Session["cli"] = cli;
             FiltroDAO daoF = new FiltroDAO();
             IList<Filtro> lista = daoF.Lista();
             ViewBag.Filtro = lista;
@@ -55,10 +55,15 @@ namespace ProjetoPraticaOficial.Controllers
         {
             LojaDAO dao = new LojaDAO();
             lo = dao.BuscaPorNome(e.Nome);
-            Session["loja"] = lo;
+            Session["lo"] = lo;
             if (lo.CpfDono == e.CpfDono)
                 return View();
             return null;
+        }
+
+        public ActionResult LoginEm()
+        {
+            return View();
         }
 
         [HttpGet]
@@ -72,8 +77,20 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult EditarDadosEm(Loja e)
         {
             LojaDAO dao = new LojaDAO();
+            if (e.Nome == "" || e.Nome ==  null)
+                e.Nome = ((Loja)Session["lo"]).Nome;
+            if (e.CpfDono == "" || e.CpfDono ==  null)
+                e.CpfDono = ((Loja)Session["lo"]).CpfDono;
+            if (e.Email == "" || e.Email ==  null)
+                e.Email = ((Loja)Session["lo"]).Email;
+            if (e.RgDono == "" || e.RgDono ==  null)
+                e.RgDono = ((Loja)Session["lo"]).RgDono;
+            if (e.OrgaoEmissor == "" || e.OrgaoEmissor == null)
+                e.OrgaoEmissor = ((Loja)Session["lo"]).OrgaoEmissor;
+            e.Id = ((Loja)Session["lo"]).Id;
             dao.Atualiza(e);
-            return View();
+
+            return RedirectToAction("LoginEm", "Login");
         }
 
         public ActionResult Principal()
@@ -84,7 +101,6 @@ namespace ProjetoPraticaOficial.Controllers
         {
             return View();
         }
-
         public ActionResult Base()
         {
             return View();
@@ -96,6 +112,24 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult EditarDadosCli()
         {
             return View();
+        }
+        public ActionResult EditarDadosCliente(Cliente u)
+        {
+
+            ClienteDAO dao = new ClienteDAO();
+            if (u.Nome == "" || u.Nome == null)
+                u.Nome = ((Cliente)Session["cli"]).Nome;
+            if(u.Cpf == "" || u.Cpf == null)
+                u.Cpf = ((Cliente)Session["cli"]).Cpf;
+            if(u.Email == "" || u.Email == null)
+                u.Email = ((Cliente)Session["cli"]).Email;
+            if(u.Senha == "" || u.Senha == null)
+                u.Senha = ((Cliente)Session["cli"]).Senha;
+            u.Telefone = ((Cliente)Session["cli"]).Telefone;
+            u.Id = ((Cliente)Session["cli"]).Id;
+            dao.Atualiza(u);
+
+            return RedirectToAction("LoginCli", "Login");
         }
 
         public ActionResult CadastroLoja()

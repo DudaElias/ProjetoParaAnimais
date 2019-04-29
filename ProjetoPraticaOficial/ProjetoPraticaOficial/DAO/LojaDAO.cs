@@ -38,7 +38,6 @@ namespace ProjetoPraticaOficial.DAO
         {
             using (var contexto = new LoginContext())
             {
-                Loja.Id = 0;
                 contexto.Entry(Loja).State = EntityState.Modified;
                 contexto.SaveChanges();
             }
