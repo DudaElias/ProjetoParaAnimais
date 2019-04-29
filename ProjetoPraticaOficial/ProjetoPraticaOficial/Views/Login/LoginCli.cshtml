@@ -47,5 +47,16 @@
             <li class="filtro"><a class="qualFiltro">@f.Animal   <i class="fas fa-times-circle"></i></a></li>
         }
     </ul>
+
+    @foreach (var p in ViewBag.Produto)
+    {
+       
+        <div class="produto">
+            <h1>@p.Nome</h1>
+            <a style="background-image: url(@p.Imagem)"></a>
+            <h2>@p.Descricao</h2>
+            <h3>@p.CodFiltro</h3>
+        </div>
+    }
 </body>
 </html>

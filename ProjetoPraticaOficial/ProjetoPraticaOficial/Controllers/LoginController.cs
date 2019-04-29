@@ -43,8 +43,11 @@ namespace ProjetoPraticaOficial.Controllers
             cli = dao.BuscaPorNome(c.Nome);
             Session["cli"] = cli;
             FiltroDAO daoF = new FiltroDAO();
+            ProdutoDAO daoP = new ProdutoDAO();
+            IList<Produto> p = daoP.Lista();
             IList<Filtro> lista = daoF.Lista();
             ViewBag.Filtro = lista;
+            ViewBag.Produto = p;
             if (cli.Senha == c.Senha)
                 return View();
             return null;
@@ -151,8 +154,11 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult LoginCli()
         {
             FiltroDAO dao = new FiltroDAO();
+            ProdutoDAO daoP = new ProdutoDAO();
+            IList<Produto> p = daoP.Lista();
             IList<Filtro> lista = dao.Lista();
             ViewBag.Filtro = lista;
+            ViewBag.Produto = p;
             return View();
         }
 
@@ -176,7 +182,7 @@ namespace ProjetoPraticaOficial.Controllers
 
             FiltroDAO fDao = new FiltroDAO();
             ProdutoDAO dao = new ProdutoDAO();
-            p.CodLoja = ((Loja)Session["loja"]).Id;
+            p.CodLoja = ((Loja)Session["lo"]).Id;
             if (fDao.BuscaPorNome(n) == null)
             {
                 Filtro f = new Filtro();

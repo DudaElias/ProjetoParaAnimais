@@ -21,7 +21,7 @@
     padding-bottom: 150px;
     /*background: #34495e;*/
 }
-    .box input[type = "text"], .box input[ type = "password"], .box input[ type = "email"] {
+    .box input[type = "text"], .box input[ type = "password"], .box input[ type = "email"], .box input[type="url"] {
         border: 0;
         background: none;
         display: block;
@@ -38,11 +38,10 @@
         transition: 0.25s;
     }
 
-    .box input[type = "text"]:focus, .box input[ type = "password"]:focus, .box input[type = "email"]:focus
-    {
-        width: 280px;
-        border-color: #753B3B;
-    }
+        .box input[type = "text"]:focus, .box input[ type = "password"]:focus, .box input[type = "email"]:focus, .box input[ type = "url"]:focus {
+            width: 280px;
+            border-color: #753B3B;
+        }
 .lblLogin {
     width: 400px;
     font-family: Courier New, Courier, monospace;
