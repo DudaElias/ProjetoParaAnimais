@@ -1,7 +1,4 @@
-Cookies Cliente e Empresa
-Editar Dados Cliente e Empresa
 Pesquisa
-Filtros
 Pedido
 Aparecer pedidos para a Empresa
 Footer (cadastro e parte interna)
