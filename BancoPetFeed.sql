@@ -6,7 +6,6 @@ cpf varchar(14) not null,
 senha varchar(50) not null,
 telefone varchar(14) not null,
 )
-drop table Cliente
 create table Pedido(
 id int identity(1,1) primary key,
 dataPedido date not null,
@@ -38,8 +37,9 @@ codLoja int not null,
 constraint fkCodLoja foreign key (codLoja) references Loja(id),
 codFiltro int not null
 constraint fkCodFiltro foreign key(codFiltro) references Filtro(id),
+imagem varchar(max) not null,
 nome varchar(70) not null,
-descricao nText not null,
+descricao varchar(max) not null,
 preco money not null
 )
 
