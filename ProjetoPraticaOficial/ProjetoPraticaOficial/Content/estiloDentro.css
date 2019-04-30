@@ -239,6 +239,7 @@
     font-size: 20px;
     padding: 10px 10px;
     transition: 0.4s;
+    cursor:pointer;
 }
 
 .show-menu-btn-perfil {
@@ -268,6 +269,11 @@
     line-height: normal;
     transition: 0.7s;
     z-index: -2999;
+}
+
+body
+{
+    z-index: -20000000000000000;
 }
 
 #chk-perfil {

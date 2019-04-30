@@ -29,7 +29,7 @@ namespace ProjetoPraticaOficial.Controllers
             dao.Adiciona(c);
             Session["cli"] = c;
             //redirecionar para a camada de visualização
-            return RedirectToAction("LoginCli", "Login", Session["cli"]);
+            return LoginCli(c);
         }
         [HttpPost]
         public ActionResult CadastroEm(Loja e)
@@ -57,7 +57,7 @@ namespace ProjetoPraticaOficial.Controllers
             IList<Produto> p = daoP.Lista();
             ViewBag.Produto = p;
             if (cli.Senha == c.Senha)
-                return View();
+                return View("LoginCli");
             return null;
         }
         
