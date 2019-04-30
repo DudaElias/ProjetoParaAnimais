@@ -9,6 +9,10 @@
     font-family: 'Slabo 27px', serif;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 .sobre {
     height: 100%;
 }
