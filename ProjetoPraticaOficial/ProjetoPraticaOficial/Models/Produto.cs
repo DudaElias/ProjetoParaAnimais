@@ -9,9 +9,11 @@ namespace ProjetoPraticaOficial.Models
     {
         public int Id { get; set; }
         public int CodLoja { get; set; }
+
+        public string Imagem { get; set; }
         public int CodFiltro { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public string Preco { get; set; }
+        public decimal Preco { get; set; }
     }
 }

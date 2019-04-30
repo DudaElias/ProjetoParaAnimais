@@ -10,6 +10,19 @@
 }
 
 
+.boxp {
+    width: 15em;
+    height: 20em;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+    .boxp .produto {
+        width: 10em;
+        background-size: cover;
+        height: 10em;
+    }
+
 .box {
     width: 500px;
     padding: 40px;

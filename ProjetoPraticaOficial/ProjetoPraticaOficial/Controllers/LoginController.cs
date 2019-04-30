@@ -45,6 +45,9 @@ namespace ProjetoPraticaOficial.Controllers
             FiltroDAO daoF = new FiltroDAO();
             IList<Filtro> lista = daoF.Lista();
             ViewBag.Filtro = lista;
+            ProdutoDAO daoP = new ProdutoDAO();
+            IList<Produto> p = daoP.Lista();
+            ViewBag.Produto = p;
             if (cli.Senha == c.Senha)
                 return View();
             return null;
