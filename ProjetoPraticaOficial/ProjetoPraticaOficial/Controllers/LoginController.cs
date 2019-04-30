@@ -24,16 +24,24 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult CadastroCli(Cliente c)
         {
             ClienteDAO dao = new ClienteDAO();
+            if (dao.BuscaPorNome(c.Nome) != null)
+                return RedirectToAction("CadastroCliente", "Login");
             dao.Adiciona(c);
+            Session["cli"] = c;
             //redirecionar para a camada de visualização
-            return View();
+            return RedirectToAction("LoginCli", "Login", Session["cli"]);
         }
         [HttpPost]
         public ActionResult CadastroEm(Loja e)
         {
+
             LojaDAO dao = new LojaDAO();
+            if (dao.BuscaPorNome(e.Nome) != null)
+                return RedirectToAction("CadastroEmpresa", "Login");
             dao.Adiciona(e);
-            return View();
+            Session["lo"] = e;
+            //redirecionar para a camada de visualização
+            return RedirectToAction("LoginEm", "Login", Session["lo"]);
         }
 
         [HttpPost]
