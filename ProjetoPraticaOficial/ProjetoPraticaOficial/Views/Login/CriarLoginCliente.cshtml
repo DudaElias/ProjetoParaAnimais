@@ -11,7 +11,7 @@
     <title>CriarLoginCliente</title>
 
     <script type="text/javascript" src="~/Script/cadastro.js"></script>
-    <link rel="stylesheet" href="~/Content/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/estilo.css" />
 </head>
 <body>
     <div class="header">
@@ -25,7 +25,7 @@
             <a href="SobreNos">Sobre nós</a>
             <a href="Pergunta">FAQ</a>
             <a href="CadastroLoja">Loja</a>
-            <a href="CadastroCliente">Cliente</a>
+            <a href="CadastroCliente">Cliente</a> b
             <label for="chk" class="hide-menu-btn">
                 <i class="fas fa-times"></i>
             </label>
@@ -35,42 +35,46 @@
         <div class="box-btn2" id="box2" runat="server">
             <label ID="Label2" value="Quero me cadastrar: " class="lblCadastrar">Quero me cadastrar:</label>
 
-            <input type="text" ID="txtNomeCliente" name="c.Nome" placeholder="Digite o nome do cliente" class="txtEmpresa" runat="server" Visible="false">
-            <input type="text" ID="txtEmailCliente" name="c.Email" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" Visible="false">
-            <input type="text" ID="txtCpfCliente" name="c.Cpf" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" Visible="false">
-            <input type="password" ID="txtSenhaCliente" name="c.Senha" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" Visible="false">
-            <input type="password" ID="txtSenhaNovCliente" placeholder="Digite a senha novamente do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtNomeCliente" name="c.Nome" placeholder="Digite o nome do cliente" class="txtEmpresa" runat="server" Visible="false" maxlength="30">
+            @Html.ValidationMessage("c.Nome")
+            <input type="text" ID="txtEmailCliente" name="c.Email" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" Visible="false" maxlength="100">
+            <input type="text" ID="txtCpfCliente" name="c.Cpf" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" Visible="false" maxlength="14">
+            <input type="password" ID="txtSenhaCliente" name="c.Senha" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" Visible="false" maxlength="50">
+            <input type="password" ID="txtSenhaNovCliente" placeholder="Digite a senha novamente do cliente" class="txtEmpresa" runat="server" Visible="false" maxlength="50">
             <!--<asp:Label ID="lblPreferencia" CssClass="lblCliente" runat="server" Visible="false"></asp:Label>
             <asp:TextBox ID="txtDDDCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>-->
-            <input type="text" ID="txtCelularCliente" name="c.Telefone" placeholder="Digite o celular do cliente" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtCelularCliente" name="c.Telefone" placeholder="Digite o celular do cliente" class="txtEmpresa" runat="server" Visible="false" maxlength="14">
             <input type="checkbox" ID="chkTermos" class="chkCliente" runat="server" Visible="false" />
             <label ID="lblTermos" class="lblCliente" runat="server" Visible="false"></label>
             <!--<input type="button" ID="btnCadastrarCliente" class="btnCadastrar" value="Cadastrar" runat="server" Visible="false" <!--onclick="Cadastrar(2)"-->
             <input type="submit" value="Cadastrar" class="btnCadastrar" />
         </div>
     </form>
-    <footer class="s-mLogin">
-        <ul class="menuFooter">
-            <li><a href="Sobre nós.aspx">Sobre nós</a></li>
-            <li><a href="Pergunta.aspx">Fale conosco</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">Como pedir</a></li>
-            <li><a href="#">Cadastre sua loja</a></li>
-            <li><a href="#">Cadastre-se</a></li>
+    <footer class="s-mPrincipal">
 
+        <p class="fPetFeed">PetFeed</p>
+        <ul class="menuFooterP">
+            <li><a href="SobreNos">Sobre nós</a></li>
+            <li><a href="Pergunta">Fale conosco</a></li>
+        </ul>
+
+        <p class="fDescubra">Descubra</p>
+        <ul class="menuFooterD">
+            <!--Fazer essa página se der tempo-->
+            <li><a href="#">Como pedir</a></li>
+            <li><a href="CadastroLoja">Cadastre sua loja</a></li>
+            <li><a href="CadastroCliente">Cadastre-se</a></li>
         </ul>
         <a class="icone" href="https://www.facebook.com/petfeed.shoping/?epa=SEARCH_BOX"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
 
         <a href="#" class="icone"><i class="fab fa-twitter"></i></a>
+        <!--
+    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a> -->
 
-        <!--<a href="#"><i class="fab fa-google-plus-g"></i></a>
-
-        <a href="#"><i class="fab fa-youtube"></i></a>-->
-
-        <a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
-        <span>PetFeed <i class="far fa-copyright"></i> Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
-
+        <hr class="hrFooter" />
+        <span class="creditosFooter" id="creditos">PetFeed <i class="far fa-copyright"></i>Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
     </footer>
 </body>
 </html>

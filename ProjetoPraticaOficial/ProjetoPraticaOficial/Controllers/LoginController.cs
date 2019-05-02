@@ -28,7 +28,7 @@ namespace ProjetoPraticaOficial.Controllers
             if (dao.BuscaPorNome(c.Nome) != null)
                 return RedirectToAction("CadastroCliente", "Login");
 
-            if (c.Nome != null && c.Nome.Length < 30)
+            if (ModelState.IsValid)
             {
                 dao.Adiciona(c);
                 Session["cli"] = c;
@@ -37,7 +37,8 @@ namespace ProjetoPraticaOficial.Controllers
             }
             else
             {
-                return RedirectToAction("CriarLoginCliente");
+                //colocar p ficar vermelho
+                return View("CriarLoginCliente");
             }
         }
         [HttpPost]
