@@ -24,12 +24,21 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult CadastroCli(Cliente c)
         {
             ClienteDAO dao = new ClienteDAO();
+
             if (dao.BuscaPorNome(c.Nome) != null)
                 return RedirectToAction("CadastroCliente", "Login");
-            dao.Adiciona(c);
-            Session["cli"] = c;
-            //redirecionar para a camada de visualização
-            return LoginCli(c);
+
+            if (c.Nome != null && c.Nome.Length < 30)
+            {
+                dao.Adiciona(c);
+                Session["cli"] = c;
+                //redirecionar para a camada de visualização
+                return LoginCli(c);
+            }
+            else
+            {
+                return RedirectToAction("CriarLoginCliente");
+            }
         }
         [HttpPost]
         public ActionResult CadastroEm(Loja e)
@@ -205,5 +214,9 @@ namespace ProjetoPraticaOficial.Controllers
             Produto p = dao.BuscaPorNome(pesquisa);
             return View();
         }
+
+        ////////////////////////////////
+
+        //public ActionResult 
     }
 }
