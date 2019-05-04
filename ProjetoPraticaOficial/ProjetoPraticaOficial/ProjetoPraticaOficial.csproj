@@ -211,11 +211,11 @@
     <Content Include="Views\Login\SobreNos.cshtml" />
     <Content Include="Views\Login\EditarDadosCli.cshtml" />
     <Content Include="Views\Login\AdicionarProduto.cshtml" />
-    <Content Include="Views\Login\AdicionarProdutoVerdade.cshtml" />
     <Content Include="Views\Login\CadastroLoja.cshtml" />
     <Content Include="Views\Login\CriarLoginLoja.cshtml" />
     <Content Include="Views\Login\CadastroCliente.cshtml" />
     <Content Include="Views\Login\CriarLoginCliente.cshtml" />
+    <Content Include="Views\Login\FazerPesquisa.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

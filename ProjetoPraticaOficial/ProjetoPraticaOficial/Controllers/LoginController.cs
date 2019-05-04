@@ -213,11 +213,9 @@ namespace ProjetoPraticaOficial.Controllers
         {
             ProdutoDAO dao = new ProdutoDAO();
             Produto p = dao.BuscaPorNome(pesquisa);
+            ViewBag.Produto = p;
+            ViewBag.Filtro = (new FiltroDAO().Lista());
             return View();
         }
-
-        ////////////////////////////////
-
-        //public ActionResult 
     }
 }

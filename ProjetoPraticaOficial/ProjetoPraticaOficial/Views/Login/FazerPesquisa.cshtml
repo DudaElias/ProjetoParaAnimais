@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FazerPesquisa</title>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/estiloDentro.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+    <div>
+
+        <div class="header">
+            <div class="logo"></div>
+            <div class="menu-perfil">
+                <input type="checkbox" id="chk-perfil">
+                <label for="chk-perfil" class="show-menu-btn-perfil">
+                    <img src="~/Imagens/perfil.png">
+                </label>
+
+                <ul class="lateral">
+                    <a href="EditarDadosCli">Editar Dados</a>
+                    <a href="LoginCli">Pesquisa</a>
+                    <a href="#">Pedidos</a>
+                    <a href="Pergunta">Ajuda</a>
+                    <a href="Principal">Sair</a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <form action="FazerPesquisa" method="post">
+                <input class="search-txt" type="text" name="pesquisa" placeholder="Type to search" />
+                <input type="submit" class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+                </form>
+        </div>
+        <input type="checkbox" id="chk-filtro">
+        <label for="chk-filtro" class="aa">
+            <a class="img-filtro"><i class="fas fa-filter fa-2x"></i></a>
+        </label>
+
+        <ul id="filtros" name="qualFiltro">
+            @foreach (var f in ViewBag.Filtro)
+            {
+                <li class="filtro"><a class="qualFiltro">@f.Animal   <i class="fas fa-times-circle"></i></a></li>
+            }
+        </ul>
+        <div class="boxp">
+            <h1>@ViewBag.Produto.Nome</h1>
+            <div class="produto" style="background-image: url(@ViewBag.Produto.Imagem)"></div>
+            <h2>@ViewBag.Produto.Descricao</h2>
+            <h2>@ViewBag.Produto.Preco</h2>
+        </div>
+    </div>
+</body>
+</html>
