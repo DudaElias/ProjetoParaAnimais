@@ -1,0 +1,118 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GraficoPareto</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+
+    <script type="text/javascript" src="~/Script/cadastro.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="../Content/estiloPrincipal.css" />
+</head>
+<body>
+    <div>
+        <div class="header">
+            <div class="logo"></div>
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <ul class="menu">
+                <a href="SobreNos">Sobre nós</a>
+                <a href="Pergunta">FAQ</a>
+                <a href="CadastroLoja">Loja</a>
+                <a href="CadastroCliente">Cliente</a>
+                <a href="GraficoPareto">Gráfico de Pareto</a>
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>
+        </div>
+        <canvas id="myChart" width="400" height="400">
+            <script>
+
+                var data = {
+                    labels: ["SQl Exception", "Erro de conversão", "ViewBag não encontrada", "Hierarquia CSS"],
+                    datasets: [{
+                        type: "line",
+                        label: "% Acumulado",
+                        borderColor: "#5B5A5E",
+                        backgroundColor: "#5B5A5E",
+                        pointBorderWidth: 5,
+                        fill: false,
+                        data: [(10 * 100) / 22, (15 * 100) / 22, (19 * 100) / 22, (22 * 100) / 22],
+                        yAxisID: 'y-axis-2'
+                    }, {
+                        type: "bar",
+                        label: "Erros",
+                        borderColor: "#34495e",
+                        backgroundColor: "#34495e",
+                        data: [10, 5, 4, 3],
+                        yAxisID: 'y-axis-1'
+                    }]
+                };
+
+                var options = {
+                    scales: {
+                        xAxes: [{
+                            stacked: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: "Nomes dos erros"
+                            }
+                        }],
+
+                        yAxes: [{
+                            type: "linear",
+                            position: "left",
+                            id: "y-axis-1",
+                            stacked: true,
+                            ticks: {
+                                suggestedMin: 0
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: "Número de erros"
+                            }
+                        }, {
+                            type: "linear",
+                            position: "right",
+                            id: "y-axis-2",
+                            ticks: {
+                                suggestedMin: 0,
+                                callback: function (value) {
+                                    return value + "%";
+                                }
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: "Porcentagem"
+                            }
+                        }]
+                    }
+                    }
+                ;
+
+                window.onload = function () {
+                    var ctx = document.getElementById("myChart");
+
+                    window.myBar = new Chart(ctx, {
+                        type: 'bar',
+                        data: data,
+                        options: options
+                    });
+                };
+
+            </script>
+        </canvas>
+    </div>
+</body>
+</html>

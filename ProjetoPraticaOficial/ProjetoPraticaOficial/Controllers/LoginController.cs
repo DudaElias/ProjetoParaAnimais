@@ -197,7 +197,7 @@ namespace ProjetoPraticaOficial.Controllers
 
             FiltroDAO fDao = new FiltroDAO();
             ProdutoDAO dao = new ProdutoDAO();
-            p.CodLoja = ((Loja)Session["loja"]).Id;
+            p.CodLoja = ((Loja)Session["lo"]).Id;
             if (fDao.BuscaPorNome(n) == null)
             {
                 Filtro f = new Filtro();
@@ -212,9 +212,39 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult FazerPesquisa(string pesquisa)
         {
             ProdutoDAO dao = new ProdutoDAO();
-            Produto p = dao.BuscaPorNome(pesquisa);
-            ViewBag.Produto = p;
+
+            if (pesquisa == "")
+            {
+                ViewBag.Produto = dao.Lista();
+                ViewBag.Filtro = (new FiltroDAO().Lista());
+                return View();
+            }
+            IList<Produto> lista = dao.Lista();
+            List<Produto> produtosEncontrados = new List<Produto>();
+            foreach(var a in lista)
+            {
+               string[] dados = a.Nome.Split(' ');
+               string[] dados2 = a.Descricao.Split(' ');
+                foreach (var b in dados)
+                    if (b == pesquisa)
+                    {
+                        produtosEncontrados.Add(a);
+                        break;
+                    }
+                foreach (var c in dados2)
+                    if (c == pesquisa)
+                    {
+                        produtosEncontrados.Add(a);
+                        break;
+                    }
+            }
+            ViewBag.Produto = produtosEncontrados;
             ViewBag.Filtro = (new FiltroDAO().Lista());
+            return View();
+        }
+
+        public ActionResult GraficoPareto()
+        {
             return View();
         }
     }

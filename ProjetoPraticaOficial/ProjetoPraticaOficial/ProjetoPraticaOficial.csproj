@@ -216,6 +216,7 @@
     <Content Include="Views\Login\CadastroCliente.cshtml" />
     <Content Include="Views\Login\CriarLoginCliente.cshtml" />
     <Content Include="Views\Login\FazerPesquisa.cshtml" />
+    <Content Include="Views\Login\GraficoPareto.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
