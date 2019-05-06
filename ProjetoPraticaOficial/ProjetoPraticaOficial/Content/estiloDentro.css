@@ -13,9 +13,10 @@
 .boxp {
     width: 15em;
     height: 20em;
-    background-color: rgba(51,47,46,0.3);
-    border: 2px solid black;
+    border-radius: 4px;
+    border: solid 3px #332F2E;
     display: inline-block;
+    text-align: center;
 }
 
 .boxp .produto {
