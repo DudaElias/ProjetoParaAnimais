@@ -10,17 +10,16 @@
 }
 
 
-.boxp {
-    width: 15em;
-    height: 20em;
-    border: 2px solid black;
-    display: inline-block;
-}
 
 .boxp .produto {
     width: 10em;
+    margin-left:15%;
     background-size: cover;
     height: 10em;
+}
+
+.cc{
+    margin-left: 3em;
 }
 
 .box {
@@ -80,6 +79,7 @@
     line-height: 200px;
     z-index: 90;
 }
+
 @media screen and (max-width: 1100px) {
     .show-menu-btn, .hide-menu-btn {
         display: block;
@@ -198,12 +198,14 @@
 }
 
 
-.search-btn {
-    background-image: url("../Imagens/9228f03f9d.png") none;
+.search-btn 
+{
+    background: url("../Imagens/9228f03f9d.png");
     background-size: cover;
     text-indent: -9999px;
     width: 40px;
     height: 40px;
+    border: unset;
 }
 
 .search-txt {
@@ -243,7 +245,7 @@
         float: right;
         width: 70px;
         height: 70px;
-        z-index: 2000px;
+        z-index: 2000;
     }
 
 .lateral {
@@ -331,4 +333,21 @@ body
     position:relative;
     top: 50%;
     display:inline-block;
+}
+
+h1, h2 {
+    font-family: 'Century Gothic';
+    
+}
+
+.boxp {
+    margin-top: 5em;
+    margin-left: 5em;
+    width: 15em;
+    font-family: 'Century Gothic';
+    height: 20em;
+    border-radius: 4px;
+    border: solid 3px #332F2E;
+    display:inline-grid;
+    text-align: center;
 }
