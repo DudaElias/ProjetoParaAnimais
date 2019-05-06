@@ -224,18 +224,19 @@ namespace ProjetoPraticaOficial.Controllers
             foreach(var a in lista)
             {
                string[] dados = a.Nome.Split(' ');
+                bool pode = true;
                string[] dados2 = a.Descricao.Split(' ');
                 foreach (var b in dados)
-                    if (b == pesquisa)
+                    if (b == pesquisa && pode != false)
                     {
                         produtosEncontrados.Add(a);
-                        break;
+                        pode = false;
                     }
                 foreach (var c in dados2)
-                    if (c == pesquisa)
+                    if (c == pesquisa && pode != false)
                     {
                         produtosEncontrados.Add(a);
-                        break;
+                        pode = false;
                     }
             }
             ViewBag.Produto = produtosEncontrados;

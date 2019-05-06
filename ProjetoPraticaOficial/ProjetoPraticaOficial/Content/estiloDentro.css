@@ -184,6 +184,29 @@
     height: 7em;
 }
 
+.btn{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid #753B3B;
+    padding: 7px 20px;
+    width: 150px;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+    .btn:hover{
+        background: #753B3B;
+        color: white;
+    }
+
 /*PESQUISA*/
 
 .search-box {
@@ -259,7 +282,7 @@
     padding: 80px 0;
     line-height: normal;
     transition: 0.7s;
-    z-index: -2999;
+    z-index: 0;
 }
 
 body
@@ -337,16 +360,16 @@ body
 
 h1, h2 {
     font-family: 'Century Gothic';
-    
+    font-weight:100;
 }
 
 .boxp {
-    margin-top: 5em;
+    margin-top: 8em;
     margin-left: 5em;
     width: 15em;
     font-family: 'Century Gothic';
-    height: 20em;
-    border-radius: 4px;
+    height: 400px;
+    border-radius: 10px;
     border: solid 3px #332F2E;
     display:inline-grid;
     text-align: center;
