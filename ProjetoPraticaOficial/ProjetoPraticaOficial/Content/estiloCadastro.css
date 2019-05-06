@@ -332,16 +332,10 @@ html {
     color: #70AD47;
 }
 
-
 .chkCliente {
     border: 2px solid #70AD47;
     visibility: hidden;
 }
-
-
-
-
-
 
 .menuFooterD {
     position: absolute;
@@ -373,7 +367,6 @@ html {
     float: left;
 }
 
-
 @media screen and (max-width: 300px) {
     .creditosFooter {
         visibility: hidden;
@@ -387,6 +380,7 @@ html {
         visibility: hidden;
     }
 }
+
 
 .hrFooter {
     position: absolute;
@@ -434,7 +428,6 @@ html {
     top: 3%;
     color: snow;
 }
-
 
 .fSociais {
     position: absolute;

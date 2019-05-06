@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Acme|Inconsolata|Poiret+One|Signika|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=acme|inconsolata|poiret+one|signika|slabo+27px');
 
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'slabo 27px', serif;
 }
 
-html
-{
+html {
     overflow-x: hidden;
+    
 }
 
 .sobre {
@@ -20,7 +20,7 @@ html
     height: 150px;
     background: #34495e;
     padding: 0 20px;
-    color: #fff;
+    color: #fff; 
 }
 
 .logo {
@@ -28,7 +28,7 @@ html
     position: absolute;
     margin-top: 0em;
     float: left;
-    background-image: url("../Imagens/Logo.png");
+    background-image: url("../imagens/logo.png");
     width: 200px;
     height: 7em;
 }
@@ -130,24 +130,24 @@ html
     margin: 20px 8px;
 }
 
-.s-mSobre .icone:hover {
+.s-msobre .icone:hover {
     background: #e67e22;
 }
 
-.s-mSobre a i {
+.s-msobre a i {
     transition: 0.4s all;
 }
 
 
-.s-mSobre a:hover > i {
+.s-msobre a:hover > i {
     transform: scale(1.4) rotate(25deg)
 }
 
-.s-mSobre span i {
+.s-msobre span i {
     color: white;
 }
 
-.s-mSobre span {
+.s-msobre span {
     float: right;
     color: white;
     /*left: 25%;*/
@@ -157,15 +157,15 @@ html
     text-align: justify;
 }
 
-.sobreNos {
+.sobrenos {
     width: 100%;
     height: 680px;
     position: absolute;
     top: 15%;
 }
 
-.primeiroSobre {
-    background: url("../Imagens/racao-cachorro-gato-escolha-600x399.jpg");
+.primeirosobre {
+    background: url("../imagens/racao-cachorro-gato-escolha-600x399.jpg");
     width: 100%;
     background-size: cover;
     background-attachment: fixed;
@@ -177,7 +177,7 @@ html
 }
 
 .lema {
-    background: #5375A3;
+    background: #5375a3;
     border-radius: 24px;
     border: 1px solid #34495e;
     width: 500px;
@@ -187,7 +187,7 @@ html
 }
 
 .span1 {
-    color: #74C4E3;
+    color: #74c4e3;
     font-size: 30px;
     text-shadow: black 0.1em 0.1em 0.2em;
 }
@@ -198,7 +198,7 @@ html
 }
 
 
-.segundoSobre {
+.segundosobre {
     background: white;
     width: 100%;
     background-attachment: fixed;
@@ -210,8 +210,8 @@ html
     align-items: center;
 }
 
-.primeiroDepoimento {
-    background: #5375A3;
+.primeirodepoimento {
+    background: #5375a3;
     border-radius: 10px;
     border: 1px solid #34495e;
     width: 300px;
@@ -220,8 +220,8 @@ html
     padding: 40px 30px;
 }
 
-.segundoDepoimento {
-    background: #5375A3;
+.segundodepoimento {
+    background: #5375a3;
     border-radius: 10px;
     border: 1px solid #34495e;
     width: 300px;
@@ -230,7 +230,7 @@ html
     padding: 40px 30px;
 }
 
-    .primeiroDepoimento span, .segundoDepoimento span {
+    .primeirodepoimento span, .segundodepoimento span {
         font-size: 20px;
     }
 
@@ -242,9 +242,26 @@ html
     text-align: center;
 }
 
+.section {
+    width: 100%;
+    height: 350vh;
+}
 
+.gotopbtn {
+    z-index: 3;
+    position: absolute;
+    width: 50px;
+    background: #34495e;
+    bottom: 10%;
+    right: 1%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 20%;
+    color: white;
+    font-size: 26px;
+}
 
-.menuFooterD {
+.menufooterd {
     position: absolute;
     margin-top: 0.5em;
     top: 20%;
@@ -254,7 +271,7 @@ html
     display: inline-block;
 }
 
-.menuFooterP {
+.menufooterp {
     position: absolute;
     left: 1.3%;
     margin-top: 0.5em;
@@ -265,7 +282,7 @@ html
     text-decoration: none;
 }
 
-.creditosFooter {
+.creditosfooter {
     position: absolute;
     float: left;
     font-size: 0.9em;
@@ -275,7 +292,7 @@ html
 }
 
 @media screen and (max-width: 300px) {
-    .creditosFooter {
+    .creditosfooter {
         visibility: hidden;
     }
 
@@ -289,7 +306,7 @@ html
 }
 
 
-.hrFooter {
+.hrfooter {
     position: absolute;
     top: 79%;
     left: 0%;
@@ -297,14 +314,14 @@ html
     border-color: grey;
 }
 
-.s-mPrincipal {
+.s-mprincipal {
     background: #34495e;
     width: 100%;
     height: 150px;
     position: absolute;
 }
 
-.menuFooterP {
+.menufooterp {
     position: absolute;
     top: 20%;
     float: left;
@@ -314,11 +331,11 @@ html
     text-decoration: none;
 }
 
-    .menuFooterD li a, .menuFooterP li a {
+    .menufooterd li a, .menufooterp li a {
         color: white;
     }
 
-.fPetFeed {
+.fpetfeed {
     position: absolute;
     font-size: 150%;
     left: 2%;
@@ -327,7 +344,7 @@ html
     color: snow;
 }
 
-.fDescubra {
+.fdescubra {
     position: absolute;
     font-size: 150%;
     left: 17%;
@@ -336,7 +353,7 @@ html
     color: snow;
 }
 
-.fSociais {
+.fsociais {
     position: absolute;
     font-size: 150%;
     left: 81%;
@@ -368,35 +385,36 @@ html
     margin: 20px 8px;
 }
 
-.s-mPrincipal .icone:hover {
+.s-mprincipal .icone:hover {
     background: lightseagreen;
 }
 
-.s-mPrincipal a i {
+.s-mprincipal a i {
     transition: 0.4s all;
 }
 
-.s-mPrincipal {
+.s-mprincipal {
     grid-row-start: 2;
     grid-row-end: 3;
 }
 
-    .s-mPrincipal a:hover > i {
+    .s-mprincipal a:hover > i {
         transform: scale(1.4) rotate(25deg)
     }
 
-    .s-mPrincipal span i {
+    .s-mprincipal span i {
         color: white;
     }
 
-    .s-mPrincipal span {
+    .s-mprincipal span {
         float: left;
         color: white;
         text-align: justify;
     }
 
+
 @media screen and (max-width: 600px) {
-    .fDescubra {
+    .fdescubra {
         position: absolute;
         font-size: 150%;
         left: 2%;
@@ -405,7 +423,7 @@ html
         color: snow;
     }
 
-    .menuFooterP {
+    .menufooterp {
         position: absolute;
         top: 12%;
         left: 0.5%;
@@ -416,7 +434,7 @@ html
         text-decoration: none;
     }
 
-    .menuFooterD {
+    .menufooterd {
         position: absolute;
         top: 48%;
         left: 0.5%;
@@ -427,7 +445,7 @@ html
         text-decoration: none;
     }
 
-    .s-mPrincipal {
+    .s-mprincipal {
         background: #34495e;
         width: 100%;
         height: 250px;
