@@ -29,7 +29,7 @@ html {
     position: absolute;
     top: 3%;
     float: left;
-    background-image: url("Imagens/Logo.png");
+    background-image: url("../Imagens/Logo.png");
     width: 200px;
     height: 7em;
 }
@@ -142,7 +142,7 @@ html {
 .box {
     width: 300px;
     padding: 40px;
-    margin-top: 25em;
+    margin-top: 10em;
     margin-left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -228,13 +228,11 @@ html {
 .box-btn {
     width: 500px;
     padding: 50px;
-    position: absolute;
-    top: 55%;
-    left: 65%;
+    margin-top: 20em;
+    margin-left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: -100;
-    visibility: hidden;
 }
 
 .btns {
@@ -252,9 +250,6 @@ html {
     color: black;
     font-weight: bold;
     font-size: 30px;
-    position: absolute;
-    top: 20%;
-    left: 55%;
     height: 50px;
 }
 
@@ -326,13 +321,10 @@ html {
 
 .box-btn2 {
     width: 500px;
-    padding: 50px;
-    position: absolute;
-    top: 55%;
-    left: 65%;
+    margin-top: 20em;
+    margin-left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    visibility: hidden;
     z-index: -100;
 }
 
