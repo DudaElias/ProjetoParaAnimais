@@ -13,6 +13,7 @@
 .boxp {
     width: 15em;
     height: 20em;
+    background-color: rgba(51,47,46,0.3);
     border: 2px solid black;
     display: inline-block;
 }
@@ -198,12 +199,14 @@
 }
 
 
-.search-btn {
-    background-image: url("../Imagens/9228f03f9d.png") none;
+.search-btn 
+{
+    background: url("../Imagens/9228f03f9d.png");
     background-size: cover;
     text-indent: -9999px;
     width: 40px;
     height: 40px;
+    border: unset;
 }
 
 .search-txt {
@@ -243,7 +246,7 @@
         float: right;
         width: 70px;
         height: 70px;
-        z-index: 2000px;
+        z-index: 2000;
     }
 
 .lateral {
