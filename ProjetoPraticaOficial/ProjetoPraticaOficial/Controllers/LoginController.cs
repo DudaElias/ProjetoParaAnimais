@@ -212,7 +212,7 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult FazerPesquisa(string pesquisa)
         {
             ProdutoDAO dao = new ProdutoDAO();
-
+            pesquisa = pesquisa.ToUpper();
             if (pesquisa == "")
             {
                 ViewBag.Produto = dao.Lista();
@@ -224,16 +224,17 @@ namespace ProjetoPraticaOficial.Controllers
             foreach(var a in lista)
             {
                string[] dados = a.Nome.Split(' ');
+                
                 bool pode = true;
                string[] dados2 = a.Descricao.Split(' ');
                 foreach (var b in dados)
-                    if (b == pesquisa && pode != false)
+                    if (b.ToUpper() == pesquisa && pode != false)
                     {
                         produtosEncontrados.Add(a);
                         pode = false;
                     }
                 foreach (var c in dados2)
-                    if (c == pesquisa && pode != false)
+                    if (c.ToUpper() == pesquisa && pode != false)
                     {
                         produtosEncontrados.Add(a);
                         pode = false;
