@@ -1,7 +1,0 @@
-Pesquisa
-Pedido
-Aparecer pedidos para a Empresa
-Footer (cadastro e parte interna)
-Responsividade (cadastro e parte interna)
-
-Gráfico de Pareto

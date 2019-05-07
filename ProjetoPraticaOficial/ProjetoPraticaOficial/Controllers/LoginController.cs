@@ -245,6 +245,11 @@ namespace ProjetoPraticaOficial.Controllers
             return View();
         }
 
+
+        public ActionResult Comprar(Produto p)
+        {
+            return RedirectToAction("GraficoPareto");
+        }
         public ActionResult GraficoPareto()
         {
             return View();
