@@ -10,12 +10,32 @@ using ProjetoPraticaOficial.Models;
 
 namespace ProjetoPraticaOficial.Controllers
 {
+    using WebServiceCEP;
     public class LoginController : Controller
     {
         // GET: Login
 
         Cliente cli;
         Loja lo;
+        public ActionResult BuscarCep(string pesquisa)
+        {
+            using (var ws = new AtendeClienteClient())
+            {
+                var resposta = ws.consultaCEP(cep);
+
+                ViewBag.CEP = resposta;
+            }
+            return null;
+        }
+        private static void ConsultaCEP(string cep)
+        {
+            using (var ws = new AtendeClienteClient())
+            {
+                var resposta = ws.consultaCEP(cep);
+
+                Console.WriteLine(String.Format("Endereço: {0}", resposta.end));
+            }
+        }
         public ActionResult Cadastro()
         {
             return View();
