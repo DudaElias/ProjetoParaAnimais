@@ -11,6 +11,7 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior:smooth;
 }
 
 .sobre {
@@ -145,6 +146,25 @@ html {
     margin-top: 2em;
     width: 100%;
     margin-bottom: 0em;
+}
+
+.section {
+    width: 100%;
+    height: 350vh;
+}
+
+.gotopbtn {
+    z-index: 3;
+    position: absolute;
+    width: 50px;
+    background: #34495e;
+    bottom: 10%;
+    right: 1%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 20%;
+    color: white;
+    font-size: 26px;
 }
 
 .menuFooterD {

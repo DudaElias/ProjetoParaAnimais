@@ -9,11 +9,12 @@
 
 html {
     overflow-x: hidden;
-    
+    scroll-behavior: smooth;
 }
 
 .sobre {
     height: 100%;
+    
 }
 
 .header {
