@@ -36,11 +36,22 @@
                 <h1 name="">@ViewBag.Produto.Nome</h1>
                 <div class="produto" name="p.Imagem" style="background-image: url(@ViewBag.Produto.Imagem)"></div>
                 <h2>@ViewBag.Produto.Descricao</h2>
-                <h2>@String.Format("{0:c}", ViewBag.Produto.Preco)</h2>
+                <h3>@String.Format("{0:c}", ViewBag.Produto.Preco)</h3>
                 <form>
                     <label>Quantidade: </label>
-                    <input type="number"/>
-                    </form>
+                    <input type="number" />
+                </form>
+                <form id="form-cep" onsubmit="buscaCep()" method="POST">
+                    <input type="text" name="pesquisa" id="pesquisa" placeholder="Informe o cep" onblur="@HttpResponse() \>
+                </form>
+                <div id="resultados">
+                    <p id="logradouro" name="logradouro" class="oculto"></p>
+                    <p id="bairro" name="bairro" class="oculto"></p>
+                    <p id="cidade" name="cidade" class="oculto"></p>
+                    <p id="estado" name="estado" class="oculto"></p>
+                    <p id="cep" name="cep" class="oculto"></p>
+
+                </div>
             </div>
         </div>
     </div>
