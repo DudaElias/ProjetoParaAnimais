@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>CriarLoginCliente</title>
 
-    <script type="text/javascript" src="~/Script/cadastro.js"></script>
+    <script type="text/javascript" src="~/Script/cadastro.js">
+    </script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="../Content/estiloCadastro.css" />
@@ -43,7 +44,7 @@
             @Html.ValidationMessage("c.Nome")
             <input type="text" ID="txtEmailCliente" name="c.Email" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" maxlength="100">
             @Html.ValidationMessage("c.Email")
-            <input type="text" ID="txtCpfCliente" name="c.Cpf" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="14">
+            <input type="text" ID="cpf" name="c.Cpf" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="11" onblur="TestaCPF()">
             @Html.ValidationMessage("c.Cpf")
             <input type="password" ID="txtSenhaCliente" name="c.Senha" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" maxlength="50">
             @Html.ValidationMessage("c.Senha")
@@ -54,7 +55,7 @@
             @Html.ValidationMessage("c.Telefone")
             <input type="checkbox" ID="chkTermos" class="chkCliente" runat="server" />
             <label ID="lblTermos" class="lblCliente" runat="server"></label>
-            <!--<input type="button" ID="btnCadastrarCliente" class="btnCadastrar" value="Cadastrar" runat="server" Visible="false" <!--onclick="Cadastrar(2)"-->
+            <!--<input type="button" ID="btnCadastrarCliente" class="btnCadastrar" value="Cada            strar" runat="server" Visible="false" <!--onclick="Cadastrar(2)"-->
             <input type="submit" value="Cadastrar" class="btnCadastrar" />
         </div>
     </form>
@@ -80,6 +81,11 @@
         <!--
     <a href="#"><i class="fab fa-google-plus-g"></i></a>
     <a href="#"><i class="fab fa-youtube"></i></a> -->
+
+        <section>
+
+        </section>
+        <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
 
         <hr class="hrFooter" />
         <span class="creditosFooter" id="creditos">PetFeed <i class="far fa-copyright"></i>Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
