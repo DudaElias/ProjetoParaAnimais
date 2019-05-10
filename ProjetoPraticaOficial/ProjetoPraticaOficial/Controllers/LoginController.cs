@@ -149,7 +149,7 @@ namespace ProjetoPraticaOficial.Controllers
             u.Telefone = ((Cliente)Session["cli"]).Telefone;
             u.Id = ((Cliente)Session["cli"]).Id;
             dao.Atualiza(u);
-
+           
             return RedirectToAction("LoginCli", "Login");
         }
 
@@ -174,6 +174,10 @@ namespace ProjetoPraticaOficial.Controllers
             FiltroDAO dao = new FiltroDAO();
             IList<Filtro> lista = dao.Lista();
             ViewBag.Filtro = lista;
+
+            ProdutoDAO daoP = new ProdutoDAO();
+            IList<Produto> p = daoP.Lista();
+            ViewBag.Produto = p;
             return View();
         }
 
@@ -244,11 +248,11 @@ namespace ProjetoPraticaOficial.Controllers
             ViewBag.Filtro = (new FiltroDAO().Lista());
             return View();
         }
-
-
-        public ActionResult Comprar(Produto p)
+        [HttpPost]
+        public ActionResult Comprar(Produto po)
         {
-            return RedirectToAction("GraficoPareto");
+            ViewBag.Produto = po;
+            return View();
         }
         public ActionResult GraficoPareto()
         {
