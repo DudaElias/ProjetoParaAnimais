@@ -22,6 +22,20 @@
     margin-left: 3em;
 }
 
+input[type=number]
+{
+    width: 50px;
+}
+
+.boxCompra h1{
+    margin-left:  5em;
+}
+.boxCompra  label {
+    font-family: 'Century Gothic';
+    font-size: 20px;
+    font-weight: 300;
+}
+
 .box {
     width: 500px;
     padding: 40px;
@@ -290,6 +304,22 @@ body
     z-index: -200000;
 }
 
+.boxCompra {
+    margin-top: 8em;
+    margin-left: 5em;
+    width: 15em;
+    font-family: 'Century Gothic';
+    height: 400px;
+    display: inline-grid;
+    text-align: center;
+}
+
+    .boxCompra .produto {
+        width: 10em;
+        margin-left: 15%;
+        background-size: cover;
+        height: 10em;
+    }
 #chk-perfil {
     position: absolute;
     visibility: hidden;

@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Comprar</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/estiloDentro.css" />
+</head>
+<body>
+    <div>
+
+        <div class="header">
+            <div class="logo"></div>
+            <div class="menu-perfil">
+                <input type="checkbox" id="chk-perfil">
+                <label for="chk-perfil" class="show-menu-btn-perfil">
+                    <img src="~/Imagens/perfil.png">
+                </label>
+
+                <ul class="lateral">
+                    <a href="EditarDadosCli">Editar Dados</a>
+                    <a href="LoginCli">Pesquisa</a>
+                    <a href="#">Pedidos</a>
+                    <a href="Pergunta">Ajuda</a>
+                    <a href="Principal">Sair</a>
+                </ul>
+            </div>
+        </div>
+        <div class="cc">
+            <div class="boxCompra">
+                <h1 name="">@ViewBag.Produto.Nome</h1>
+                <div class="produto" name="p.Imagem" style="background-image: url(@ViewBag.Produto.Imagem)"></div>
+                <h2>@ViewBag.Produto.Descricao</h2>
+                <h2>@String.Format("{0:c}", ViewBag.Produto.Preco)</h2>
+                <form>
+                    <label>Quantidade: </label>
+                    <input type="number"/>
+                    </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
