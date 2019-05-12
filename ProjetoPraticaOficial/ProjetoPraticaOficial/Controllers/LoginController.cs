@@ -21,20 +21,16 @@ namespace ProjetoPraticaOficial.Controllers
         {
             using (var ws = new AtendeClienteClient())
             {
-                var resposta = ws.consultaCEP(cep);
-
+                var resposta = ws.consultaCEP(pesquisa);
+                Session["end"] = resposta.cidade + resposta.bairro + resposta.end;
                 ViewBag.CEP = resposta;
             }
-            return null;
+            return RedirectToAction("ComprarDados","Login");
         }
-        private static void ConsultaCEP(string cep)
-        {
-            using (var ws = new AtendeClienteClient())
-            {
-                var resposta = ws.consultaCEP(cep);
 
-                Console.WriteLine(String.Format("Endereço: {0}", resposta.end));
-            }
+        public ActionResult ComprarDados()
+        {
+            return View();
         }
         public ActionResult Cadastro()
         {

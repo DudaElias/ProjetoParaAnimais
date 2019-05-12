@@ -371,6 +371,7 @@
     <Content Include="Views\Login\FazerPesquisa.cshtml" />
     <Content Include="Views\Login\GraficoPareto.cshtml" />
     <Content Include="Views\Login\Comprar.cshtml" />
+    <Content Include="Views\Login\ComprarDados.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
