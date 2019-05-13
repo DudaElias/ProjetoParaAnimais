@@ -12,7 +12,18 @@
 
     <script type="text/javascript" src="~/Script/cadastro.js">
     </script>
-
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("cpf").onkeypress = function () {
+                var txt = this.value;
+                if (txt.length == 3 || txt.length == 7)
+                    this.value += ".";
+                else
+                    if (txt.length == 11)
+                        this.value += "-";
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="../Content/estiloCadastro.css" />
 </head>
@@ -44,7 +55,7 @@
             @Html.ValidationMessage("c.Nome")
             <input type="text" ID="txtEmailCliente" name="c.Email" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" maxlength="100">
             @Html.ValidationMessage("c.Email")
-            <input type="text" ID="cpf" name="c.Cpf" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="11" onblur="TestaCPF()">
+            <input type="text" ID="cpf" name="c.Cpf" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="14" onblur="TestaCPF()">
             @Html.ValidationMessage("c.Cpf")
             <input type="password" ID="txtSenhaCliente" name="c.Senha" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" maxlength="50">
             @Html.ValidationMessage("c.Senha")

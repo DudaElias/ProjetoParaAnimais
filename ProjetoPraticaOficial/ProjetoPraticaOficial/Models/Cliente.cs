@@ -16,7 +16,7 @@ namespace ProjetoPraticaOficial.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Nome obrigatório", AllowEmptyStrings = false)]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use apenas caracteres alfabéticos.")]
+        [RegularExpression(@"^[a-z]|[A-Z]+$", ErrorMessage = "Use apenas caracteres alfabéticos.")]
         //está dando erro quando coloca <><
         public string Nome { get; set; }
         
@@ -27,7 +27,6 @@ namespace ProjetoPraticaOficial.Models
         [Required(ErrorMessage = "CPF obrigatório", AllowEmptyStrings = false)]// arrumar no css
         [Display(Name = "Cpf do cliente")]
         [RegularExpression("^[0-9]", ErrorMessage = "Use apenas números.")]
-        //ele digitar só número
         public string Cpf { get; set; }
 
         [Required(ErrorMessage = "Senha obrigatória", AllowEmptyStrings = false)] // arrumar no css

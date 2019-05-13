@@ -11,6 +11,19 @@
     <title>CriarLoginLoja</title>
 
     <script type="text/javascript" src="~/Script/cadastro.js"></script>
+    <script type="text/javascript">//mudar para rg
+        window.onload = function () {
+            document.getElementById("cpf").onkeypress = function () {
+                var txt = this.value;
+                if (txt.length == 3 || txt.length == 7)
+                    this.value += ".";
+                else
+                    if (txt.length == 11)
+                        this.value += "-";
+            }
+        }
+    </script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
     <link rel="stylesheet" href="~/Content/estiloCadastro.css" />

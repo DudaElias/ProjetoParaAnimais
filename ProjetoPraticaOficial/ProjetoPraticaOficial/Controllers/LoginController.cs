@@ -60,7 +60,6 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult CadastroCli(Cliente c)
         {
             ClienteDAO dao = new ClienteDAO();
-
             if (dao.BuscaPorNome(c.Nome) != null)
                 return RedirectToAction("CadastroCliente", "Login");
 
