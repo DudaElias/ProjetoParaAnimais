@@ -22,14 +22,34 @@ namespace ProjetoPraticaOficial.Controllers
             using (var ws = new AtendeClienteClient())
             {
                 var resposta = ws.consultaCEP(pesquisa);
-                Session["end"] = resposta.cidade + resposta.bairro + resposta.end;
+                Session["end"] = resposta;
+                Session["cep"] = pesquisa;
                 ViewBag.CEP = resposta;
             }
-            return RedirectToAction("ComprarDados","Login");
+            return RedirectToAction("ComprarDados","Login",Session["p"]);
         }
-
-        public ActionResult ComprarDados()
+        public ActionResult EfetuarCompra(int numero, string complemento)
         {
+            PedidoDAO dao = new PedidoDAO();
+            ItemPedidoDAO daoI = new ItemPedidoDAO();
+            ItemPedido item = new ItemPedido();
+            item.CodProduto = ((Produto)Session["p"]).Id;
+            item.Quantidade = numero;
+            daoI.Adiciona(item);
+            Pedido pedido = new Pedido();
+            pedido.CodCliente = ((Cliente)Session["cli"]).Id;
+            pedido.Endereco = Session["cep"].ToString()+ " " + complemento;
+            pedido.DataPedido = DateTime.Today.Date;
+            pedido.DataEntrega = DateTime.Today.Date;
+            pedido.CodSedex = 0;
+            pedido.CodPedido = item.Id;
+            dao.Adiciona(pedido);
+            return null;
+        }
+        public ActionResult ComprarDados(Produto p)
+        {
+            ViewBag.Produto = p;
+            ViewBag.Cep = Session["end"];
             return View();
         }
         public ActionResult Cadastro()
@@ -268,6 +288,7 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult Comprar(Produto po)
         {
             ViewBag.Produto = po;
+            Session["p"] = po;
             return View();
         }
         public ActionResult GraficoPareto()

@@ -9,6 +9,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Comprar</title>
+    <script src="~/Script/Cep.js"></script>
     <link rel="stylesheet" type="text/css" href="~/Content/estiloDentro.css" />
 </head>
 <body>
@@ -37,12 +38,8 @@
                 <div class="produto" name="p.Imagem" style="background-image: url(@ViewBag.Produto.Imagem)"></div>
                 <h2>@ViewBag.Produto.Descricao</h2>
                 <h3>@String.Format("{0:c}", ViewBag.Produto.Preco)</h3>
-                <form>
-                    <label>Quantidade: </label>
-                    <input type="number" />
-                </form>
                 <form id="form-cep" action="BuscarCep" method="POST">
-                    <input type="text" name="pesquisa" id="pesquisa" placeholder="Informe o cep" \>
+                    <input type="text" name="pesquisa" id="pesquisa" placeholder="Informe o cep" onblur="CalcularPrecoTempo()" \>
                     <input type="submit" value="Buscar CEP"/>
                 </form>
             </div>

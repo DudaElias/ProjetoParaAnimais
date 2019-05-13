@@ -325,6 +325,7 @@
     <Content Include="Imagens\racao-cachorro-gato-escolha-600x399.jpg" />
     <Content Include="Content\estilo.css" />
     <Content Include="Script\cadastro.js" />
+    <Content Include="Script\Cep.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -337,15 +338,19 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\FiltroDAO.cs" />
+    <Compile Include="DAO\ItemPedidoDAO.cs" />
     <Compile Include="DAO\LojaDAO.cs" />
     <Compile Include="DAO\LoginContext.cs" />
+    <Compile Include="DAO\PedidoDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Filtro.cs" />
+    <Compile Include="Models\ItemPedido.cs" />
     <Compile Include="Models\Loja.cs" />
+    <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -13,6 +13,8 @@ namespace ProjetoPraticaOficial.DAO
         public DbSet<Loja> Loja { get; set; }
         public DbSet<Filtro> Filtro { get; set; }
         public DbSet<Produto> Produto { get; set; }
+        public DbSet<Pedido> Pedido { get; set; }
+        public DbSet<ItemPedido> ItemPedido { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=regulus.cotuca.unicamp.br;Initial Catalog='PR118343'; User ID ='PR118343'; Password ='PR118343'");
