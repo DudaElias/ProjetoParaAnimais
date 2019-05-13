@@ -859,4 +859,28 @@
         height: 250px;
         margin-bottom: 0em;
     }
+
+    .creditosFooter {
+        position: absolute;
+        float: left;
+        font-size: 0.9em;
+        top: 86%;
+        left: 1%;
+        float: left;
+        width: 83%;
+    }
+
+    .gotopbtn {
+        z-index: 3;
+        position: absolute;
+        width: 50px;
+        background: #34495e;
+        bottom: 15%;
+        right: 1%;
+        text-decoration: none;
+        text-align: center;
+        line-height: 30%;
+        color: white;
+        font-size: 26px;
+    }
 }
