@@ -13,32 +13,31 @@ namespace ProjetoPraticaOficial.Models
         {
 
         }
-
-       // [Required]
         public int Id { get; set; }
 
-        //[Required(ErrorMessage = "O nome do usuário é obrigatório", AllowEmptyStrings = false)]
+        [Required(ErrorMessage = "Nome obrigatório", AllowEmptyStrings = false)]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use apenas caracteres alfabéticos.")]
+        //está dando erro quando coloca <><
         public string Nome { get; set; }
-
-        //[StringLength(100, MinimumLength = 4)]
-        //[Required(ErrorMessage = "Informe o seu email")]// arrumar no css
-        //[RegularExpression(".+\\@.+\\..+", ErrorMessage = "Informe um email válido...")]
+        
+        [Required(ErrorMessage = "E-mail obrigatório")]// arrumar no css
+        [RegularExpression(".+\\@.+\\..+", ErrorMessage = "Informe um email válido...")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "O CPF do usuário é obrigatório", AllowEmptyStrings = false)]// arrumar no css
+        [Required(ErrorMessage = "CPF obrigatório", AllowEmptyStrings = false)]// arrumar no css
         [Display(Name = "Cpf do cliente")]
+        [RegularExpression("^[0-9]", ErrorMessage = "Use apenas números.")]
         //ele digitar só número
         public string Cpf { get; set; }
 
-        //[Required(ErrorMessage = "A senha é obrigatória", AllowEmptyStrings = false)] // arrumar no css
-       // [Display(Name = "Informe a Senha")]
-        //[StringLength(10, MinimumLength = 4)]
+        [Required(ErrorMessage = "Senha obrigatória", AllowEmptyStrings = false)] // arrumar no css
+        [StringLength(50, ErrorMessage = "A senha deve ter pelo menos 6 caracteres. Tente inserir outra senha.",MinimumLength = 6)]
         public string Senha { get; set; }
 
-        //[Required(ErrorMessage = "O telefone do usuário é obrigatório", AllowEmptyStrings = false)]// arrumar no css
-        //[Display(Name ="Telefone do cliente")]
-        //[DisplayFormat(DataFormatString = )]
-        //digitar só número por causa da função do css
+        [Required(ErrorMessage = "Telefone obrigatório", AllowEmptyStrings = false)]// arrumar no css
+        [Phone]
+        [StringLength(12, ErrorMessage = "Número inválido", MinimumLength = 10)]
+        [RegularExpression("^[0-9]", ErrorMessage = "Use apenas números.")]
         public string Telefone { get; set; }
     }
 }
