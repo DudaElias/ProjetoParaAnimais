@@ -11,6 +11,7 @@
                 para.type = 'button';
                 para.value = 'Finalizar Compra';
                 para.className = 'btn';
+                para.width = "500px";
                 var element = document.getElementById("form-cep");
                 element.appendChild(para);
             },
