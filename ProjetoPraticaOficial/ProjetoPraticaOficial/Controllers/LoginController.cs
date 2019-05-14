@@ -131,6 +131,8 @@ namespace ProjetoPraticaOficial.Controllers
             ViewBag.Produto = p;
             if (cli.Senha == c.Senha)
                 return View("LoginCli");
+            else
+                return View("CriarLoginCliente");
             return null;
         }
         

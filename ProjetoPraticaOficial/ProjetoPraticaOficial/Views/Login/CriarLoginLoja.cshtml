@@ -56,7 +56,16 @@
             <input type="text" ID="txtEmailEmpresa" name="e.Email" placeholder="Digite o e-mail da empresa" class="txtEmpresa" runat="server" Visible="false">        <input type="text" ID="txtNomeEmpresa" name="e.Nome" placeholder="Digite o nome da empresa" class="txtEmpresa" runat="server" Visible="false">
             <input type="text" ID="txtCPFEmpresa" name="e.CpfDono" placeholder="Digite o CPF do dono da empresa" class="txtEmpresa" runat="server" Visible="false">
             <input type="text" ID="txtRGEmpresa" name="e.RgDono" placeholder="Digite o RG do dono da empresa" class="txtEmpresa" runat="server" Visible="false" maxlength="12">
+            <!--<input type="text" ID="txtCEPEmpresa" name="e.OrgaoEmissor" placeholder="Digite o órgão emissor da empresa" class="txtEmpresa" runat="server" Visible="false">-->
             <input type="text" ID="txtOrgaoEmpresa" name="e.OrgaoEmissor" placeholder="Digite o órgão emissor da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
             <input type="submit" ID="btnCadastrarEmpresa" class="btnCadastrar" runat="server" value="Cadastrar" Visible="false" />
         </div>
     </form>

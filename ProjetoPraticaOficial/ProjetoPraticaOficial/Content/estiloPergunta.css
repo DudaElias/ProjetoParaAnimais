@@ -8,10 +8,17 @@
     text-decoration: none;
     font-family: 'Slabo 27px', serif;
 }
-
+.field-validation-error {
+    color: red;
+    font-size: 13px;
+}
 html {
     overflow-x: hidden;
     scroll-behavior:smooth;
+}
+
+.Pagamento{
+    left:50%;
 }
 
 .sobre {

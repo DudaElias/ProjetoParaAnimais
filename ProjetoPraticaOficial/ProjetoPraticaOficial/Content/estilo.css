@@ -1,5 +1,4 @@
-﻿
-/*BASE DO DESIGN DA PÁGINA*/
+﻿/*BASE DO DESIGN DA PÁGINA*/
 @import url('https://fonts.googleapis.com/css?family=Acme|Inconsolata|Poiret+One|Signika|Slabo+27px');
 
 * {
@@ -7,6 +6,11 @@
     padding: 0;
     text-decoration: none;
     font-family: 'Slabo 27px', serif;
+}
+
+.field-validation-error 
+{
+    color: red;
 }
 
 .sobre {

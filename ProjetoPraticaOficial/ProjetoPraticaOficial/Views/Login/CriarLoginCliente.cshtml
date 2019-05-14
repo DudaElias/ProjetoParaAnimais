@@ -35,6 +35,19 @@
                     this.value = this.value.substring(0, 10).replace("-", "") + "-" + this.value.substring(10);
                 //quando apaga ele n volta
             }
+
+            
+
+        }
+
+        function SomenteNumero(e) {
+            var tecla = (window.event) ? event.keyCode : e.which;
+            if ((tecla > 47 && tecla < 58)) 
+                return true;
+            else {
+                if (tecla == 8 || tecla == 0) return true;
+                else return false;
+            }
         }
     </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
@@ -68,7 +81,7 @@
             @Html.ValidationMessage("c.Nome")
             <input type="text" ID="txtEmailCliente" name="c.Email" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" maxlength="100">
             @Html.ValidationMessage("c.Email")
-            <input type="text" ID="cpf" name="c.Cpf" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="14" onblur="TestaCPF()">
+            <input type="text" ID="cpf" name="c.Cpf" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="14" onblur="TestaCPF()" onkeypress='return SomenteNumero(event)'>
             @Html.ValidationMessage("c.Cpf")
             <input type="password" ID="txtSenhaCliente" name="c.Senha" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" maxlength="50">
             @Html.ValidationMessage("c.Senha")

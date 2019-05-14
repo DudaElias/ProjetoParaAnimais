@@ -14,10 +14,16 @@ html {
     scroll-behavior: smooth;
 }
 
+.field-validation-error 
+{
+    color: red;
+    font-size: 15px;
+}
+
+
 .sobre {
     height: 100%;
 }
-
 .header {
     height: 150px;
     background: #34495e;

@@ -26,7 +26,6 @@ namespace ProjetoPraticaOficial.Models
 
         [Required(ErrorMessage = "CPF obrigatório", AllowEmptyStrings = false)]// arrumar no css
         [Display(Name = "Cpf do cliente")]
-        [RegularExpression("^[0-9]", ErrorMessage = "Use apenas números.")]
         public string Cpf { get; set; }
 
         [Required(ErrorMessage = "Senha obrigatória", AllowEmptyStrings = false)] // arrumar no css
@@ -34,9 +33,7 @@ namespace ProjetoPraticaOficial.Models
         public string Senha { get; set; }
 
         [Required(ErrorMessage = "Telefone obrigatório", AllowEmptyStrings = false)]// arrumar no css
-        [Phone]
         [StringLength(12, ErrorMessage = "Número inválido", MinimumLength = 10)]
-        [RegularExpression("^[0-9]", ErrorMessage = "Use apenas números.")]
         public string Telefone { get; set; }
     }
 }
