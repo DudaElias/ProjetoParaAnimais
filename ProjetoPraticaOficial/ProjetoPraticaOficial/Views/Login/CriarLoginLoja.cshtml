@@ -13,12 +13,12 @@
     <script type="text/javascript" src="~/Script/cadastro.js"></script>
     <script type="text/javascript">//mudar para rg
         window.onload = function () {
-            document.getElementById("cpf").onkeypress = function () {
+            document.getElementById("txtRGEmpresa").onkeypress = function () {
                 var txt = this.value;
-                if (txt.length == 3 || txt.length == 7)
+                if (txt.length == 2 || txt.length == 6)
                     this.value += ".";
                 else
-                    if (txt.length == 11)
+                    if (txt.length == 10)
                         this.value += "-";
             }
         }
@@ -55,7 +55,7 @@
 
             <input type="text" ID="txtEmailEmpresa" name="e.Email" placeholder="Digite o e-mail da empresa" class="txtEmpresa" runat="server" Visible="false">        <input type="text" ID="txtNomeEmpresa" name="e.Nome" placeholder="Digite o nome da empresa" class="txtEmpresa" runat="server" Visible="false">
             <input type="text" ID="txtCPFEmpresa" name="e.CpfDono" placeholder="Digite o CPF do dono da empresa" class="txtEmpresa" runat="server" Visible="false">
-            <input type="text" ID="txtRGEmpresa" name="e.RgDono" placeholder="Digite o RG do dono da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtRGEmpresa" name="e.RgDono" placeholder="Digite o RG do dono da empresa" class="txtEmpresa" runat="server" Visible="false" maxlength="12">
             <input type="text" ID="txtOrgaoEmpresa" name="e.OrgaoEmissor" placeholder="Digite o órgão emissor da empresa" class="txtEmpresa" runat="server" Visible="false">
             <input type="submit" ID="btnCadastrarEmpresa" class="btnCadastrar" runat="server" value="Cadastrar" Visible="false" />
         </div>
