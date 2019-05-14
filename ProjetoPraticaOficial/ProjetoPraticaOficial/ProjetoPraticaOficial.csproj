@@ -167,8 +167,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\WebServiceCepCerto\CalcPrecoPrazo.wsdl" />
+    <Content Include="Connected Services\WebServiceCepCerto\ProjetoPraticaOficial.WebServiceCepCerto.cResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WebServiceCepCerto\ProjetoPraticaOficial.WebServiceCepCerto.cResultadoModal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WebServiceCepCerto\ProjetoPraticaOficial.WebServiceCepCerto.cResultadoObjeto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WebServiceCepCerto\ProjetoPraticaOficial.WebServiceCepCerto.cResultadoServicos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WebServiceCepCerto\ProjetoPraticaOficial.WebServiceCepCerto.versao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WebServiceCEP\configuration91.svcinfo" />
     <None Include="Connected Services\WebServiceCEP\configuration.svcinfo" />
+    <None Include="Connected Services\WebServiceCepCerto\CalcPrecoPrazo.disco" />
+    <None Include="Connected Services\WebServiceCepCerto\configuration91.svcinfo" />
+    <None Include="Connected Services\WebServiceCepCerto\configuration.svcinfo" />
+    <None Include="Connected Services\WebServiceCepCerto\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\WebServiceCEP\ProjetoPraticaOficial.WebServiceCEP.atualizaPagamentoNaEntregaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -325,11 +348,20 @@
     <Content Include="Imagens\racao-cachorro-gato-escolha-600x399.jpg" />
     <Content Include="Content\estilo.css" />
     <Content Include="Script\cadastro.js" />
+    <Content Include="Script\CalcPrecoPrazo.xml" />
     <Content Include="Script\Cep.js" />
+    <Content Include="Script\frete.js" />
+    <Content Include="Script\frete.spec.js" />
+    <Content Include="Script\Gruntfile.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\WebServiceCepCerto\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\WebServiceCEP\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -377,6 +409,7 @@
     <Content Include="Views\Login\GraficoPareto.cshtml" />
     <Content Include="Views\Login\Comprar.cshtml" />
     <Content Include="Views\Login\ComprarDados.cshtml" />
+    <Content Include="Script\package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -391,6 +424,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WebServiceCepCerto\" />
     <WCFMetadataStorage Include="Connected Services\WebServiceCEP\" />
   </ItemGroup>
   <PropertyGroup>

@@ -10,6 +10,7 @@ using ProjetoPraticaOficial.Models;
 
 namespace ProjetoPraticaOficial.Controllers
 {
+    using WebServiceCepCerto;
     using WebServiceCEP;
     public class LoginController : Controller
     {
@@ -19,14 +20,41 @@ namespace ProjetoPraticaOficial.Controllers
         Loja lo;
         public ActionResult BuscarCep(string pesquisa)
         {
-            using (var ws = new AtendeClienteClient())
+            /*using (var ws = new AtendeClienteClient())
             {
                 var resposta = ws.consultaCEP(pesquisa);
                 Session["end"] = resposta;
                 Session["cep"] = pesquisa;
                 ViewBag.CEP = resposta;
             }
-            return RedirectToAction("ComprarDados","Login",Session["p"]);
+            return RedirectToAction("ComprarDados","Login",Session["p"]);*/
+            return null;
+        }
+        [HttpGet]
+        public JsonResult ComprarTeste(string cep)
+        {
+            string nCdEmpresa = string.Empty;
+            string sDsSenha = string.Empty;
+            string nCdServico = "41106";
+
+            string sCepOrigem = "13043805";
+            string sCepDestino = cep;
+            int nCdFormato = 1;
+            string nVlPeso = Convert.ToString(1);
+            decimal nVlComprimento = 20;
+            decimal nVlAltura = 20;
+            decimal nVlLargura = 20;
+            decimal nVlDiametro = 0;
+            string sCdMaoPropria = "N";
+            decimal nVlValorDeclarado = 0;
+            string sCdAvisoRecebimento = "N";
+            CalcPrecoPrazoWSSoapClient cliente = new CalcPrecoPrazoWSSoapClient();
+            cResultado retornoCorreios = cliente.CalcPrecoPrazo(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento);
+
+            string[] result = new string[2];
+            result[0] = retornoCorreios.Servicos[0].Valor;
+            result[1] = retornoCorreios.Servicos[0].PrazoEntrega;
+            return Json(result,JsonRequestBehavior.AllowGet);
         }
         public ActionResult EfetuarCompra(int numero, string complemento)
         {
