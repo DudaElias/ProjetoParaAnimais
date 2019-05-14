@@ -1,20 +1,16 @@
-﻿function CalcularPrecoTempo() {
-    var frete = require('frete');
-
-    frete()
-        .cepOrigem(document.getElementById("numero").nodeValue)
-        .peso(1)
-        .formato(1)
-        .comprimento(16)
-        .altura(2)
-        .largura(11)
-        .diametro(1)
-        .maoPropria('N')
-        .valorDeclarado(50)
-        .avisoRecebimento('S')
-        .servico(frete.codigos.sedex)
-        .precoPrazo('13466321', function (err, results) {
-            console.log(err);
-            console.log(results);
-        });
-}
+﻿$(document).ready(function () {
+    $("#btn").click(function () {
+        $.ajax({
+            url: "ComprarTeste",
+            type: "GET",
+            contentType: "application/json",
+            data: {cep: $("#pesquisa").val()},
+            success: function (result) {
+                $("#valor").html("<label> Valor: " + result[0] + "Prazo de entrega:" + result[1] + "</label>")
+            },
+            error: function (xhr, exception) {
+                alert("Erro ao calcular prazo!");
+            }
+        })
+    })
+});
