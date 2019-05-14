@@ -14,6 +14,7 @@
     </script>
     <script type="text/javascript">
         window.onload = function () {
+            //deixar digitar apenas número
             document.getElementById("cpf").onkeypress = function () {
                 var txt = this.value;
                 if (txt.length == 3 || txt.length == 7)
@@ -21,6 +22,18 @@
                 else
                     if (txt.length == 11)
                         this.value += "-";
+            }
+            document.getElementById("txtCelularCliente").onkeypress = function () {
+                var txt = this.value;
+                if (txt.length == 0)
+                    this.value += "(";
+                if (txt.length == 3)
+                    this.value += ")";
+                if (txt.length == 8)
+                    this.value += "-";
+                if (txt.length == 13)
+                    this.value = this.value.substring(0, 10).replace("-", "") + "-" + this.value.substring(10);
+                //quando apaga ele n volta
             }
         }
     </script>
@@ -62,7 +75,7 @@
             <input type="password" ID="txtSenhaNovCliente" placeholder="Digite a senha novamente do cliente" class="txtEmpresa" runat="server" maxlength="50">
             <!--<asp:Label ID="lblPreferencia" CssClass="lblCliente" runat="server" Visible="false"></asp:Label>
     <asp:TextBox ID="txtDDDCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>-->
-            <input type="text" ID="txtCelularCliente" name="c.Telefone" placeholder="Digite o celular do cliente" class="txtEmpresa" runat="server" maxlength="11">
+            <input type="tel" ID="txtCelularCliente" name="c.Telefone" placeholder="Digite o celular do cliente (com DDD)" class="txtEmpresa" runat="server" maxlength="14">
             @Html.ValidationMessage("c.Telefone")
             <input type="checkbox" ID="chkTermos" class="chkCliente" runat="server" />
             <label ID="lblTermos" class="lblCliente" runat="server"></label>
