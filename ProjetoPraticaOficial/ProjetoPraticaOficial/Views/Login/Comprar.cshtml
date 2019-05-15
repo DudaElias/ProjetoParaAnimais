@@ -40,9 +40,10 @@
                 <div class="produto" name="p.Imagem" style="background-image: url(@ViewBag.Produto.Imagem)"></div>
                 <h2>@ViewBag.Produto.Descricao</h2>
                 <h3>@String.Format("{0:c}", ViewBag.Produto.Preco)</h3>
-                <form id="form-cep" action="" method="POST">
+                <form id="form-cep" action="EfetuarCompra" method="POST" class="box">
+                    <input type="number" class="numero" name="numero" id="numero" min="1" max="100" />
                     <input type="text" name="pesquisa" id="pesquisa" placeholder="Informe o cep" \>
-                    <input type="button" id="btn" class="btn" value="Buscar CEP" />
+                    <input type="button" id="btn" class="btn-comprar" value="Buscar CEP" />
                 </form>
             </div>
         </div>

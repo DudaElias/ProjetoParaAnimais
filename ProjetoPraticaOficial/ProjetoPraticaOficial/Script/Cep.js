@@ -8,12 +8,16 @@
             success: function (result) {
                 $("#valor").html("<label> Valor: " + result[0] + "Prazo de entrega:" + result[1] + "</label>");
                 var para = document.createElement("input");
-                para.type = 'button';
+                para.type = 'submit';
                 para.value = 'Finalizar Compra';
-                para.className = 'btn';
-                para.width = "500px";
+                para.className = 'btn-compra';
+                var x = document.createElement("input");
+                x.type = 'text';
+                x.placeholder = 'Complemento';
+                x.name = "complemento"
                 var element = document.getElementById("form-cep");
                 element.appendChild(para);
+                element.appendChild(x);
             },
             error: function (xhr, exception) {
                 alert("Erro");

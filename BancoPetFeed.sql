@@ -12,11 +12,12 @@ dataPedido date not null,
 codCliente int not null,
 constraint fkCodCliente foreign key (codCliente) references Cliente(id),
 codPedido int not null,
-constraint fxCodPedido foreign key(codPedido) references Pedido(id),
+constraint fxCodPedido foreign key(codPedido) references ItemPedido(id),
 dataEntrega date not null,
-codSedex int not null,
+precoEntrega money not null,
 endereco varchar(100) not null
 )
+
 
 create table Loja(
 id int identity(1,1) primary key,

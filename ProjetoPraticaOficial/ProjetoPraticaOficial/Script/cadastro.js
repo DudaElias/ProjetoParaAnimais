@@ -1,33 +1,12 @@
-﻿function Cadastro(i)
-{
-    if (i == 1)
-    {
-        document.getElementById("box1").style.visibility = "visible";
-        document.getElementById("boxEm").style.visibility = "visible";
-        document.getElementById("boxCli").style.visibility = "hidden";
-        document.getElementById("linha").style.visibility = "visible";
-        document.getElementById("box2").style.visibility = "hidden";
-        document.getElementById("btns").style.visibility = "hidden";
-        document.getElementById("Label2").style.visibility = "visible";
-    }
-        
-    else
-    {
-        document.getElementById("box2").style.visibility = "visible";
-        document.getElementById("box1").style.visibility = "hidden";
-        document.getElementById("boxEm").style.visibility = "hidden";
-        document.getElementById("boxCli").style.visibility = "visible";
-        document.getElementById("linha").style.visibility = "visible";
-        document.getElementById("btns").style.visibility = "hidden";
-        document.getElementById("Label2").style.visibility = "visible";
-    }
-}
+﻿function CarregarImagem() {
 
-function Cadastrar(i) {
-    if (i == 1) {
-    }
-
-    else {
-        window.location.href = "PerfilUsu\Perfil";
-    }
+    var c = document.getElementById("img").value;
+    var d = document.createElement("div");
+    d.style.backgroundImage = "url(" +c + ")";
+    d.style.width = "8em";
+    d.style.height = "13em";
+    d.style.backgroundSize = "cover";
+    d.style.marginLeft = "36em";
+    d.style.marginTop = "5em";
+    document.body.appendChild(d);
 }

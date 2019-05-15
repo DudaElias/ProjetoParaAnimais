@@ -12,7 +12,7 @@ namespace ProjetoPraticaOficial.Models
         public int CodCliente { get; set; }
         public int CodPedido { get; set; }
         public DateTime DataEntrega { get; set; }
-        public int CodSedex { get; set; }
+        public decimal PrecoEntrega { get; set; }
         public string Endereco { get; set; }
 
     }

@@ -391,10 +391,7 @@
     <None Include="Connected Services\WebServiceCEP\AtendeClienteService.wsdl" />
     <None Include="packages.config" />
     <Content Include="Views\Login\LoginCli.cshtml" />
-    <Content Include="Views\Login\LoginEfetudo.cshtml" />
     <Content Include="Views\Login\LoginEm.cshtml" />
-    <Content Include="Views\Login\EditarEm.cshtml" />
-    <Content Include="Views\Login\EditarDadosEm.cshtml" />
     <Content Include="Views\Login\Principal.cshtml" />
     <Content Include="Views\Login\Base.cshtml" />
     <Content Include="Views\Login\Pergunta.cshtml" />
@@ -410,6 +407,7 @@
     <Content Include="Views\Login\Comprar.cshtml" />
     <Content Include="Views\Login\ComprarDados.cshtml" />
     <Content Include="Script\package.json" />
+    <Content Include="Views\Login\PedidosARealizar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

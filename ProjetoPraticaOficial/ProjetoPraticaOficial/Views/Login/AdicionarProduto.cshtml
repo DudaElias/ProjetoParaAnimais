@@ -9,7 +9,8 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>AdicionarProduto</title>
-
+    <script type="text/javascript" src="~/Script/cadastro.js">
+    </script>
     <link rel="stylesheet" href="~/Content/estiloDentro.css" />
 </head>
 <body>
@@ -29,11 +30,11 @@
             </label>
 
         </ul></div>
-        <div class="box">
+        <div class="box" id="box">
             <form action="AdicionarProdutoVerdade" method="post">
-            <label ID="Label1" runat="server" Text="Adicionar Produto:" CssClass="lblLogin">Adicionar Produto</label>
+            <label ID="Label1" runat="server" Text="Adicionar Produto:" class="lblLogin">Adicionar Produto</label>
             <input id="txtNomePro" name="p.Nome" type="text" placeholder="Nome" />
-            <input name="p.Imagem" type="url">
+            <input name="p.Imagem" type="url" id="img" placeholder="Imagem(deve ser online)" onblur="CarregarImagem()">
             <input id="txtFiltro" type="text" name="n" placeholder="Filtro" />
             <input id="txtDescricao" type="text" name="p.Descricao" placeholder="Descrição" />
             <input id="txtreco" type="text" name="p.Preco" placeholder="Preço" />

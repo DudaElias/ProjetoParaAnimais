@@ -18,18 +18,6 @@ namespace ProjetoPraticaOficial.Controllers
 
         Cliente cli;
         Loja lo;
-        public ActionResult BuscarCep(string pesquisa)
-        {
-            /*using (var ws = new AtendeClienteClient())
-            {
-                var resposta = ws.consultaCEP(pesquisa);
-                Session["end"] = resposta;
-                Session["cep"] = pesquisa;
-                ViewBag.CEP = resposta;
-            }
-            return RedirectToAction("ComprarDados","Login",Session["p"]);*/
-            return null;
-        }
         [HttpGet]
         public JsonResult ComprarTeste(string cep)
         {
@@ -50,12 +38,14 @@ namespace ProjetoPraticaOficial.Controllers
             string sCdAvisoRecebimento = "N";
             CalcPrecoPrazoWSSoapClient cliente = new CalcPrecoPrazoWSSoapClient();
             cResultado retornoCorreios = cliente.CalcPrecoPrazo(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento);
-
+            Session["cep"] = cep;
             string[] result = new string[2];
+            Session["correios"] = result;
             result[0] = retornoCorreios.Servicos[0].Valor;
             result[1] = retornoCorreios.Servicos[0].PrazoEntrega;
             return Json(result,JsonRequestBehavior.AllowGet);
         }
+        
         public ActionResult EfetuarCompra(int numero, string complemento)
         {
             PedidoDAO dao = new PedidoDAO();
@@ -68,8 +58,8 @@ namespace ProjetoPraticaOficial.Controllers
             pedido.CodCliente = ((Cliente)Session["cli"]).Id;
             pedido.Endereco = Session["cep"].ToString()+ " " + complemento;
             pedido.DataPedido = DateTime.Today.Date;
-            pedido.DataEntrega = DateTime.Today.Date;
-            pedido.CodSedex = 0;
+            pedido.DataEntrega = DateTime.Today.Date.AddDays(Convert.ToDouble(((string[])Session["correios"])[1]));
+            pedido.PrecoEntrega = Convert.ToDecimal(((string[])Session["correios"])[0]);
             pedido.CodPedido = item.Id;
             dao.Adiciona(pedido);
             return null;
@@ -181,6 +171,8 @@ namespace ProjetoPraticaOficial.Controllers
 
         public ActionResult Principal()
         {
+            Session["cli"] = null;
+            Session["lo"] = null;
             return View();
         }
         public ActionResult Pergunta()
@@ -251,11 +243,6 @@ namespace ProjetoPraticaOficial.Controllers
             return View();
         }
 
-        public ActionResult EditarDadosEm()
-        {
-            return View();
-        }
-
         public ActionResult AdicionarProduto()
         {
             return View();
@@ -316,12 +303,27 @@ namespace ProjetoPraticaOficial.Controllers
         [HttpPost]
         public ActionResult Comprar(Produto po)
         {
-            ViewBag.Produto = po;
-            Session["p"] = po;
+            ProdutoDAO dao = new ProdutoDAO();
+            Produto x = dao.BuscaPorNome(po.Nome);
+            ViewBag.Produto = x;
+            Session["p"] = x;
             return View();
         }
         public ActionResult GraficoPareto()
         {
+            return View();
+        }
+
+
+        public ActionResult PedidosARealizar()
+        {
+            ItemPedidoDAO dao = new ItemPedidoDAO();
+            IList<ItemPedido> lista =  dao.Lista();
+            IList<Pedido> pedidos;
+            foreach(var b in lista)
+            {
+                if(b.CodProduto)
+            }
             return View();
         }
     }
