@@ -18,6 +18,7 @@ precoEntrega money not null,
 endereco varchar(100) not null
 )
 
+select * from Pedido
 
 create table Loja(
 id int identity(1,1) primary key,
