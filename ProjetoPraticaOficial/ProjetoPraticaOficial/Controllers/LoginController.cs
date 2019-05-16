@@ -317,13 +317,8 @@ namespace ProjetoPraticaOficial.Controllers
 
         public ActionResult PedidosARealizar()
         {
-            ItemPedidoDAO dao = new ItemPedidoDAO();
-            IList<ItemPedido> lista =  dao.Lista();
-            IList<Pedido> pedidos;
-            foreach(var b in lista)
-            {
-                if(b.CodProduto)
-            }
+            PedidoDAO dao = new PedidoDAO();
+            dao.Pedidos(Convert.ToInt32(((Loja)(Session["lo"])).Id));
             return View();
         }
     }
