@@ -340,6 +340,10 @@
     <Content Include="Content\estiloPrincipal.css" />
     <Content Include="Content\estiloSobre.css" />
     <Content Include="Global.asax" />
+    <Content Include="Imagens\1.jpg" />
+    <Content Include="Imagens\2.jpg" />
+    <Content Include="Imagens\3.jpg" />
+    <Content Include="Imagens\4.jpg" />
     <Content Include="Imagens\9228f03f9d.png" />
     <Content Include="Imagens\animais.jpg" />
     <Content Include="Imagens\graos-481.jpg" />
