@@ -384,6 +384,7 @@ html {
 .slidershow {
     width: 1000px;
     height: 500px;
+    position: absolute;
     overflow: hidden;
 }
 
@@ -454,4 +455,11 @@ input[name="r"] {
 
 #r5:checked ~ .s1 {
     margin-left: -80%;
+}
+
+
+.team-section{
+    overflow: hidden;
+    text-align: center;
+    background: #34495e;
 }
