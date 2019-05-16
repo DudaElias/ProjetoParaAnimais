@@ -318,7 +318,20 @@ namespace ProjetoPraticaOficial.Controllers
         public ActionResult PedidosARealizar()
         {
             PedidoDAO dao = new PedidoDAO();
-            dao.Pedidos(Convert.ToInt32(((Loja)(Session["lo"])).Id));
+            ItemPedidoDAO dao2 = new ItemPedidoDAO();
+            ProdutoDAO dao3 = new ProdutoDAO();
+
+            List<Pedido> pedidos = dao.Pedidos(Convert.ToInt32(((Loja)(Session["lo"])).Id));
+            List<ItemPedido> itens = new List<ItemPedido>();
+            List<Produto> produtos = new List<Produto>();
+            foreach (var a in pedidos)
+            {
+                itens.Add(dao2.BuscaPorNome(a.CodPedido));
+                produtos.Add(dao3.BuscaPorId(dao2.BuscaPorNome(a.CodPedido).CodProduto));
+            }
+            ViewBag.Pedido = pedidos;
+            ViewBag.Produtos = produtos;
+            ViewBag.Itens = itens;
             return View();
         }
     }

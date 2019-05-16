@@ -12,9 +12,19 @@
 </head>
 <body>
     <div>
-        @foreach(var a in ViewBag.Pedido)
+        @foreach (var a in ViewBag.Produtos)
         {
-            <span> aaaaaaa</span>
+            <span> @a.Nome</span>
+        }
+
+        @foreach (var a in ViewBag.Itens)
+        {
+            <span>@a.Quantidade</span>
+        }
+        @foreach (var a in ViewBag.Pedido)
+        {
+            <span> @a.DataEntrega</span>
+            <span>@a.Endereco</span>
         }
     </div>
 </body>

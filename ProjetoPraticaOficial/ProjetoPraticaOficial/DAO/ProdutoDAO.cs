@@ -27,6 +27,15 @@ namespace ProjetoPraticaOficial.DAO
                 .FirstOrDefault();
             }
         }
+        public Produto BuscaPorId(int id)
+        {
+            using (var contexto = new LoginContext())
+            {
+                return contexto.Produto
+                .Where(p => p.Id == id)
+                .FirstOrDefault();
+            }
+        }
         public IList<Produto> Lista()
         {
             using (var contexto = new LoginContext())

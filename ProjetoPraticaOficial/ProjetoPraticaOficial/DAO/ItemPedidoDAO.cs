@@ -25,6 +25,15 @@ namespace ProjetoPraticaOficial.DAO
                 return contexto.ItemPedido.ToList();
             }
         }
+        public ItemPedido BuscaPorNome(int id)
+        {
+            using (var contexto = new LoginContext())
+            {
+                return contexto.ItemPedido
+                .Where(p => p.Id == id)
+                .FirstOrDefault();
+            }
+        }
         public void Atualiza(ItemPedido ItemPedido)
         {
             using (var contexto = new LoginContext())
