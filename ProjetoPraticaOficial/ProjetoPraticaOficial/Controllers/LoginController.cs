@@ -45,13 +45,6 @@ namespace ProjetoPraticaOficial.Controllers
             result[1] = retornoCorreios.Servicos[0].PrazoEntrega;
             return Json(result,JsonRequestBehavior.AllowGet);
         }
-
-        public ActionResult Filtro(int id)
-        {
-            ProdutoDAO dao = new ProdutoDAO();
-            ViewBag.Filtros = dao.Produtos(id);
-            return null;
-        }
         
         public ActionResult EfetuarCompra(int numero, string complemento)
         {

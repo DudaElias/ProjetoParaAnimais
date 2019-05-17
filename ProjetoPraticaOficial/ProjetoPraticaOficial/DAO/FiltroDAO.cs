@@ -4,11 +4,8 @@ using System.Linq;
 using System.Web;
 using Microsoft.EntityFrameworkCore;
 using ProjetoPraticaOficial.Models;
-using Microsoft.EntityFrameworkCore.Storage;
-using System.Data.SqlClient;
 
-
-    namespace ProjetoPraticaOficial.DAO
+namespace ProjetoPraticaOficial.DAO
 {
     public class FiltroDAO
     {
@@ -45,6 +42,5 @@ using System.Data.SqlClient;
                 contexto.SaveChanges();
             }
         }
-        
     }
 }
