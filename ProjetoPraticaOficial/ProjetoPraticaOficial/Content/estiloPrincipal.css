@@ -123,16 +123,15 @@ html {
 }
 
 .slidershow {
-    width: 1000px;
-    height: 500px;
+    width: 100%;
+    height: 560px;
     position: absolute;
-    top: -2%;
     overflow: hidden;
 }
 
 .middle {
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -201,11 +200,11 @@ input[name="r"] {
 }
 
 
-.team-section{
+.team-section {
     overflow: hidden;
     text-align: center;
-    margin-top: 35em;
-    background: #34495e;
+    margin-top: 37em;
+    background: #EB7252;
 }
 .team-section h1{
     text-transform: uppercase;
@@ -214,13 +213,13 @@ input[name="r"] {
     font-size: 30px;
 }
 
-.border{
+.border {
     display: block;
     margin: auto;
     width: 160px;
     height: 3px;
-    background: #3498db;
-    margin-bottom:40px;
+    background: white;
+    margin-bottom: 40px;
 }
 
 .ps{
@@ -347,14 +346,14 @@ p{
     top: 79%;
     left: 0%;
     width: 99.8%;
-    border-color: grey;
+    border-color: white;
 }
 .s-mPrincipal {
     background: #EB7252;
     width: 100%;
     height: 150px;
     position: relative;
-    bottom: -2em;
+    bottom: -1.5em;
 }
 
 .menuFooterP {
@@ -376,14 +375,15 @@ p{
     top: 79%;
     left: 0%;
     width: 99.8%;
-    border-color: grey;
+    color: white;
+    border-color: white;
 }
 
 .fPetFeed {
     position: absolute;
     font-size: 150%;
     left: 2%;
-    font-weight: bold;
+    font-weight: 500;
     top: 3%;
     color: snow;
     font-family: var(--fort);
@@ -393,7 +393,7 @@ p{
     position: absolute;
     font-size: 150%;
     left: 17%;
-    font-weight: bold;
+    font-weight: 500;
     top: 3%;
     color: snow;
     font-family: var(--fort);
@@ -502,10 +502,9 @@ p{
     }
 
     .s-mPrincipal {
-        background: #34495e;
         width: 100%;
         height: 250px;
-        margin-bottom: 0em;
+        margin-bottom: -1em;
     }
 
     .creditosFooter {
@@ -522,7 +521,6 @@ p{
         z-index: 3;
         position: absolute;
         width: 50px;
-        background: #34495e;
         bottom: 15%;
         right: 1%;
         text-decoration: none;
