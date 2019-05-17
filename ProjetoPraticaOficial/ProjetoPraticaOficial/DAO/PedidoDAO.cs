@@ -38,7 +38,6 @@ namespace ProjetoPraticaOficial.DAO
 
         public List<Pedido> Pedidos(int id)
         {
-
             List<Pedido> list = new List<Pedido>();
             Pedido p = null;
             using (var conn = new SqlConnection("Data Source=regulus.cotuca.unicamp.br;Initial Catalog='PR118343'; User ID ='PR118343'; Password ='PR118343'"))
