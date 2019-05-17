@@ -344,11 +344,13 @@
     <Content Include="Imagens\2.jpg" />
     <Content Include="Imagens\3.jpg" />
     <Content Include="Imagens\4.jpg" />
+    <Content Include="Imagens\6df4a909-0427-47fa-8e8f-dfc6c55ff68c.jpg" />
     <Content Include="Imagens\9228f03f9d.png" />
     <Content Include="Imagens\animais.jpg" />
     <Content Include="Imagens\graos-481.jpg" />
     <Content Include="Imagens\Logo.png" />
     <Content Include="Imagens\perfil.png" />
+    <Content Include="Imagens\pp.jpg" />
     <Content Include="Imagens\racao-cachorro-gato-escolha-600x399.jpg" />
     <Content Include="Content\estilo.css" />
     <Content Include="Script\cadastro.js" />
