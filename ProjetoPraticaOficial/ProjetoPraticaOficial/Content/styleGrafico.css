@@ -1,0 +1,380 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Acme|Inconsolata|Poiret+One|Signika|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans');
+
+:root {
+--fort: 'Fredoka One', cursive;
+--normal: 'Open Sans', sans-serif;
+}
+
+* {
+margin: 0;
+padding: 0;
+text-decoration: none;
+font-family: 'Slabo 27px', serif;
+}
+
+html {
+overflow-x: hidden;
+scroll-behavior: smooth;
+}
+
+.sobre {
+height: 100%;
+}
+
+.header {
+    height: 8em;
+    background: #20bf6b;
+    padding: 0 20px;
+    color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.678);
+}
+
+.logo {
+line-height: 100px;
+position: absolute;
+top: 3%;
+float: left;
+background-image: url(../Imagens/Logo.png);
+width: 200px;
+height: 7em;
+}
+
+.menu {
+float: right;
+line-height: 150px;
+z-index: 90;
+}
+
+.menu a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 10px;
+    transition: 0.4s;
+    font-family: var(--fort);
+}
+
+.show-menu-btn, .hide-menu-btn {
+transition: 0.4s;
+font-size: 30px;
+cursor: pointer;
+display: none;
+}
+
+.show-menu-btn {
+float: right;
+}
+
+.show-menu-btn i {
+    line-height: 150px;
+}
+
+.menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+    color: rgb(92, 92, 92);
+}
+
+#chk {
+position: absolute;
+visibility: hidden;
+z-index: -1111;
+}
+
+@media screen and (max-width: 800px) {
+    .show-menu-btn, .hide-menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #20bf6b;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+
+.menu a {
+    display: block;
+    padding: 20px;
+}
+
+.hide-menu-btn {
+position: absolute;
+top: 40px;
+right: 40px;
+}
+
+#chk:checked ~ .menu {
+right: 0;
+}
+}
+.section {
+width: 100%;
+height: 350vh;
+}
+
+.gotopbtn {
+z-index: 3;
+position: absolute;
+width: 50px;
+background: #20bf6b;
+bottom: 10%;
+right: 1%;
+text-decoration: none;
+text-align: center;
+line-height: 20%;
+color: white;
+font-size: 26px;
+}
+
+.menuFooterD {
+position: absolute;
+margin-top: 0.5em;
+top: 20%;
+left: 16.9%;
+list-style-type: none;
+text-decoration: none;
+display: inline-block;
+}
+
+.menuFooterP {
+position: absolute;
+left: 1.3%;
+margin-top: 0.5em;
+float: left;
+padding: 0px 10px;
+list-style-type: none;
+display: inline-block;
+text-decoration: none;
+}
+
+.creditosFooter {
+position: absolute;
+float: left;
+font-size: 0.9em;
+top: 86%;
+left: 1%;
+float: left;
+}
+
+@media screen and (max-width: 300px) {
+.creditosFooter {
+    visibility: hidden;
+}
+
+.icone {
+    visibility: hidden;
+}
+
+.logo {
+    visibility: hidden;
+}
+}
+
+
+.hrFooter {
+position: absolute;
+top: 79%;
+left: 0%;
+width: 99.8%;
+border-color: white;
+}
+
+.s-mPrincipal {
+background: #20bf6b;
+width: 100%;
+height: 150px;
+position: relative;
+bottom: -1.5em;
+}
+
+.menuFooterP {
+position: absolute;
+top: 20%;
+float: left;
+padding: 0px 10px;
+list-style-type: none;
+display: inline-block;
+text-decoration: none;
+font-family: var(--normal);
+}
+
+.menuFooterD li a, .menuFooterP li a {
+color: white;
+font-family: var(--normal);
+}
+
+.hrFooter {
+    position: absolute;
+    top: 79%;
+    left: 0%;
+    width: 99.8%;
+    color: white;
+    border-color: white;
+}
+
+.fPetFeed {
+    position: absolute;
+    font-size: 150%;
+    left: 2%;
+    font-weight: 500;
+    top: 3%;
+    color: snow;
+    font-family: var(--fort);
+}
+
+.fDescubra {
+    position: absolute;
+    font-size: 150%;
+    left: 17%;
+    font-weight: 500;
+    top: 3%;
+    color: snow;
+    font-family: var(--fort);
+}
+
+.fSociais {
+    position: absolute;
+    font-size: 150%;
+    left: 81%;
+    display: inline-block;
+    font-family: var(--fort);
+    font-weight: bold;
+    top: 14%;
+    color: snow;
+}
+
+.s-m ul li {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.icone {
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    background: white;
+    color: #20bf6b;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-size: 24px;
+    float: right;
+    margin: 20px 8px;
+}
+
+.s-mPrincipal .icone:hover {
+    background: rgb(92, 92, 92);
+}
+
+.s-mPrincipal a i {
+    transition: 0.4s all;
+}
+
+.s-mPrincipal {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.s-mPrincipal a:hover > i {
+    transform: scale(1.4) rotate(25deg)
+}
+
+.s-mPrincipal span i {
+    color: white;
+}
+
+.s-mPrincipal span {
+    float: left;
+    color: white;
+    text-align: justify;
+}
+
+.content {
+    padding: 0 25%;
+    position: absolute;
+}
+
+.content img {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 600px) {
+    .fDescubra {
+        position: absolute;
+        font-size: 150%;
+        left: 2%;
+        font-weight: bold;
+        top: 39%;
+        color: snow;
+    }
+
+    .menuFooterP {
+        position: absolute;
+        top: 12%;
+        left: 0.5%;
+        float: left;
+        padding: 0px 10px;
+        list-style-type: none;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .menuFooterD {
+        position: absolute;
+        top: 48%;
+        left: 0.5%;
+        float: left;
+        padding: 0px 10px;
+        list-style-type: none;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .s-mPrincipal {
+        width: 100%;
+        height: 250px;
+        margin-bottom: -1em;
+    }
+
+    .creditosFooter {
+        position: absolute;
+        float: left;
+        font-size: 0.9em;
+        top: 86%;
+        left: 1%;
+        float: left;
+        width: 83%;
+    }
+
+    .gotopbtn {
+        z-index: 3;
+        position: absolute;
+        width: 50px;
+        bottom: 15%;
+        right: 1%;
+        text-decoration: none;
+        text-align: center;
+        line-height: 30%;
+        color: white;
+        font-size: 26px;
+    }
+}
+
+#myChart {
+    padding-top: 20px;
+    margin-left: 32%;
+    max-height: 50em;
+    max-width: 35em;
+}

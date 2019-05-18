@@ -1,6 +1,12 @@
-
+﻿
 /*BASE DO DESIGN DA PÁGINA*/
 @import url('https://fonts.googleapis.com/css?family=Acme|Inconsolata|Poiret+One|Signika|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans');
+
+:root {
+    --fort: 'Fredoka One', cursive;
+    --normal: 'Open Sans', sans-serif;
+}
 
 * {
     margin: 0;
@@ -8,14 +14,16 @@
     text-decoration: none;
     font-family: 'Slabo 27px', serif;
 }
-
+body{
+    background-image: url(../Imagens/a.jpg);
+    background-size: cover;
+}
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-.field-validation-error 
-{
+.field-validation-error {
     color: red;
     font-size: 15px;
 }
@@ -23,11 +31,13 @@ html {
 .sobre {
     height: 100%;
 }
+
 .header {
-    height: 150px;
-    background: #34495e;
+    height: 8em;
+    background: #6D3E9C;
     padding: 0 20px;
     color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.678);
 }
 
 .logo {
@@ -53,6 +63,7 @@ html {
         font-size: 20px;
         padding: 0 10px;
         transition: 0.4s;
+        font-family: var(--fort);
     }
 
 .show-menu-btn, .hide-menu-btn {
@@ -71,7 +82,7 @@ html {
     }
 
     .menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
-        color: #e67e22;
+        color: rgb(92, 92, 92);
     }
 
 #chk {
@@ -146,14 +157,15 @@ html {
 /*PÁGINA DE LOGIN*/
 
 .box {
-    background: #34495e;
+    background: rgba(0,0,0,0.7);
     width: 300px;
     padding: 40px;
-    margin-top: 20em;
+    margin-top: 15em;
     margin-left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
+    margin-top: 17em;
     border-radius: 10%;
 }
 
@@ -165,18 +177,13 @@ html {
     transform: translate(-50%, -50%);
     text-align: center;
     padding-bottom: 150px;
-    
 }
 
 .lblLogin {
     width: 400px;
-    font-family: Courier New, Courier, monospace;
-    color: black;
-    font-weight: bold;
-    font-size: 30px;
-    position: absolute;
-    top: -8%;
-    left: 0%;
+    font-family: var(--fort);
+    color: white;
+    font-size: 25px;
 }
 
 .box input[type = "text"], .box input[ type = "password"] {
@@ -189,16 +196,23 @@ html {
     padding: 14px 10px;
     width: 250px;
     font-size: 20px;
+    font-family: var(--normal);
     font-weight: 500;
     outline: none;
-    color: black;
+    color: white;
     border-radius: 24px;
     transition: 0.25s;
 }
 
-    .box input[type = "text"]:focus, .box input[ type = "password"]:focus {
+.box a 
+{
+    color: white;
+    font-family: var(--normal);
+}
+
+    input[type = "text"]:focus, input[ type = "password"]:focus{
         width: 280px;
-        border-color: #753B3B;
+        border-color: #6D3E9C;
     }
 
 .btn, .Button2, .Button3 {
@@ -207,20 +221,21 @@ html {
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #753B3B;
+    border: 2px solid #6D3E9C;
     padding: 14px 40px;
     width: 200px;
     outline: none;
-    color: black;
+    color: white;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 400;
+    font-family: var(--normal);
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
 }
 
     .btn:hover, .Button2:hover, .Button3:hover {
-        background: #753B3B;
+        background: #6D3E9C;
         color: white;
     }
 
@@ -234,12 +249,16 @@ html {
 }
 
 .box-btn {
-    width: 500px;
-    padding: 50px;
-    margin-top: 20em;
+    background: rgba(0,0,0,0.7);
+    padding: 40px;
+    margin-top: 15em;
     margin-left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    padding-bottom: 50px;
+    margin-top: 20em;
+    width:400px;
+    border-radius: 10%;
     z-index: -100;
 }
 
@@ -254,9 +273,8 @@ html {
 
 .lblCadastrar {
     width: 400px;
-    font-family: Courier New, Courier, monospace;
-    color: black;
-    font-weight: bold;
+    font-family: var(--fort);
+    color: white;
     font-size: 30px;
     height: 50px;
 }
@@ -307,13 +325,15 @@ html {
     display: block;
     margin: 10px auto;
     text-align: center;
-    border: 2px solid #753B3B;
+    border: 2px solid #6D3E9C;
     padding: 10px 40px;
     width: 200px;
     outline: none;
     position: relative;
     top: 80%;
-    color: black;
+    color: white;
+    font-family: var(--normal);
+    font-weight: 500;
     font-size: 20px;
     font-weight: 700;
     border-radius: 24px;
@@ -322,10 +342,10 @@ html {
 }
 
 
-.btnCadastrar:hover {
-    background: #753B3B;
-    color: white;
-}
+    .btnCadastrar:hover {
+        background: #6D3E9C;
+        color: white;
+    }
 
 .box-btn2 {
     width: 500px;
@@ -354,7 +374,7 @@ html {
     z-index: 3;
     position: absolute;
     width: 50px;
-    background: #34495e;
+    background: #6D3E9C;
     bottom: 10%;
     right: 1%;
     text-decoration: none;
@@ -418,7 +438,7 @@ html {
 }
 
 .s-mPrincipal {
-    background: #34495e;
+    background: #6D3E9C;
     width: 100%;
     height: 150px;
     position: absolute;
@@ -478,7 +498,7 @@ html {
     width: 60px;
     height: 60px;
     background: white;
-    color: #34495e;
+    color: #6D3E9C;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
@@ -489,7 +509,7 @@ html {
 }
 
 .s-mPrincipal .icone:hover {
-    background: lightseagreen;
+    background: grey;
 }
 
 .s-mPrincipal a i {
@@ -553,6 +573,7 @@ html {
         height: 250px;
         margin-bottom: 0em;
     }
+
     .creditosFooter {
         position: absolute;
         float: left;
@@ -560,8 +581,9 @@ html {
         top: 86%;
         left: 1%;
         float: left;
-        width:83%;
+        width: 83%;
     }
+
     .gotopbtn {
         z-index: 3;
         position: absolute;

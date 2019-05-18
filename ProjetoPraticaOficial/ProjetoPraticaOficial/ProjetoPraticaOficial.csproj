@@ -334,11 +334,13 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Content\estiloCadastro.css" />
-    <Content Include="Content\estiloDentro.css" />
-    <Content Include="Content\estiloPergunta.css" />
-    <Content Include="Content\estiloPrincipal.css" />
-    <Content Include="Content\estiloSobre.css" />
+    <Content Include="Content\styleCadastro.css" />
+    <Content Include="Content\styleDentro.css" />
+    <Content Include="Content\stylePergunta.css" />
+    <Content Include="Content\stylePrincipal.css" />
+    <Content Include="Content\styleSobre.css" />
+    <Content Include="Content\styleGrafico.css" />
+    <Content Include="Content\styleLoja.css" />
     <Content Include="Global.asax" />
     <Content Include="Imagens\1.jpg" />
     <Content Include="Imagens\2.jpg" />
@@ -346,13 +348,14 @@
     <Content Include="Imagens\4.jpg" />
     <Content Include="Imagens\6df4a909-0427-47fa-8e8f-dfc6c55ff68c.jpg" />
     <Content Include="Imagens\9228f03f9d.png" />
+    <Content Include="Imagens\a.jpg" />
     <Content Include="Imagens\animais.jpg" />
+    <Content Include="Imagens\b.jpeg" />
     <Content Include="Imagens\graos-481.jpg" />
     <Content Include="Imagens\Logo.png" />
     <Content Include="Imagens\perfil.png" />
     <Content Include="Imagens\pp.jpg" />
     <Content Include="Imagens\racao-cachorro-gato-escolha-600x399.jpg" />
-    <Content Include="Content\estilo.css" />
     <Content Include="Script\cadastro.js" />
     <Content Include="Script\CalcPrecoPrazo.xml" />
     <Content Include="Script\Cep.js" />

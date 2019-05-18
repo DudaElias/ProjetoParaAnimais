@@ -12,7 +12,7 @@
 
     <script type="text/javascript" src="~/Script/cadastro.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <link rel="stylesheet" type="text/css" href="../Content/estiloCadastro.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/styleLoja.css" />
 </head>
 <body>
     <div class="header">
@@ -37,8 +37,8 @@
     <div class="box" id="boxEm">
         <label ID="Label1" Text="Já sou cadastrado:" class="lblLogin">Já sou cadastrado:</label>
         <form method="post" action="/Login/LoginEm">
-            <input id="Text1" name="e.Nome" type="text" placeholder="Usuário" />
-            <input id="Password1" name="e.CpfDono" type="text" placeholder="CPF" />
+            <input id="Text1" name="e.Nome" type="text" autocomplete="off" placeholder="Usuário" />
+            <input id="Password1" name="e.CpfDono" autocomplete="off" type="text" placeholder="CPF" />
             <input id="Button1" type="submit" value="Entrar" class="btn" />
             <a href="CriarLoginLoja">Ainda não tenho um cadastro</a>
         </form>
