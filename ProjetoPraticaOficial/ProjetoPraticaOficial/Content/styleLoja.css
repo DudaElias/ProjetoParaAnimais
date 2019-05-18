@@ -35,8 +35,8 @@ html {
 .header {
     height: 8em;
     background: #6D3E9C;
-    padding: 0 20px;
     color: #fff;
+    width: 100%;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.678);
 }
 
@@ -74,7 +74,7 @@ html {
 }
 
 .show-menu-btn {
-    float: right;
+    margin-left:90vw;
 }
 
     .show-menu-btn i {
@@ -196,6 +196,22 @@ html {
     padding: 14px 10px;
     width: 250px;
     font-size: 20px;
+    font-family: var(--normal);
+    font-weight: 500;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box-btn input[type = "text"], .box-btn input[ type = "password"], .box-btn input[ type = "tel"] {
+    border: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 2px solid #5B5A5E;
+    width: 250px;
+    font-size: 13px;
     font-family: var(--normal);
     font-weight: 500;
     outline: none;
@@ -392,6 +408,7 @@ html {
     list-style-type: none;
     text-decoration: none;
     display: inline-block;
+    font-family: var(--normal);
 }
 
 .menuFooterP {
@@ -403,6 +420,7 @@ html {
     list-style-type: none;
     display: inline-block;
     text-decoration: none;
+    font-family: var(--normal);
 }
 
 .creditosFooter {
@@ -452,28 +470,30 @@ html {
     list-style-type: none;
     display: inline-block;
     text-decoration: none;
+    font-family: var(--normal);
 }
 
     .menuFooterD li a, .menuFooterP li a {
         color: white;
+        font-family: var(--normal);
     }
 
 .fPetFeed {
     position: absolute;
     font-size: 150%;
     left: 2%;
-    font-weight: bold;
     top: 3%;
     color: snow;
+    font-family: var(--fort);
 }
 
 .fDescubra {
     position: absolute;
     font-size: 150%;
     left: 17%;
-    font-weight: bold;
     top: 3%;
     color: snow;
+    font-family: var(--fort);
 }
 
 .fSociais {
@@ -481,7 +501,7 @@ html {
     font-size: 150%;
     left: 81%;
     display: inline-block;
-    font-weight: bold;
+    font-family: var(--fort);
     top: 14%;
     color: snow;
 }
@@ -540,7 +560,6 @@ html {
         position: absolute;
         font-size: 150%;
         left: 2%;
-        font-weight: bold;
         top: 39%;
         color: snow;
     }
@@ -568,8 +587,7 @@ html {
     }
 
     .s-mPrincipal {
-        background: #34495e;
-        width: 100%;
+        background: #6D3E9C;
         height: 250px;
         margin-bottom: 0em;
     }
@@ -588,7 +606,7 @@ html {
         z-index: 3;
         position: absolute;
         width: 50px;
-        background: #34495e;
+        background: #6D3E9C;
         bottom: 15%;
         right: 1%;
         text-decoration: none;
