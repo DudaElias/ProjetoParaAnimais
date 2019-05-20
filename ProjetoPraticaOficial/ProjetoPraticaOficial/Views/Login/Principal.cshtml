@@ -13,102 +13,102 @@
     <link rel="stylesheet" type="text/css" href="../Content/stylePrincipal.css" />
 </head>
 <body>
-        <div class="header">
-            <a href="Principal"><div class="logo"></div></a>
-            <input type="checkbox" id="chk">
-            <label for="chk" class="show-menu-btn">
-                <i class="fas fa-bars"></i>
+    <div class="header">
+        <a href="Principal"><div class="logo"></div></a>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="menu">
+            <a href="SobreNos">Sobre nós</a>
+            <a href="Pergunta">FAQ</a>
+            <a href="CadastroLoja">Loja</a>
+            <a href="CadastroCliente">Cliente</a>
+            <a href="GraficoPareto">Gráfico de Pareto</a>
+
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
             </label>
+        </ul>
+    </div>
+    <div class="slidershow middle">
 
-            <ul class="menu">
-                <a href="SobreNos">Sobre nós</a>
-                <a href="Pergunta">FAQ</a>
-                <a href="CadastroLoja">Loja</a>
-                <a href="CadastroCliente">Cliente</a>
-                <a href="GraficoPareto">Gráfico de Pareto</a>
-
-                <label for="chk" class="hide-menu-btn">
-                    <i class="fas fa-times"></i>
-                </label>
-            </ul>
-        </div>
-        <div class="slidershow middle">
-
-            <div class="slides">
-                <input type="radio" name="r" id="r1" checked>
-                <input type="radio" name="r" id="r2">
-                <input type="radio" name="r" id="r3">
-                <input type="radio" name="r" id="r4">
-                <div class="slide s1">
-                    <img src="~/Imagens/1.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="~/Imagens/2.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="~/Imagens/3.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="~/Imagens/4.jpg" alt="">
-                </div>
+        <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+            <div class="slide s1">
+                <img src="~/Imagens/1.jpg" alt="">
             </div>
-
-            <div class="navigation">
-                <label for="r1" class="bar"></label>
-                <label for="r2" class="bar"></label>
-                <label for="r3" class="bar"></label>
-                <label for="r4" class="bar"></label>
+            <div class="slide">
+                <img src="~/Imagens/2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="~/Imagens/3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="~/Imagens/4.jpg" alt="">
             </div>
         </div>
-        <div class="team-section">
-            <h1>Nosso Time</h1>
+
+        <div class="navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+            <label for="r4" class="bar"></label>
+        </div>
+    </div>
+    <div class="team-section">
+        <h1>Nosso Time</h1>
+        <span class="border"></span>
+        <div class="ps">
+            <a href="#p1"><img src="~/Imagens/6df4a909-0427-47fa-8e8f-dfc6c55ff68c.jpg" alt="" /></a>
+            <a href="#p2"><img src="~/Imagens/pp.jpg" alt="" /></a>
+        </div>
+
+        <div class="section1" id="p1">
+            <span class="name">Lorenna Nunes</span>
             <span class="border"></span>
-            <div class="ps">
-                <a href="#p1"><img src="~/Imagens/6df4a909-0427-47fa-8e8f-dfc6c55ff68c.jpg" alt="" /></a>
-                <a href="#p2"><img src="~/Imagens/pp.jpg" alt="" /></a>
-            </div>
-
-            <div class="section1" id="p1">
-                <span class="name">Lorenna Nunes</span>
-                <span class="border"></span>
-                <p>
-                    blablablablablabla
-                </p>
-            </div>
-            <div class="section1" id="p2">
-                <span class="name">Maria Eduarda Rocha</span>
-                <span class="border"></span>
-                <p>
-                    blablablablablabla
-                </p>
-            </div>
+            <p>
+                blablablablablabla
+            </p>
         </div>
-        <footer class="s-mPrincipal">
+        <div class="section1" id="p2">
+            <span class="name">Maria Eduarda Rocha</span>
+            <span class="border"></span>
+            <p>
+                blablablablablabla
+            </p>
+        </div>
+    </div>
 
-            <p class="fPetFeed">PetFeed</p>
-            <ul class="menuFooterP">
-                <li><a href="SobreNos">Sobre nós</a></li>
-                <li><a href="Pergunta">Fale conosco</a></li>
-            </ul>
+    <footer class="s-mPrincipal">
+        <p class="fPetFeed">PetFeed</p>
+        <ul class="menuFooterP">
+            <li><a href="SobreNos">Sobre nós</a></li>
+            <li><a href="Pergunta">Fale conosco</a></li>
+        </ul>
 
-            <p class="fDescubra">Descubra</p>
-            <ul class="menuFooterD">
-                <!--Fazer essa página se der tempo-->
-                <li><a href="#">Como pedir</a></li>
-                <li><a href="CadastroLoja">Cadastre sua loja</a></li>
-                <li><a href="CadastroCliente">Cadastre-se</a></li>
-            </ul>
-            <a class="icone" href="https://www.facebook.com/petfeed.shoping/?epa=SEARCH_BOX"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
+        <p class="fDescubra">Descubra</p>
+        <ul class="menuFooterD">
+            <!--Fazer essa página se der tempo-->
+            <li><a href="#">Como pedir</a></li>
+            <li><a href="CadastroLoja">Cadastre sua loja</a></li>
+            <li><a href="CadastroCliente">Cadastre-se</a></li>
+        </ul>
+        <a class="icone" href="https://www.facebook.com/petfeed.shoping/?epa=SEARCH_BOX"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
 
-            <a href="#" class="icone"><i class="fab fa-twitter"></i></a>
-            <!--
-    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a> -->
-            <section></section>
-            <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
-            <hr class="hrFooter" />
-            <span class="creditosFooter" id="creditos">PetFeed <i class="far fa-copyright"></i>Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
-        </footer>
+        <a href="#" class="icone"><i class="fab fa-twitter"></i></a>
+        <!--
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a> -->
+        <section></section>
+        <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+        <hr class="hrFooter" />
+        <span class="creditosFooter" id="creditos">PetFeed <i class="far fa-copyright"></i>Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
+    </footer>
 </body>
 </html>
