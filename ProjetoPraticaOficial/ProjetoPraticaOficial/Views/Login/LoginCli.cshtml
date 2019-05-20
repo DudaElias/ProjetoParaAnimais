@@ -5,7 +5,7 @@
 <html>
 <head>
 
-    <link rel="stylesheet" type="text/css" href="~/Content/styleDentro.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/styleDentroCliente.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <meta name="viewport" content="width=device-width" />
     <title>Login</title>
@@ -53,15 +53,15 @@
             <h1>@p.Nome</h1>
             <div class="produto" style="background-image: url(@p.Imagem)" value="@p.Imagem"></div>
             <h2>@p.Descricao</h2>
-            <h2>@String.Format("{0:c}", p.Preco)</h2>
-            <input type="text" name="po.Nome" value="@p.Nome" style="visibility: hidden;" />
-            <input type="text" name="po.Imagem" value="@p.Imagem" style="visibility: hidden;" />
-            <input type="text" name="po.Descricao" value="@p.Descricao" style="visibility: hidden;" />
-            <input type="text" name="po.Preco" value="@p.Preco" style="visibility: hidden;" />
+            <h3>@String.Format("{0:c}", p.Preco)</h3>
+            <input type="text"  name="po.Nome" value="@p.Nome" style="visibility: hidden;display:none;" />
+            <input type="text" name="po.Imagem" value="@p.Imagem" style="visibility: hidden; display:none;" />
+            <input type="text" name="po.Descricao" value="@p.Descricao" style="visibility: hidden; display:none;" />
+            <input type="text" name="po.Preco" value="@p.Preco" style="visibility: hidden; display:none;" />
 
 
 
-            <input type="submit" class="btn" value="Comprar">
+            <input type="submit" class="btn-compra" value="Comprar">
 
         </form>
     </div>
