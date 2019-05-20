@@ -11,6 +11,8 @@
     <title>AdicionarProduto</title>
     <script type="text/javascript" src="~/Script/cadastro.js">
     </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
     <link rel="stylesheet" href="~/Content/styleDentro.css" />
 </head>
 <body>
@@ -33,11 +35,11 @@
         <div class="box" id="box">
             <form action="AdicionarProdutoVerdade" method="post">
             <label ID="Label1" runat="server" Text="Adicionar Produto:" class="lblLogin">Adicionar Produto</label>
-            <input id="txtNomePro" name="p.Nome" type="text" placeholder="Nome" />
-            <input name="p.Imagem" type="url" id="img" placeholder="Imagem(deve ser online)" onblur="CarregarImagem()">
-            <input id="txtFiltro" type="text" name="n" placeholder="Filtro" />
-            <input id="txtDescricao" type="text" name="p.Descricao" placeholder="Descrição" />
-            <input id="txtreco" type="text" name="p.Preco" placeholder="Preço" />
+            <input autocomplete="off" id="txtNomePro" name="p.Nome" type="text" placeholder="Nome" />
+            <input autocomplete="off" name="p.Imagem" type="url" id="img" placeholder="Imagem(deve ser online)" onblur="CarregarImagem()">
+            <input autocomplete="off" id="txtFiltro" type="text" name="n" placeholder="Filtro" />
+            <input autocomplete="off" id="txtDescricao" type="text" name="p.Descricao" placeholder="Descrição" />
+            <input autocomplete="off" id="txtreco" type="text" name="p.Preco" placeholder="Preço" />
             <input id="Button2" type="button" value="Cancelar" class="btn" />
             <input id="Button1" type="submit" value="Aplicar" class="btn" />
                 </form>
