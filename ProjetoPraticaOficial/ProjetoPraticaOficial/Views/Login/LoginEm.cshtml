@@ -9,6 +9,8 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>LoginEmpresa</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
     <link rel="stylesheet" href="~/Content/styleDentro.css" />
 </head>
 <body>
@@ -28,16 +30,16 @@
             </label>
 
         </ul>
+        </div>
         <form method="post" action="/Login/EditarDadosEm" class="box">
             <span Text="Editar Dados da Empresa:" class="lblLogin">Editar Dados da Empresa:</span>
-            <input id="txtNomeEm" type="text" name="e.Nome" placeholder="Nome" />
-            <input id="txtCpf" type="text" name="e.CpfDono" placeholder="CPF" />
-            <input id="txtEmail" type="text" name="e.Email" placeholder="E-mail" />
-            <input id="txtRg" type="text" name="e.RgDono" placeholder="RG" />
-            <input id="txtOrgao" type="text" name="e.OrgaoEmissor" placeholder="Orção Emissor" />
+            <input autocomplete="off" id="txtNomeEm" type="text" name="e.Nome" placeholder="Nome" />
+            <input autocomplete="off" id="txtCpf" type="text" name="e.CpfDono" placeholder="CPF" />
+            <input autocomplete="off" id="txtEmail" type="text" name="e.Email" placeholder="E-mail" />
+            <input autocomplete="off" id="txtRg" type="text" name="e.RgDono" placeholder="RG" />
+            <input autocomplete="off" id="txtOrgao" type="text" name="e.OrgaoEmissor" placeholder="Orção Emissor" />
             <input id="Button2" onclick="Cancelar(1)" type="button" value="Cancelar" class="btn" />
             <input id="Button1" type="submit" value="Aplicar" class="btn" />
         </form>
-    </div>
 </body>
 </html>

@@ -1,74 +1,100 @@
 ﻿
 /*BASE DO DESIGN DA PÁGINA*/
 
+/*BASE DO DESIGN DA PÁGINA*/
+@import url('https://fonts.googleapis.com/css?family=Acme|Inconsolata|Poiret+One|Signika|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans');
 
+:root {
+    --fort: 'Fredoka One', cursive;
+    --normal: 'Open Sans', sans-serif;
+}
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Slabo 27px', serif;
 }
 
-
-
-.boxp .produto {
-    width: 10em;
-    margin-left:15%;
+body {
+    background-image: url(../Imagens/a.jpg);
     background-size: cover;
-    height: 10em;
 }
 
-.cc{
-    margin-left: 3em;
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-input[type=number]
-{
-    width: 50px;
+.field-validation-error {
+    color: red;
+    font-size: 15px;
 }
 
-.boxCompra  label, h3 {
-    font-family: 'Century Gothic';
-    font-size: 20px;
-    font-weight: 300;
+h1 {
+    color: white;
 }
-
-    .box input[type = "text"], .box input[ type = "password"], .box input[ type = "email"], .box input[type = "url"] {
-        border: 0;
-        background: none;
-        display: block;
-        margin: 30px auto;
-        text-align: center;
-        border: 2px solid #5B5A5E;
-        padding: 14px 10px;
-        width: 250px;
-        font-size: 20px;
-        font-weight: 500;
-        outline: none;
-        color: black;
-        border-radius: 24px;
-        transition: 0.25s;
-    }
-
-    .box input[type = "text"]:focus, .box input[ type = "password"]:focus, .box input[type = "email"]:focus, .box input[type = "url"]:focus {
-        width: 280px;
-        border-color: #753B3B;
-    }
-.menu a {
+.header {
+    height: 8em;
+    background: #6D3E9C;
+    padding: 0 20px;
     color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 0 10px;
-    transition: 0.4s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.678);
 }
+
+.logo {
+    line-height: 100px;
+    position: absolute;
+    top: 3%;
+    float: left;
+    background-image: url("../Imagens/Logo.png");
+    width: 200px;
+    height: 7em;
+}
+
 .menu {
-    text-align:center;
-    line-height: 200px;
+    float: right;
+    line-height: 150px;
     z-index: 90;
 }
 
-@media screen and (max-width: 1100px) {
+    .menu a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 0 10px;
+        transition: 0.4s;
+        font-family: var(--fort);
+    }
+
+.show-menu-btn, .hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+    .show-menu-btn i {
+        line-height: 150px;
+    }
+
+    .menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+        color: rgb(92, 92, 92);
+    }
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+
+@media screen and (max-width: 900px) {
     .show-menu-btn, .hide-menu-btn {
         display: block;
     }
@@ -100,27 +126,207 @@ input[type=number]
     #chk:checked ~ .menu {
         right: 0;
     }
-
+}
+.box {
+    background: rgba(0,0,0,0.7);
+    width: 400px;
+    padding: 40px;
+    margin-top: 25em;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-bottom: 50px;
+    border-radius: 10%;
+}
+.lblLogin {
+    width: 400px;
+    font-family: var(--fort);
+    color: white;
+    font-size: 25px;
 }
 
-.show-menu-btn, .hide-menu-btn {
-    transition: 0.4s;
-    font-size: 30px;
+.box input[type = "text"], .box input[ type = "password"], .box input[ type = "url"], .box input[ type = "tel"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    border: 2px solid #5B5A5E;
+    padding: 14px 10px;
+    width: 250px;
+    font-size: 20px;
+    font-family: var(--normal);
+    font-weight: 500;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box-btn input[type = "text"], .box-btn input[ type = "password"], .box-btn input[ type = "tel"] {
+    border: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 2px solid #fff;
+    width: 250px;
+    font-size: 10px;
+    font-family: var(--normal);
+    font-weight: 500;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box a {
+    color: white;
+    font-family: var(--normal);
+}
+
+input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "url"]:focus, input[ type = "tel"]:focus {
+    width: 280px;
+    border-color: #6D3E9C;
+}
+
+.box-btn {
+    color: white;
+}
+
+.btn {
+    border: 0;
+    background: none;
+    display: inline-block;
+    margin: 20px 10px;
+    text-align: center;
+    border: 2px solid #6D3E9C;
+    padding: 14px 40px;
+    width: 150px;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--normal);
+    border-radius: 24px;
+    transition: 0.25s;
     cursor: pointer;
-    display: none;
 }
 
-.show-menu-btn {
-    float: right;
+    .btn:hover, .Button2:hover, .Button3:hover {
+        background: #6D3E9C;
+        color: white;
+    }
+/*.box {
+    background: rgba(0,0,0,0.7);
+    width: 300px;
+    padding: 40px;
+    margin-top: 30em;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-bottom: 50px;
+    border-radius: 10%;
 }
 
-.show-menu-btn i {
-    line-height: 150px;
+.boxEditar {
+    width: 300px;
+    padding: 40px;
+    margin-top: 20em;
+    margin-left: 50em;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-bottom: 150px;
 }
 
-.menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
-    color: #e67e22;
+.lblLogin {
+    width: 400px;
+    font-family: var(--fort);
+    color: white;
+    font-size: 25px;
 }
+
+.box input[type = "text"], .box input[ type = "password"], .box input[ type = "tel"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    border: 2px solid #5B5A5E;
+    padding: 14px 10px;
+    width: 250px;
+    font-size: 20px;
+    font-family: var(--normal);
+    font-weight: 500;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box-btn input[type = "text"], .box-btn input[ type = "password"], .box-btn input[ type = "tel"] {
+    border: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 2px solid #5B5A5E;
+    width: 250px;
+    font-size: 10px;
+    font-family: var(--normal);
+    font-weight: 500;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box a {
+    color: white;
+    font-family: var(--normal);
+}
+
+input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"]:focus {
+    width: 280px;
+    border-color: #45aaf2;
+}
+
+.box-btn {
+    color: white;
+}
+
+.btn, .Button2, .Button3 {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #45aaf2;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--normal);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+    .btn:hover, .Button2:hover, .Button3:hover {
+        background: #45aaf2;
+        color: white;
+    }
+.boxp .produto {
+    width: 10em;
+    margin-left:15%;
+    background-size: cover;
+    height: 10em;
+}
+
+.cc{
+    margin-left: 3em;
+}
+
 
 #chk {
     position: absolute;
@@ -150,27 +356,6 @@ input[type=number]
         color: white;
     }
 
-.sobre {
-    height: 100%;
-}
-
-.header {
-    height: 150px;
-    background: #34495e;
-    padding: 0 20px;
-    color: #fff;
-    z-index:0;
-}
-
-.logo {
-    line-height: 100px;
-    position: absolute;
-    top: 3%;
-    float: left;
-    background-image: url("../Imagens/Logo.png");
-    width: 200px;
-    height: 7em;
-}
 
 .btn{
     border: 0;
@@ -198,7 +383,7 @@ input[type=number]
 
 /*PESQUISA*/
 
-.search-box {
+/*.search-box {
     position: absolute;
     top: 10%;
     left: 50%;
@@ -236,7 +421,7 @@ input[type=number]
     color: #fff;
     display: block;
     /*text-transform: uppercase;*/
-    text-decoration: none;
+    /*text-decoration: none;
     position: relative;
     top: 10%;
     font-size: 20px;
@@ -274,11 +459,6 @@ input[type=number]
     z-index: 0;
 }
 
-body
-{
-    z-index: -200000;
-}
-
 .boxCompra {
     margin-top: 0em;
     margin-left: 5em;
@@ -305,29 +485,6 @@ body
         background-size: cover;
         height: 20em;
     }
-#chk-perfil {
-    position: absolute;
-    visibility: hidden;
-    top: 5%;
-    left: 90%;
-    z-index: -1111;
-}
-
-#chk-perfil:checked ~ .lateral {
-    right: 0;
-    transition: 0.7s;
-}
-
-#chk-perfil:checked ~ .show-menu-btn-perfil {
-    z-index: 1000;
-    transition: 0.7s;
-}
-
-.show-menu-btn-perfil {
-    cursor: pointer;
-    display: block;
-}
-
 
 .img-filtro i {
     color: white;
@@ -373,11 +530,6 @@ body
     display:inline-block;
 }
 
-h1, h2 {
-    font-family: 'Century Gothic';
-    font-weight:100;
-}
-
 .boxp {
     margin-top: 8em;
     margin-left: 5em;
@@ -401,7 +553,7 @@ h1, h2 {
     padding: 14px 10px;
     width: 250px;
     outline: none;
-    color: black;
+    color: white;
     font-size: 20px;
     font-weight: 700;
     border-radius: 24px;
@@ -424,22 +576,4 @@ h1, h2 {
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
-}
-
-
-
-.box {
-    width: 500px;
-    text-align: center;
-    margin-left: 32%;
-}
-
-
-.lblLogin {
-    font-family: Courier New, Courier, monospace;
-    color: black;
-    font-weight: bold;
-    font-size: 30px;
-    width: 400px;
-
-}
+}*/
