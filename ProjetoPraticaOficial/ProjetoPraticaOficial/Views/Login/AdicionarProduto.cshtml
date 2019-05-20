@@ -31,18 +31,43 @@
                 <i class="fas fa-times"></i>
             </label>
 
-        </ul></div>
-        <div class="box" id="box">
-            <form action="AdicionarProdutoVerdade" method="post">
+        </ul>
+    </div>
+    <div class="box" id="box">
+        <form action="AdicionarProdutoVerdade" method="post">
             <label ID="Label1" runat="server" Text="Adicionar Produto:" class="lblLogin">Adicionar Produto</label>
             <input autocomplete="off" id="txtNomePro" name="p.Nome" type="text" placeholder="Nome" />
             <input autocomplete="off" name="p.Imagem" type="url" id="img" placeholder="Imagem(deve ser online)" onblur="CarregarImagem()">
             <input autocomplete="off" id="txtFiltro" type="text" name="n" placeholder="Filtro" />
-            <input autocomplete="off" id="txtDescricao" type="text" name="p.Descricao" placeholder="Descrição" />
+            <input autocomplete="off" class="desc" id="txtDescricao" type="text" name="p.Descricao" placeholder="Descrição" />
             <input autocomplete="off" id="txtreco" type="text" name="p.Preco" placeholder="Preço" />
             <input id="Button2" type="button" value="Cancelar" class="btn" />
             <input id="Button1" type="submit" value="Aplicar" class="btn" />
-                </form>
-        </div>
+        </form>
+    </div>
+
+    <footer class="s-mPrincipal">
+        <p class="fPetFeed">PetFeed</p>
+        <ul class="menuFooterP">
+            <li><a href="SobreNos">Sobre nós</a></li>
+            <li><a href="Pergunta">Fale conosco</a></li>
+        </ul>
+
+        <p class="fDescubra">Descubra</p>
+        <ul class="menuFooterD">
+            <!--Fazer essa página se der tempo-->
+            <li><a href="#">Como pedir</a></li>
+            <li><a href="CadastroLoja">Cadastre sua loja</a></li>
+            <li><a href="CadastroCliente">Cadastre-se</a></li>
+        </ul>
+        <a class="icone" href="https://www.facebook.com/petfeed.shoping/?epa=SEARCH_BOX"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
+
+        <a href="#" class="icone"><i class="fab fa-twitter"></i></a>
+        <section></section>
+        <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+        <hr class="hrFooter" />
+        <span class="creditosFooter" id="creditos">PetFeed <i class="far fa-copyright"></i>Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
+    </footer>
 </body>
 </html>

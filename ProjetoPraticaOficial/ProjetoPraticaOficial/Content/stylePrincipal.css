@@ -470,7 +470,7 @@ p {
         margin: 20px auto;
     }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .fDescubra {
         position: absolute;
         font-size: 150%;
@@ -529,6 +529,10 @@ p {
         line-height: 30%;
         color: white;
         font-size: 26px;
+    }
+    .infoNos
+    {
+        left: 10%;
     }
 }
 

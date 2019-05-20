@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -9,6 +8,26 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>LoginEmpresa</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("txtCpf").onkeypress = function () {
+                var txt = this.value;
+                if (txt.length == 3 || txt.length == 7)
+                    this.value += ".";
+                else
+                    if (txt.length == 11)
+                        this.value += "-";
+            }
+            document.getElementById("txtRg").onkeypress = function () {
+                var txt = this.value;
+                if (txt.length == 2 || txt.length == 6)
+                    this.value += ".";
+                else
+                    if (txt.length == 10)
+                        this.value += "-";
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
     <link rel="stylesheet" href="~/Content/styleDentro.css" />
@@ -30,16 +49,16 @@
             </label>
 
         </ul>
-        </div>
-        <form method="post" action="/Login/EditarDadosEm" class="box">
-            <span Text="Editar Dados da Empresa:" class="lblLogin">Editar Dados da Empresa:</span>
-            <input autocomplete="off" id="txtNomeEm" type="text" name="e.Nome" placeholder="Nome" />
-            <input autocomplete="off" id="txtCpf" type="text" name="e.CpfDono" placeholder="CPF" />
-            <input autocomplete="off" id="txtEmail" type="text" name="e.Email" placeholder="E-mail" />
-            <input autocomplete="off" id="txtRg" type="text" name="e.RgDono" placeholder="RG" />
-            <input autocomplete="off" id="txtOrgao" type="text" name="e.OrgaoEmissor" placeholder="Orção Emissor" />
-            <input id="Button2" onclick="Cancelar(1)" type="button" value="Cancelar" class="btn" />
-            <input id="Button1" type="submit" value="Aplicar" class="btn" />
-        </form>
+    </div>
+    <form method="post" action="/Login/EditarDadosEm" class="box">
+        <span Text="Editar Dados da Empresa:" class="lblLogin">Editar Dados da Empresa:</span>
+        <input autocomplete="off" id="txtNomeEm" type="text" name="e.Nome" placeholder="Nome" maxlength="30"/>
+        <input autocomplete="off" id="txtCpf" type="text" name="e.CpfDono" placeholder="CPF" maxlength="14"/>
+        <input autocomplete="off" id="txtEmail" type="text" name="e.Email" placeholder="E-mail" maxlength="100"/>
+        <input autocomplete="off" id="txtRg" type="text" name="e.RgDono" placeholder="RG" maxlength="12"/>
+        <input autocomplete="off" id="txtOrgao" type="text" name="e.OrgaoEmissor" placeholder="Orção Emissor" maxlength="6"/>
+        <input id="Button2" onclick="Cancelar(1)" type="button" value="Cancelar" class="btn" />
+        <input id="Button1" type="submit" value="Aplicar" class="btn" />
+    </form>
 </body>
 </html>
