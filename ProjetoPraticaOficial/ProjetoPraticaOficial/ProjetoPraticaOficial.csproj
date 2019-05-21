@@ -419,6 +419,7 @@
     <Content Include="Script\package.json" />
     <Content Include="Views\Login\PedidosARealizar.cshtml" />
     <Content Include="Views\Login\Pedidos.cshtml" />
+    <Content Include="Views\Login\Filtrar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

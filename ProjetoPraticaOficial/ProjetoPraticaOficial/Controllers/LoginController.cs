@@ -90,9 +90,11 @@ namespace ProjetoPraticaOficial.Controllers
                 if (a.CodFiltro == fi.Id)
                     produtosEncontrados.Add(a);
             }
-            ViewBag.Produto = produtosEncontrados;
-            ViewBag.Filtro = (new FiltroDAO().Lista());
-            return View("FazerPesquisa");
+            List<Produto> p = produtosEncontrados;
+            List<Filtro> f = new FiltroDAO().Lista().ToList();
+            string pesquisa = null;
+            var url = "Filtrar";
+            return Json(new { redirectTo = Url.Action("FazerPesquisa", "Login", new { pesquisa, p, f })});
         }
 
         [HttpPost]
@@ -299,39 +301,53 @@ namespace ProjetoPraticaOficial.Controllers
             return RedirectToAction("AdicionarProduto", "Login");
         }
 
-        public ActionResult FazerPesquisa(string pesquisa)
+        public ActionResult FazerPesquisa(string pesquisa, string b)
         {
             ProdutoDAO dao = new ProdutoDAO();
-            pesquisa = pesquisa.ToUpper();
-            if (pesquisa == "")
+            FiltroDAO fDao = new FiltroDAO();
+
+            List<Produto> produtosEncontrados = new List<Produto>();
+            if (b == "1")
+            {
+                IList<Produto> f = dao.Lista();
+                foreach (var a in f)
+                {
+                    if (a.CodFiltro == fDao.BuscaPorNome(pesquisa).Id)
+                        produtosEncontrados.Add(a);
+                }
+            }
+            else if (pesquisa.ToUpper() == "")
             {
                 ViewBag.Produto = dao.Lista();
                 ViewBag.Filtro = (new FiltroDAO().Lista());
                 return View();
+
             }
-            IList<Produto> lista = dao.Lista();
-            List<Produto> produtosEncontrados = new List<Produto>();
-            foreach(var a in lista)
+            else
             {
-               string[] dados = a.Nome.Split(' ');
-                
-                bool pode = true;
-               string[] dados2 = a.Descricao.Split(' ');
-                foreach (var b in dados)
-                    if (b.ToUpper() == pesquisa && pode != false)
-                    {
-                        produtosEncontrados.Add(a);
-                        pode = false;
-                    }
-                foreach (var c in dados2)
-                    if (c.ToUpper() == pesquisa && pode != false)
-                    {
-                        produtosEncontrados.Add(a);
-                        pode = false;
-                    }
+                IList<Produto> lista = dao.Lista();
+                foreach (var a in lista)
+                {
+                    string[] dados = a.Nome.Split(' ');
+
+                    bool pode = true;
+                    string[] dados2 = a.Descricao.Split(' ');
+                    foreach (var c in dados)
+                        if (b.ToUpper() == pesquisa && pode != false)
+                        {
+                            produtosEncontrados.Add(a);
+                            pode = false;
+                        }
+                    foreach (var c in dados2)
+                        if (c.ToUpper() == pesquisa && pode != false)
+                        {
+                            produtosEncontrados.Add(a);
+                            pode = false;
+                        }
+                }
             }
-            ViewBag.Produto = produtosEncontrados;
-            ViewBag.Filtro = (new FiltroDAO().Lista());
+                ViewBag.Produto = produtosEncontrados;
+                ViewBag.Filtro = (new FiltroDAO().Lista());
             return View();
         }
         [HttpPost]
