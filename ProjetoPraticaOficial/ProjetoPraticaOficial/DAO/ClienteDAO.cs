@@ -9,6 +9,7 @@ namespace ProjetoPraticaOficial.DAO
 {
     public class ClienteDAO
     {
+
         public void Adiciona(Cliente c)
         {
             using (var context = new LoginContext())
