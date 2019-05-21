@@ -119,11 +119,10 @@ namespace ProjetoPraticaOficial.Controllers
             ProdutoDAO daoP = new ProdutoDAO();
             IList<Produto> p = daoP.Lista();
             ViewBag.Produto = p;
-            if (cli.Senha == c.Senha)
+            if (cli != null && cli.Senha == c.Senha)
                 return View("LoginCli");
             else
-                return View("CriarLoginCliente");
-            return null;
+                return RedirectToAction("CriarLoginCliente");
         }
         
         [HttpPost]
@@ -132,9 +131,9 @@ namespace ProjetoPraticaOficial.Controllers
             LojaDAO dao = new LojaDAO();
             lo = dao.BuscaPorNome(e.Nome);
             Session["lo"] = lo;
-            if (lo.CpfDono == e.CpfDono)
+            if (lo != null && lo.CpfDono == e.CpfDono)
                 return View();
-            return null;
+            return RedirectToAction("CriarLoginLoja");
         }
 
         public ActionResult LoginEm()
@@ -240,6 +239,20 @@ namespace ProjetoPraticaOficial.Controllers
 
         public ActionResult Pedidos()
         {
+            PedidoDAO dao = new PedidoDAO();
+            ItemPedidoDAO dao2 = new ItemPedidoDAO();
+            ProdutoDAO dao3 = new ProdutoDAO();
+            List<int> po = new List<int>();
+            List<Produto> produtos = new List<Produto>();
+            List<Pedido> pedidos = dao.PedidosCliente(Convert.ToInt32(((Cliente)(Session["cli"])).Id), ref po);
+            List<ItemPedido> itens = new List<ItemPedido>();
+            foreach (var a in pedidos)
+            {
+                itens.Add(dao2.BuscaPorNome(a.CodPedido));
+            }
+            ViewBag.Pedido = pedidos;
+            ViewBag.Produtos = produtos;
+            ViewBag.Itens = itens;
             return View();
         }
 

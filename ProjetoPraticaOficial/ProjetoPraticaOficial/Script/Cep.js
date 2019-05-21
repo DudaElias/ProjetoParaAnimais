@@ -25,3 +25,17 @@
         })
     })
 });
+
+$(document).ready(function () {
+    $("#qualFiltro").click(function () {
+        $.ajax({
+            url: "GraficoPareto",
+            success: function (result) {
+                alert('aaaaaaa');
+            },
+            error: function (xhr, exception) {
+                alert(exception);
+            }
+        })
+    })
+});

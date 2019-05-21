@@ -13,21 +13,11 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $("#qualFiltro").click(function () {
-                $.ajax({
-                    url: "Filtro",
-                    type: "GET",
-                    data: { id: $("#qualFiltro").val() },
-                    success: function (result) {
-                        alert("oi");
-                    },
-                    error: function (xhr, exception) {
-                        alert("Erro");
-                    }
-                })
+                window.location = 'GraficoPareto';
             })
         });
     </script>
-    <link rel="stylesheet" type="text/css" href="~/Content/styleDentro.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/styleDentroCliente.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
 <body>
@@ -44,7 +34,7 @@
                 <ul class="lateral">
                     <a href="EditarDadosCli">Editar Dados</a>
                     <a href="LoginCli">Pesquisa</a>
-                    <a href="#">Pedidos</a>
+                    <a href="Pedidos">Pedidos</a>
                     <a href="Pergunta">Ajuda</a>
                     <a href="Principal">Sair</a>
                 </ul>
@@ -65,7 +55,7 @@
         <ul id="filtros" name="qualFiltro">
             @foreach (var f in ViewBag.Filtro)
             {
-                <li class="filtro"><a class="qualFiltro">@f.Animal<i class="fas fa-times-circle"></i></a></li>
+                <li class="filtro"><a class="qualFiltro" id="qualFiltro">@f.Animal<i class="fas fa-times-circle"></i></a></li>
             }
         </ul>
         <div class="cc">

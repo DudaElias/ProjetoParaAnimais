@@ -71,5 +71,42 @@ namespace ProjetoPraticaOficial.DAO
             }
             return list;
         }
+        public List<Pedido> PedidosCliente(int id, ref List<int> pr)
+        {
+            List<Pedido> list = new List<Pedido>();
+            Pedido p = null;
+            Produto pro = null;
+            using (var conn = new SqlConnection("Data Source=regulus.cotuca.unicamp.br;Initial Catalog='PR118343'; User ID ='PR118343'; Password ='PR118343'"))
+            {
+                string sql = "select Produto.id, Pedido.* from Pedido inner join Produto on Pedido.codCliente = @Id and Pedido.codPedido in (select id from ItemPedido where codProduto = Produto.id)";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Id", id);
+                try
+                {
+                    conn.Open();
+                    using (var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection))
+                    {
+                        while (reader.Read())
+                        {
+                            p = new Pedido();
+                            p.Id = (int)reader[1];
+                            p.CodCliente = (int)reader["codCliente"];
+                            p.CodPedido = (int)reader["codPedido"];
+                            p.DataEntrega = (DateTime)reader["dataEntrega"];
+                            p.Endereco = reader["endereco"].ToString();
+                            p.DataPedido = (DateTime)reader["dataPedido"];
+                            p.PrecoEntrega = (decimal)reader["precoEntrega"];
+                            pr.Add((int)reader[0]);
+                            list.Add(p);
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+            return list;
+        }
     }
 }

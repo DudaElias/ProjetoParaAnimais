@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Pedidos</title>
+</head>
+<body>
+    <div>
+
+        @foreach (var a in ViewBag.Produtos)
+        {
+            <span> @a.Nome</span>
+        }
+
+        @foreach (var a in ViewBag.Itens)
+        {
+            <span>@a.Quantidade</span>
+        }
+        @foreach (var a in ViewBag.Pedido)
+        {
+            <span> @a.DataEntrega</span>
+            <span>@a.Endereco</span>
+        }
+    </div>
+</body>
+</html>

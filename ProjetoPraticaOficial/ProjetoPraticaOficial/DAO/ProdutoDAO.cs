@@ -60,7 +60,7 @@ namespace ProjetoPraticaOficial.DAO
             Produto pr = null;
             using (var conn = new SqlConnection("Data Source=regulus.cotuca.unicamp.br;Initial Catalog='PR118343'; User ID ='PR118343'; Password ='PR118343'"))
             {
-                string sql = "select * from Produto where codFiltron = @Id)";
+                string sql = "select * from Produto where codFiltro = @Id)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@Id", id);
                 try

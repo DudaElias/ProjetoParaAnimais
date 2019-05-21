@@ -418,6 +418,7 @@
     <Content Include="Views\Login\ComprarDados.cshtml" />
     <Content Include="Script\package.json" />
     <Content Include="Views\Login\PedidosARealizar.cshtml" />
+    <Content Include="Views\Login\Pedidos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

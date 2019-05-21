@@ -42,6 +42,7 @@ h1 {
     background: #45aaf2;
     padding: 0 20px;
     color: #fff;
+    z-index: 2000;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.678);
 }
 
@@ -341,7 +342,7 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
     top: -200%;
     height: 50px;
     width: 98.95%;
-    z-index: -3000;
+    z-index: 1000;
     text-align: center;
     padding: 20px 10px;
     transition: 0.7s;
@@ -476,12 +477,14 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
 .boxp h2 {
     font-family: var(--normal);
     max-height: 50px;
+    font-weight: 200;
     height: 50px;
     font-size: 20px;
 }
 .boxp h3 {
     font-family: var(--normal);
     font-size: 20px;
+    font-weight: 200;
     margin-top: 1em;
 }
 
