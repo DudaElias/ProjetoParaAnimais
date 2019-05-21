@@ -33,7 +33,6 @@ namespace ProjetoPraticaOficial.Models
         public string Senha { get; set; }
 
         [Required(ErrorMessage = "Telefone obrigatório", AllowEmptyStrings = false)]// arrumar no css
-        [StringLength(12, ErrorMessage = "Número inválido", MinimumLength = 10)]
         public string Telefone { get; set; }
     }
 }
