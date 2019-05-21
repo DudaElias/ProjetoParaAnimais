@@ -74,6 +74,27 @@ namespace ProjetoPraticaOficial.Controllers
         {
             return View();
         }
+
+
+        [HttpPost]
+
+        public ActionResult Filtrar(string filtro)
+        {
+            FiltroDAO dao = new FiltroDAO();
+            Filtro fi = dao.BuscaPorNome(filtro);
+            ProdutoDAO daoP = new ProdutoDAO();
+            IList<Produto> lista = daoP.Lista();
+            List<Produto> produtosEncontrados = new List<Produto>();
+            foreach (var a in lista)
+            {
+                if (a.CodFiltro == fi.Id)
+                    produtosEncontrados.Add(a);
+            }
+            ViewBag.Produto = produtosEncontrados;
+            ViewBag.Filtro = (new FiltroDAO().Lista());
+            return View("FazerPesquisa");
+        }
+
         [HttpPost]
         public ActionResult CadastroCli(Cliente c)
         {

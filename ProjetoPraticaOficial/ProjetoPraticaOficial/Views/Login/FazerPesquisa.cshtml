@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -11,12 +10,21 @@
     <title>FazerPesquisa</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#qualFiltro").click(function () {
-                window.location = 'GraficoPareto';
-            })
-        });
+        function Enviar(f) {
+            //$("#enviar").click();
+            $.ajax({
+                url:'Filtrar',
+                type: 'POST',
+                data: { filtro: f },
+                error: function (xhr, status, error) {
+                },
+                success: function (results) {
+                    alert(results);
+                }
+            });
+        }
     </script>
+    
     <link rel="stylesheet" type="text/css" href="~/Content/styleDentroCliente.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
@@ -55,8 +63,14 @@
         <ul id="filtros" name="qualFiltro">
             @foreach (var f in ViewBag.Filtro)
             {
-                <li class="filtro"><a class="qualFiltro" id="qualFiltro">@f.Animal<i class="fas fa-times-circle"></i></a></li>
-            }
+
+                <form method="post" action="Filtrar">
+                    <li class="filtro"><a class="qualFiltro" id="qualFiltro" onclick="Enviar('@f.Animal')"><input type="text" id="a" style="visibility: hidden;" name="filtro" value="@f.Animal" />@f.Animal<i class="fas fa-times-circle"></i></a></li>
+                    <input type="submit" id="enviar" value="" style="visibility: hidden;">
+                </form>
+                
+             }
+      
         </ul>
         <div class="cc">
             @foreach (var p in ViewBag.Produto)
