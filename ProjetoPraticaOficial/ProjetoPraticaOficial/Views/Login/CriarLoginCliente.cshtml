@@ -78,14 +78,15 @@
             @Html.ValidationMessage("c.Nome")
             <input type="text" ID="txtEmailCliente" name="c.Email" autocomplete="off" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" maxlength="100">
             @Html.ValidationMessage("c.Email")
-            <input type="text" ID="cpf" name="c.Cpf" autocomplete="off" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="14" onblur="TestaCPF()" onkeypress='return SomenteNumero(event)'>
+            <input type="text" ID="cpf" name="c.Cpf" autocomplete="off" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
             @Html.ValidationMessage("c.Cpf")
             <input type="password" ID="txtSenhaCliente" autocomplete="off" name="c.Senha" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" maxlength="50">
             @Html.ValidationMessage("c.Senha")
             <input type="password" ID="txtSenhaNovCliente" autocomplete="off" placeholder="Digite a senha novamente do cliente" class="txtEmpresa" runat="server" maxlength="50">
             <!--<asp:Label ID="lblPreferencia" CssClass="lblCliente" runat="server" Visible="false"></asp:Label>
     <asp:TextBox ID="txtDDDCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>-->
-            <input type="tel" ID="txtCelularCliente" autocomplete="off" name="c.Telefone" placeholder="Digite o celular do cliente (com DDD)" class="txtEmpresa" runat="server" maxlength="14">
+            <input type="tel" ID="txtCelularCliente" autocomplete="off" name="c.Telefone" placeholder="Digite o celular do cliente (com DDD)" class="txtEmpresa" runat="server" maxlength="14" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$
+">
             @Html.ValidationMessage("c.Telefone")
             <input type="checkbox" ID="chkTermos" class="chkCliente" runat="server" />
             <label ID="lblTermos" class="lblCliente" runat="server"></label>

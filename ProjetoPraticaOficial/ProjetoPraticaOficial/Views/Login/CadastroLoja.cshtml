@@ -11,6 +11,18 @@
     <title>CadastroLoja</title>
 
     <script type="text/javascript" src="~/Script/cadastro.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("Password1").onkeypress = function () {
+                var txt = this.value;
+                if (txt.length == 3 || txt.length == 7)
+                    this.value += ".";
+                else
+                    if (txt.length == 11)
+                        this.value += "-";
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="../Content/styleLoja.css" />
 </head>
@@ -37,8 +49,8 @@
     <div class="box" id="boxEm">
         <label ID="Label1" Text="Já sou cadastrado:" class="lblLogin">Já sou cadastrado:</label>
         <form method="post" action="/Login/LoginEm">
-            <input id="Text1" name="e.Nome" type="text" autocomplete="off" placeholder="Usuário" />
-            <input id="Password1" name="e.CpfDono" autocomplete="off" type="text" placeholder="CPF" />
+            <input id="Text1" name="e.Nome" type="text" autocomplete="off" placeholder="Usuário" maxlength="30"/>
+            <input id="Password1" name="e.CpfDono" autocomplete="off" type="text" placeholder="CPF" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"/>
             <input id="Button1" type="submit" value="Entrar" class="btn" />
             <a href="CriarLoginLoja">Ainda não tenho um cadastro</a>
         </form>
