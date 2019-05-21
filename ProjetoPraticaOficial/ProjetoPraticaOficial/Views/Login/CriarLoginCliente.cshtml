@@ -84,7 +84,8 @@
             <input type="password" ID="txtSenhaNovCliente" autocomplete="off" placeholder="Digite a senha novamente do cliente" class="txtEmpresa" runat="server" maxlength="50">
             <!--<asp:Label ID="lblPreferencia" CssClass="lblCliente" runat="server" Visible="false"></asp:Label>
     <asp:TextBox ID="txtDDDCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>-->
-            <input type="tel" ID="txtCelularCliente" autocomplete="off" name="c.Telefone" placeholder="Digite o celular do cliente (com DDD)" class="txtEmpresa" runat="server" maxlength="14" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$">            @Html.ValidationMessage("c.Telefone")
+            <input type="tel" ID="txtCelularCliente" autocomplete="off" name="c.Telefone" placeholder="Digite o celular do cliente (com DDD)" class="txtEmpresa" runat="server" maxlength="14" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$">
+            @Html.ValidationMessage("c.Telefone")
             <input type="checkbox" ID="chkTermos" class="chkCliente" runat="server" />
             <label ID="lblTermos" class="lblCliente" runat="server"></label>
             <!--<input type="button" ID="btnCadastrarCliente" class="btnCadastrar" value="Cada            strar" runat="server" Visible="false" <!--onclick="Cadastrar(2)"-->
