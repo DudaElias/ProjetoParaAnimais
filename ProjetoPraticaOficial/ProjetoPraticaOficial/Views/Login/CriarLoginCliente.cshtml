@@ -85,7 +85,7 @@
             <input type="password" ID="txtSenhaNovCliente" autocomplete="off" placeholder="Digite a senha novamente do cliente" class="txtEmpresa" runat="server" maxlength="50">
             <!--<asp:Label ID="lblPreferencia" CssClass="lblCliente" runat="server" Visible="false"></asp:Label>
     <asp:TextBox ID="txtDDDCliente" CssClass="txtEmpresa" runat="server" Visible="false"></asp:TextBox>-->
-            <input type="text" ID="txtCelularCliente" autocomplete="off" name="c.Telefone" placeholder="Digite o celular do cliente (com DDD)" class="txtEmpresa" runat="server" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$">
+            <input type="text" ID="txtCelularCliente" autocomplete="off" name="c.Telefone" placeholder="Digite o celular do cliente (com DDD)" class="txtEmpresa" runat="server" maxlength="14" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{4}$">
             @Html.ValidationMessage("c.Telefone")
             <input type="checkbox" ID="chkTermos" class="chkCliente" runat="server" />
             <label ID="lblTermos" class="lblCliente" runat="server"></label>
