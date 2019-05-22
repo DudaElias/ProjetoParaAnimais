@@ -253,17 +253,17 @@ namespace ProjetoPraticaOficial.Controllers
         {
             return View();
         }
-        //public ActionResult LoginCli()
-        //{
-        //    FiltroDAO dao = new FiltroDAO();
-        //    IList<Filtro> lista = dao.Lista();
-        //    ViewBag.Filtro = lista;
+        /*public ActionResult LoginCli()
+        {
+            FiltroDAO dao = new FiltroDAO();
+            IList<Filtro> lista = dao.Lista();
+            ViewBag.Filtro = lista;
 
-        //    ProdutoDAO daoP = new ProdutoDAO();
-        //    IList<Produto> p = daoP.Lista();
-        //    ViewBag.Produto = p;
-        //    return View();
-        //}
+            ProdutoDAO daoP = new ProdutoDAO();
+            IList<Produto> p = daoP.Lista();
+            ViewBag.Produto = p;
+            return View();
+        }*/
 
         public ActionResult Pedidos()
         {
@@ -375,18 +375,22 @@ namespace ProjetoPraticaOficial.Controllers
             PedidoDAO dao = new PedidoDAO();
             ItemPedidoDAO dao2 = new ItemPedidoDAO();
             ProdutoDAO dao3 = new ProdutoDAO();
-
+            List<PedidoFeito> lista = new List<PedidoFeito>();
             List<Pedido> pedidos = dao.Pedidos(Convert.ToInt32(((Loja)(Session["lo"])).Id));
             List<ItemPedido> itens = new List<ItemPedido>();
             List<Produto> produtos = new List<Produto>();
             foreach (var a in pedidos)
             {
-                itens.Add(dao2.BuscaPorNome(a.CodPedido));
-                produtos.Add(dao3.BuscaPorId(dao2.BuscaPorNome(a.CodPedido).CodProduto));
+                ItemPedido item = dao2.BuscaPorNome(a.CodPedido);
+                Produto p = dao3.BuscaPorId(dao2.BuscaPorNome(a.CodPedido).CodProduto);
+                PedidoFeito x = new PedidoFeito();
+                x.Nome = p.Nome;
+                x.Quantidade = item.Quantidade;
+                x.DataEntrega = a.DataEntrega;
+                x.Endereco = a.Endereco;
+                lista.Add(x);
             }
-            ViewBag.Pedido = pedidos;
-            ViewBag.Produtos = produtos;
-            ViewBag.Itens = itens;
+            ViewBag.Pedido = lista;
             return View();
         }
     }

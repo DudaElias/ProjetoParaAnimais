@@ -8,24 +8,47 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="~/Script/cadastro.js">
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <link rel="stylesheet" href="~/Content/styleDentro.css" />
     <title>PedidosARealizar</title>
 </head>
 <body>
-    <div>
-        @foreach (var a in ViewBag.Produtos)
-        {
-            <span> @a.Nome</span>
-        }
+    <div class="header">
+        <div class="logo"></div>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
 
-        @foreach (var a in ViewBag.Itens)
-        {
-            <span>@a.Quantidade</span>
-        }
-        @foreach (var a in ViewBag.Pedido)
-        {
-            <span> @a.DataEntrega</span>
-            <span>@a.Endereco</span>
-        }
+        <ul class="menu">
+            <a href="LoginEm">Editar Dados</a>
+            <a href="AdicionarProduto">Adicionar Produto</a>
+            <a href="PedidosARealizar">Pedidos a Realizar</a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+
+        </ul>
     </div>
+    <div class="boxPedido">
+        <span>Nome do Produto</span>
+        <span>Quantidade</span>
+        <span>Data de Entrega</span>
+        <span>CEP</span>
+        <span>Complemento</span>
+    </div>
+    @foreach (var a in ViewBag.Pedido)
+    {
+        <div class="boxPedido">
+            <span> @a.Nome</span>
+            <span>@a.Quantidade</span>
+            <span> @a.DataEntrega.ToString().Substring(0, 10)</span>
+            <span>@a.Endereco.Substring(0,9)</span>
+            <span>@a.Endereco.Substring(8)</span>
+        </div>
+    }
 </body>
 </html>
