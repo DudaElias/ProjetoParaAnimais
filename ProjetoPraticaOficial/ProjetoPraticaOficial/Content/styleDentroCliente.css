@@ -132,7 +132,7 @@ h1 {
     }
 }
 .box {
-    background: rgba(0,0,0,0.7);
+    background: rgb(163, 224, 245);
     width: 300px;
     padding: 40px;
     margin-top: 15em;
@@ -382,6 +382,11 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
     display: block;
 }
 
+.produto{
+    width:200px;
+    height: 200px;
+}
+
 .boxp .produto {
     width: 10em;
     margin-left: 15%;
@@ -408,19 +413,13 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
         font-family: var(--normal);
     }
 
-    .boxCompra h1 {
-        margin-top: 3em;
-    }
-
-    .boxCompra h3 {
-        margin-top: -2em;
-    }
 
     .boxCompra .produto {
-        width: 20em;
-        margin-left: 10%;
+        width: 30em;
+        margin-left:-12%;
+        margin-top:10%;
         background-size: cover;
-        height: 20em;
+        height: 30em;
     }
 
 .boxp {
@@ -491,4 +490,18 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
 .btn-compra:hover {
     background: #45aaf2;
     color: white;
+}
+
+.desc{
+    font-size:15px;
+}
+.nomeP{
+    font-size:30px;
+    margin-left:40%;
+}
+.preco{
+    font-size:30px;
+    color:green;
+    margin-left:60%;
+    margin-top:-40%;
 }

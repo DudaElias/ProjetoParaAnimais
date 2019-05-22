@@ -253,17 +253,17 @@ namespace ProjetoPraticaOficial.Controllers
         {
             return View();
         }
-        public ActionResult LoginCli()
-        {
-            FiltroDAO dao = new FiltroDAO();
-            IList<Filtro> lista = dao.Lista();
-            ViewBag.Filtro = lista;
+        //public ActionResult LoginCli()
+        //{
+        //    FiltroDAO dao = new FiltroDAO();
+        //    IList<Filtro> lista = dao.Lista();
+        //    ViewBag.Filtro = lista;
 
-            ProdutoDAO daoP = new ProdutoDAO();
-            IList<Produto> p = daoP.Lista();
-            ViewBag.Produto = p;
-            return View();
-        }
+        //    ProdutoDAO daoP = new ProdutoDAO();
+        //    IList<Produto> p = daoP.Lista();
+        //    ViewBag.Produto = p;
+        //    return View();
+        //}
 
         public ActionResult Pedidos()
         {

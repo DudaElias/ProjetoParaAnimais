@@ -33,13 +33,17 @@
                     <a href="Principal">Sair</a>
                 </ul>
             </div>
+
         </div>
         <div class="cc">
+            <div class="nomeP"><h1>@ViewBag.Produto.Nome</h1></div>
             <div class="boxCompra">
-                <h1 name="">@ViewBag.Produto.Nome</h1>
+
+
                 <div class="produto" name="p.Imagem" style="background-image: url(@ViewBag.Produto.Imagem)"></div>
-                <h2>@ViewBag.Produto.Descricao</h2>
-                <h3>@String.Format("{0:c}", ViewBag.Produto.Preco)</h3>
+                <h2 class="desc">@ViewBag.Produto.Descricao</h2>
+                <h3 class="preco">@String.Format("{0:c}", ViewBag.Produto.Preco)</h3>
+
                 <form id="form-cep" action="EfetuarCompra" method="POST" class="box">
                     <input type="number" class="numero" name="numero" id="numero" min="1" max="100" />
                     <input type="text" name="pesquisa" id="pesquisa" placeholder="Informe o cep" \>
