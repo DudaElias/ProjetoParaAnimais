@@ -393,6 +393,7 @@
     <Compile Include="Models\ItemPedido.cs" />
     <Compile Include="Models\Loja.cs" />
     <Compile Include="Models\Pedido.cs" />
+    <Compile Include="Models\PedidoFeito.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
