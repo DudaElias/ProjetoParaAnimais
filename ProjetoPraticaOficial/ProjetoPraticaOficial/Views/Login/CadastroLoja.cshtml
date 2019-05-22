@@ -13,7 +13,7 @@
     <script type="text/javascript" src="~/Script/cadastro.js"></script>
     <script type="text/javascript">
         window.onload = function () {
-            document.getElementById("Password1").onkeypress = function () {
+            document.getElementById("Password1").onkeypress = function (event) {
                 var txt = this.value;
                 if (txt.length == 3 || txt.length == 7)
                     this.value += ".";
