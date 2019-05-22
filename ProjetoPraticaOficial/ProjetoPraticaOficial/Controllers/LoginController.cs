@@ -143,7 +143,12 @@ namespace ProjetoPraticaOficial.Controllers
             IList<Produto> p = daoP.Lista();
             ViewBag.Produto = p;
             if (cli != null && cli.Senha == c.Senha)
-                return View("LoginCli");
+            {
+
+                string pesquisa = null;
+                string b = "2";
+                return RedirectToAction("FazerPesquisa", "Login", new { pesquisa, b });
+            }
             else
                 return RedirectToAction("CriarLoginCliente");
         }
@@ -301,7 +306,7 @@ namespace ProjetoPraticaOficial.Controllers
             return RedirectToAction("AdicionarProduto", "Login");
         }
 
-        public ActionResult FazerPesquisa(string pesquisa, string b)
+        public ActionResult FazerPesquisa(string pesquisa, string b) 
         {
             ProdutoDAO dao = new ProdutoDAO();
             FiltroDAO fDao = new FiltroDAO();
@@ -316,7 +321,7 @@ namespace ProjetoPraticaOficial.Controllers
                         produtosEncontrados.Add(a);
                 }
             }
-            else if (pesquisa.ToUpper() == "")
+            else if (pesquisa == null || pesquisa.ToUpper() == "")
             {
                 ViewBag.Produto = dao.Lista();
                 ViewBag.Filtro = (new FiltroDAO().Lista());
@@ -329,7 +334,7 @@ namespace ProjetoPraticaOficial.Controllers
                 foreach (var a in lista)
                 {
                     string[] dados = a.Nome.Split(' ');
-
+                    pesquisa = pesquisa.ToUpper();
                     bool pode = true;
                     string[] dados2 = a.Descricao.Split(' ');
                     foreach (var c in dados)
