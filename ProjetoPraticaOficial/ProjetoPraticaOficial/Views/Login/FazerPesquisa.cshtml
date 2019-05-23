@@ -28,46 +28,47 @@
 
         }
     </script>
-    
-    <link rel="stylesheet" type="text/css" href="~/Content/styleDentroCliente.css" />
+
+    <link rel="stylesheet" type="text/css" href="~/Content/styleDentroCliente1.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
 <body>
 
-        <div id="header">
-            <div class="logo"></div>
-            <div class="menu-perfil">
-                <input type="checkbox" id="chk-perfil">
-                <label for="chk-perfil" class="show-menu-btn-perfil">
-                    <img src="~/Imagens/perfil.png">
-                </label>
+    <div id="header">
+        <div class="logo"></div>
+        <div class="menu-perfil">
+            <input type="checkbox" id="chk-perfil">
+            <label for="chk-perfil" class="show-menu-btn-perfil">
+                <img src="~/Imagens/perfil.png">
+            </label>
 
-                <ul class="lateral">
-                    <a href="EditarDadosCli">Editar Dados</a>
-                    <a href="FazerPesquisa">Pesquisa</a>
-                    <a href="Pedidos">Pedidos</a>
-                    <a href="Pergunta">Ajuda</a>
-                    <a href="Principal">Sair</a>
-                </ul>
-            </div>
-
-            <div class="search-box">
-                <form action="FazerPesquisa" method="post">
-                    <input class="search-txt" type="text" name="pesquisa" placeholder="Pesquisa" autocomplete="off" />
-                    <input type="text" id="a" style="visibility: hidden;display: none;" name="b" value="2" />
-                    <input type="submit" class="search-btn">
-                </form>
-            </div>
+            <ul class="lateral">
+                <a href="EditarDadosCli">Editar Dados</a>
+                <a href="FazerPesquisa">Pesquisa</a>
+                <a href="Pedidos">Pedidos</a>
+                <a href="Pergunta">Ajuda</a>
+                <a href="Principal">Sair</a>
+            </ul>
         </div>
 
+        <div class="search-box">
+            <form action="FazerPesquisa" method="post">
+                <input class="search-txt" type="text" name="pesquisa" placeholder="Pesquisa" autocomplete="off" />
+                <input type="text" id="a" style="visibility: hidden;display: none;" name="b" value="2" />
+                <input type="submit" class="search-btn">
+            </form>
+        </div>
+    </div>
 
 
-        <input type="checkbox" id="chk-filtro">
-        <label for="chk-filtro" class="aa">
-            <a class="img-filtro"><i class="fas fa-filter fa-2x"></i></a>
-        </label>
-        <ul id="filtros" name="qualFiltro">
-            @foreach (var f in ViewBag.Filtro)
+
+    <input type="checkbox" id="chk-filtro">
+    <label for="chk-filtro" class="aa">
+        <a class="img-filtro"><i class="fas fa-filter fa-2x"></i></a>
+    </label>
+
+    <ul id="filtros" name="qualFiltro">
+        @foreach (var f in ViewBag.Filtro)
         {
 
             <form class="x" method="post" action="FazerPesquisa" style="display: inline;">
@@ -75,28 +76,29 @@
                 <input type="submit" id="enviar" value="@f.Animal   -" style="background: none; border: none; color: white;font-size: 20px;" />
             </form>
 
-    }
+        }
 
-        </ul>
-        <div class="cc">
-            @foreach (var p in ViewBag.Produto)
+    </ul>
+    <div class="cc">
+        @foreach (var p in ViewBag.Produto)
         {
 
             <div class="boxp">
                 <form method="post" action="Comprar">
-                    <h1>@p.Nome</h1>
                     <div class="produto" style="background-image: url(@p.Imagem)" value="@p.Imagem"></div>
-                    <h2>@p.Descricao</h2>
-                    <h2>@String.Format("{0:c}", p.Preco)</h2>
+                    <h1 class="nomePro">@p.Nome</h1>
+
+                    <!--<h2>p.Descricao</h2>-->
+                    <h2  class="precoPro">@String.Format("{0:c}", p.Preco)</h2>
                     <input type="text" name="po.Nome" value="@p.Nome" style="visibility: hidden; display:none;" />
                     <input type="text" name="po.Imagem" value="@p.Imagem" style="visibility: hidden; display:none;" />
-                    <input type="text" name="po.Descricao" value="@p.Descricao" style="visibility: hidden; display:none;" />
+                    <!--<input type="text" name="po.Descricao" value="p.Descricao" style="visibility: hidden; display:none;" />-->
                     <input type="text" name="po.Preco" value="@p.Preco" style="visibility:hidden; display: none" />
                     <input type="submit" class="btn" value="Comprar">
 
                 </form>
             </div>
-    }
-        </div>
+        }
+    </div>
 </body>
 </html>

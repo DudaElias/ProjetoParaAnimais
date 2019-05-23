@@ -337,6 +337,7 @@
     <Content Include="Content\styleCadastro.css" />
     <Content Include="Content\styleDentro.css" />
     <Content Include="Content\styleDentroCliente.css" />
+    <Content Include="Content\styleDentroCliente1.css" />
     <Content Include="Content\stylePergunta.css" />
     <Content Include="Content\stylePrincipal.css" />
     <Content Include="Content\styleSobre.css" />
