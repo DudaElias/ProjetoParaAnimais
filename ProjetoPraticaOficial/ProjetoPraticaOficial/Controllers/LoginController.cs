@@ -332,7 +332,7 @@ namespace ProjetoPraticaOficial.Controllers
                     bool pode = true;
                     string[] dados2 = a.Descricao.Split(' ');
                     foreach (var c in dados)
-                        if (b.ToUpper() == pesquisa && pode != false)
+                        if (c.ToUpper() == pesquisa && pode != false)
                         {
                             produtosEncontrados.Add(a);
                             pode = false;
