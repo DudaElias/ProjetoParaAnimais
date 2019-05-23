@@ -352,6 +352,7 @@
     <Content Include="Imagens\a.jpg" />
     <Content Include="Imagens\animais.jpg" />
     <Content Include="Imagens\b.jpeg" />
+    <Content Include="Imagens\button.png" />
     <Content Include="Imagens\graos-481.jpg" />
     <Content Include="Imagens\Logo.png" />
     <Content Include="Imagens\perfil.png" />

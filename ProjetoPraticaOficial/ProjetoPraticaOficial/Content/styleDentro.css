@@ -84,7 +84,7 @@ h1 {
     }
 
     .menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
-        color: rgb(92, 92, 92);
+        color: #ad7be0;
     }
 
 #chk {
@@ -198,11 +198,11 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "url"
     background: none;
     display: inline-block;
     margin: 20px 10px;
-    text-align: center;
     border: 2px solid #6D3E9C;
-    padding: 14px 40px;
+    padding: 14px 25px;
     width: 150px;
     outline: none;
+    text-align: center;
     color: white;
     font-size: 20px;
     font-weight: 400;
@@ -492,12 +492,33 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "url"
     display: inline-block;
 }
 
-.boxPedido span{
-    float: left;
-    width: 200px;
-    margin-left: 2em;
-    text-align: center;
+    .boxPedido span {
+        float: left;
+        width: 200px;
+        margin-left: 2em;
+        text-align: center;
+        background: #6D3E9C;
+        padding: 0.5em;
+        border-radius: 200pt;
+        border-bottom: 0.15em solid #ad7be0;
+    }
+
+.boxPedido2 {
+    font-family: var(--fort);
+    color: white;
+    font-size: 25px;
+    display: inline-block;
 }
+
+    .boxPedido2 span {
+        float: left;
+        width: 200px;
+        margin-left: 2em;
+        text-align: center;
+        padding: 0.5em;
+        border-bottom: 0.15em solid #ad7be0;
+    }
+
 
 .x {
     background: rgba(0,0,0,0.7);
