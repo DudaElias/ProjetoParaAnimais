@@ -168,13 +168,7 @@ namespace ProjetoPraticaOficial.Controllers
         {
             return View();
         }
-
-        [HttpGet]
-
-        public ActionResult EditarEm()
-        {
-            return View();
-        }
+        
 
         [HttpPost]
         public ActionResult EditarDadosEm(Loja e)

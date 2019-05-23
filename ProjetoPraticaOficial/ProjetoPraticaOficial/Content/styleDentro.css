@@ -485,7 +485,7 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "url"
     max-width: 35em;
 }
 
-.boxPedido{
+.boxPedido {
     font-family: var(--fort);
     color: white;
     font-size: 25px;
@@ -497,4 +497,8 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "url"
     width: 200px;
     margin-left: 2em;
     text-align: center;
+}
+
+.x {
+    background: rgba(0,0,0,0.7);
 }

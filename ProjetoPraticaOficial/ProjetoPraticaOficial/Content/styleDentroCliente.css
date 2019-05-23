@@ -314,10 +314,10 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
     color: white;
     width: 200px;
     height: 200px;
-    position: absolute;
+    position: relative;
+    left: 70%;
+    top: 7vh;
     cursor: pointer;
-    left: 62%;
-    top: 8%;
 }
 
 #chk-filtro {
@@ -328,12 +328,12 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
     z-index: -1111;
 }
 
-    #chk-filtro:checked ~ #filtros {
-        top: 15%;
-        position: absolute;
-        display: inline-block;
-        transition: 0.7s;
-    }
+#chk-filtro:checked ~ #filtros {
+    top: 15%;
+    position: absolute;
+    display: inline-block;
+    transition: 0.7s;
+}
 
 #filtros {
     background: #666F77;
@@ -367,15 +367,15 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
     z-index: -1111;
 }
 
-    #chk-perfil:checked ~ .lateral {
-        right: 0;
-        transition: 0.7s;
-    }
+#chk-perfil:checked ~ .lateral {
+    right: 0;
+    transition: 0.7s;
+}
 
-    #chk-perfil:checked ~ .show-menu-btn-perfil {
-        z-index: 1000;
-        transition: 0.7s;
-    }
+#chk-perfil:checked ~ .show-menu-btn-perfil {
+    z-index: 1000;
+    transition: 0.7s;
+}
 
 .show-menu-btn-perfil {
     cursor: pointer;
@@ -504,4 +504,22 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
     color:green;
     margin-left:60%;
     margin-top:-40%;
+}
+
+.x{
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        height: 25vh;
+    }
+
+    .search-box {
+        top: 20%;
+    }
+    .img-filtro i{
+        top: 18vh;
+        left: 90%;
+    }
 }

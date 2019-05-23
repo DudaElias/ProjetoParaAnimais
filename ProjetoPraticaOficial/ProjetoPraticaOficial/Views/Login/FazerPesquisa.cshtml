@@ -51,26 +51,27 @@
                     <a href="Principal">Sair</a>
                 </ul>
             </div>
-        </div>
 
-        <div class="search-box">
-            <form action="FazerPesquisa" method="post">
-                <input class="search-txt" type="text" name="pesquisa" placeholder="Type to search" />
-                <input type="text" id="a" style="visibility: hidden;display: none;" name="b" value="2" />
-                <input type="submit" class="search-btn">
-            </form>
+            <div class="search-box">
+                <form action="FazerPesquisa" method="post">
+                    <input class="search-txt" type="text" name="pesquisa" placeholder="Type to search" />
+                    <input type="text" id="a" style="visibility: hidden;display: none;" name="b" value="2" />
+                    <input type="submit" class="search-btn">
+                </form>
+            </div>
+            <input type="checkbox" id="chk-filtro">
+            <label for="chk-filtro" class="aa">
+                <a class="img-filtro"><i class="fas fa-filter fa-2x"></i></a>
+            </label>
+
         </div>
-        <input type="checkbox" id="chk-filtro">
-        <label for="chk-filtro" class="aa">
-            <a class="img-filtro"><i class="fas fa-filter fa-2x"></i></a>
-        </label>
 
         <ul id="filtros" name="qualFiltro">
             @foreach (var f in ViewBag.Filtro)
             {
 
-                <form method="post" action="FazerPesquisa" style="display: inline;">
-                    <input type="text" id="a" style="visibility: hidden;" name="pesquisa" value="@f.Animal" /><input type="text" id="a" style="visibility: hidden; display: none;" name="b" value="1" />
+                <form class="x" method="post" action="FazerPesquisa" style="display: inline;">
+                    <input type="text" id="a" style="visibility: hidden; display:none;" name="pesquisa" value="@f.Animal" /><input type="text" id="a" style="visibility: hidden; display: none;" name="b" value="1" />
                     <input type="submit" id="enviar" value="@f.Animal   -" style="background: none; border: none; color: white; font-size: 20px;" />
                 </form>
                 
