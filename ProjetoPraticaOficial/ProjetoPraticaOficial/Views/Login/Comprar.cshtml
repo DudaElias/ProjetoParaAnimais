@@ -9,9 +9,18 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Comprar</title>
-
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("cepC").onkeypress = function (event) {
+                var txt = this.value;
+                if (txt.length == 5)
+                    this.value += "-";
+            }
+        }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="~/Script/Cep.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="~/Content/styleDentroCliente.css" />
 </head>
 <body>
@@ -35,25 +44,58 @@
             </div>
 
         </div>
-        <div class="cc">
-            <div class="nomeP"><h1>@ViewBag.Produto.Nome</h1></div>
-            <div class="boxCompra">
+
+        <div class="nomeP"><h1>@ViewBag.Produto.Nome</h1></div>
+
+        <div class="fundoDesc"></div>
 
 
-                <div class="produto" name="p.Imagem" style="background-image: url(@ViewBag.Produto.Imagem)"></div>
-                <h2 class="desc">@ViewBag.Produto.Descricao</h2>
-                <h3 class="preco">@String.Format("{0:c}", ViewBag.Produto.Preco)</h3>
-
-                <form id="form-cep" action="EfetuarCompra" method="POST" class="box">
-                    <input type="number" class="numero" name="numero" id="numero" min="1" max="100" />
-                    <input type="text" name="pesquisa" id="pesquisa" placeholder="Informe o cep" \>
-                    <input type="button" id="btn" class="btn-comprar" value="Buscar CEP" />
-                </form>
-            </div>
+       
+        <div class="desc">
+            <b>Descrição do produto</b> <br /><br />
+            @ViewBag.Produto.Descricao
         </div>
+
+      
+        <div class="boxCompra">
+            <div class="produto" name="p.Imagem" style="background-image: url(@ViewBag.Produto.Imagem)"></div>
+            <h3 class="preco">@String.Format("{0:c}", ViewBag.Produto.Preco)</h3>
+            <input type="number" class="numero" name="numero" id="numero" min="1" max="100" />
+            <form id="form-cep" action="EfetuarCompra" method="POST" class="box">
+                <i class="nomeCep">Receba no seu endereço</i>
+                <input type="text" pattern = "[0-9]{5}[-][0-9]{3}" name="pesquisa" id="cepC" placeholder="CEP" maxlength="9"/>
+                <input type="button" id="btn" class="btn-comprar" value="Calcular" />
+            </form>
+        </div>
+       
+
         <div id="valor">
             <label id="lblValor"></label>
         </div>
+
     </div>
+    <footer class="s-mPrincipal">
+        <p class="fPetFeed">PetFeed</p>
+        <ul class="menuFooterP">
+            <li><a href="SobreNos">Sobre nós</a></li>
+            <li><a href="Pergunta">Fale conosco</a></li>
+        </ul>
+
+        <p class="fDescubra">Descubra</p>
+        <ul class="menuFooterD">
+            <!--Fazer essa página se der tempo-->
+            <li><a href="#">Como pedir</a></li>
+            <li><a href="CadastroLoja">Cadastre sua loja</a></li>
+            <li><a href="CadastroCliente">Cadastre-se</a></li>
+        </ul>
+        <a class="icone" href="https://www.facebook.com/petfeed.shoping/?epa=SEARCH_BOX"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/petfeed.shopping/?hl=pt-br" class="icone"><i class="fab fa-instagram"></i></a>
+
+        <a href="#" class="icone"><i class="fab fa-twitter"></i></a>
+        <section></section>
+        <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+        <hr class="hrFooter" />
+        <span class="creditosFooter" id="creditos">PetFeed <i class="far fa-copyright"></i>Lorenna Joanna Leal Nunes e Maria Eduarda Elias Rocha. Todos os direitos reservados.</span>
+    </footer>
 </body>
 </html>
