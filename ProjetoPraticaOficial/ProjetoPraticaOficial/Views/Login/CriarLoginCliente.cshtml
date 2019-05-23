@@ -9,13 +9,19 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>CriarLoginCliente</title>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
     <script type="text/javascript" src="~/Script/cadastro.js">
     </script>
     <script type="text/javascript">
         window.onload = function () {
             //deixar digitar apenas número
-            document.getElementById("cpf").onkeypress = function () {
+
+            $('#cpf').on('keydown', function (event) {
+
+                if (event.key != "Backspace" && event.key != "Delete")
+            {
                 var txt = this.value;
                 if (txt.length == 3 || txt.length == 7)
                     this.value += ".";
@@ -23,7 +29,11 @@
                     if (txt.length == 11)
                         this.value += "-";
             }
+                
+            });
+            
             document.getElementById("txtCelularCliente").onkeypress = function () {
+
                 var txt = this.value;
                 if (txt.length == 0)
                     this.value += "(";
@@ -39,7 +49,7 @@
 
         function SomenteNumero(e) {
             var tecla = (window.event) ? event.keyCode : e.which;
-            if ((tecla > 47 && tecla < 58)) 
+            if ((tecla > 47 && tecla < 58))
                 return true;
             else {
                 if (tecla == 8 || tecla == 0) return true;
@@ -78,7 +88,7 @@
             @Html.ValidationMessage("c.Nome")
             <input type="text" ID="txtEmailCliente" name="c.Email" autocomplete="off" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" maxlength="100">
             @Html.ValidationMessage("c.Email")
-            <input type="text" ID="cpf" name="c.Cpf" autocomplete="off" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">            
+            <input type="text"  pattern = "[0-9]{3}[\.][0-9]{3}[\.][0-9]{3}[-][0-9]{2}" ID="cpf" name="c.Cpf" autocomplete="off" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">            
             @Html.ValidationMessage("c.Cpf")
             <input type="password" ID="txtSenhaCliente" autocomplete="off" name="c.Senha" placeholder="Digite a senha do cliente" class="txtEmpresa" runat="server" maxlength="50">
             @Html.ValidationMessage("c.Senha")
