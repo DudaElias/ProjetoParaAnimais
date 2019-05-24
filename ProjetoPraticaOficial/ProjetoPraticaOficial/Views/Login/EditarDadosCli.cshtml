@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
 </head>
-<body>
+<body style="background: url('../../Imagens/b.jpeg'); background-size:cover;">
     <div>
         <div class="header">
-            <div class="logo"></div>
+            <a href="Principal"><div class="logo"></div></a>
             <div class="menu-perfil">
                 <input type="checkbox" id="chk-perfil">
                 <label for="chk-perfil" class="show-menu-btn-perfil">
@@ -32,13 +32,13 @@
                 </ul>
             </div>
         </div>
-        <div class="box">
+        <div class="boxEditar">
             <form action="EditarDadosCliente" method="post">
                 <label ID="Label1" runat="server" Text="Editar Dados:" class="lblLogin">Editar Dados:</label>
-                <input id="txtNomeUsu" name="u.Nome" type="text" placeholder="Usuário" />
-                <input id="txtCpf" name="u.Cpf" type="text" placeholder="CPF" />
-                <input id="txtEmail" name="u.Email" type="email" placeholder="E-mail" />
-                <input id="senha" name="u.Senha" type="password" placeholder="Senha" />
+                <input id="txtNomeUsu" name="u.Nome" type="text" placeholder="Usuário" autocomplete="off"/>
+                <input id="txtCpf" name="u.Cpf" type="text" placeholder="CPF" autocomplete="off"/>
+                <input id="txtEmail" name="u.Email" type="email" placeholder="E-mail" autocomplete="off"/>
+                <input id="senha" name="u.Senha" type="password" placeholder="Senha" autocomplete="off"/>
                 <input id="Button2" type="button" value="Cancelar" class="btn" />
                 <input id="Button1" type="submit" value="Aplicar" class="btn" />
             </form>

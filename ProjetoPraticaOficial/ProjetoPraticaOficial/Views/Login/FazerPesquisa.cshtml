@@ -35,7 +35,7 @@
 <body>
 
     <div id="header">
-        <div class="logo"></div>
+        <a href="Principal"><div class="logo"></div></a>
         <div class="menu-perfil">
             <input type="checkbox" id="chk-perfil">
             <label for="chk-perfil" class="show-menu-btn-perfil">
@@ -68,6 +68,7 @@
     </label>
 
     <ul id="filtros" name="qualFiltro">
+        
         @foreach (var f in ViewBag.Filtro)
         {
 
@@ -80,25 +81,32 @@
 
     </ul>
     <div class="cc">
-        @foreach (var p in ViewBag.Produto)
+        @if (ViewBag.Produto.Count == 0)
         {
-
-            <div class="boxp">
-                <form method="post" action="Comprar">
-                    <div class="produto" style="background-image: url(@p.Imagem)" value="@p.Imagem"></div>
-                    <h1 class="nomePro">@p.Nome</h1>
-
-                    <!--<h2>p.Descricao</h2>-->
-                    <h2  class="precoPro">@String.Format("{0:c}", p.Preco)</h2>
-                    <input type="text" name="po.Nome" value="@p.Nome" style="visibility: hidden; display:none;" />
-                    <input type="text" name="po.Imagem" value="@p.Imagem" style="visibility: hidden; display:none;" />
-                    <!--<input type="text" name="po.Descricao" value="p.Descricao" style="visibility: hidden; display:none;" />-->
-                    <input type="text" name="po.Preco" value="@p.Preco" style="visibility:hidden; display: none" />
-                    <input type="submit" class="btn" value="Comprar">
-
-                </form>
-            </div>
+            <span class="dd">Nenhum produto encontrado a partir das pesquisas feitas</span>
         }
+        else
+        { 
+            foreach (var p in ViewBag.Produto)
+            {
+
+                <div class="boxp">
+                    <form method="post" action="Comprar">
+                        <div class="produto" style="background-image: url(@p.Imagem)" value="@p.Imagem"></div>
+                        <h1 class="nomePro">@p.Nome</h1>
+
+                        <!--<h2>p.Descricao</h2>-->
+                        <h2 class="precoPro">@String.Format("{0:c}", p.Preco)</h2>
+                        <input type="text" name="po.Nome" value="@p.Nome" style="visibility: hidden; display:none;" />
+                        <input type="text" name="po.Imagem" value="@p.Imagem" style="visibility: hidden; display:none;" />
+                        <!--<input type="text" name="po.Descricao" value="p.Descricao" style="visibility: hidden; display:none;" />-->
+                        <input type="text" name="po.Preco" value="@p.Preco" style="visibility:hidden; display: none" />
+                        <input type="submit" class="btn" value="Comprar">
+
+                    </form>
+                </div>
+            }
+        };
     </div>
 </body>
 </html>

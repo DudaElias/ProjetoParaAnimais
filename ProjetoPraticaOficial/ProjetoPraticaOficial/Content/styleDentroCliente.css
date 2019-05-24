@@ -14,6 +14,7 @@
 }
 
 body {
+    background: url("../Imagens/b.jpeg");
     background-size: cover;
 }
 
@@ -172,13 +173,16 @@ h1 {
 }
 
 .boxEditar {
-    width: 300px;
+    background: rgba(0, 0, 0, 0.7);
+    width: 450px;
     padding: 40px;
-    margin-top: 20em;
-    margin-left: 50em;
+    margin-top:20em;
+    margin-left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+        height: 500px;
 }
 
 .lblLogin {
@@ -195,7 +199,7 @@ h1 {
 
 }
 
-.box input[type = "text"], .box input[ type = "password"], .box input[ type = "tel"], input[ type = "email"] {
+input[type = "text"], input[ type = "password"],  input[ type = "tel"], input[ type = "email"] {
     border: 0;
     background: none;
     display: block;
@@ -208,7 +212,7 @@ h1 {
     font-family: var(--normal);
     font-weight: 500;
     outline: none;
-    color: black;
+    color: white;
     border-radius: 10px;
     transition: 0.25s;
 }
@@ -254,7 +258,7 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
     width: 150px;
     outline: none;
     text-align: center;
-    color: black;
+    color: white;
     font-size: 20px;
     font-weight: 400;
     font-family: var(--normal);
@@ -273,7 +277,7 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
     width: 150px;
     outline: none;
     text-align: center;
-    color: white;
+    color: black;
     font-size: 20px;
     font-weight: 400;
     font-family: var(--normal);
@@ -901,4 +905,47 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
     margin-left: 32%;
     max-height: 50em;
     max-width: 35em;
+}
+
+
+
+
+.boxPedido {
+    font-family: var(--fort);
+    color: white;
+    font-size: 25px;
+    margin-top: 2em;
+    display: inline-block;
+}
+
+    .boxPedido span {
+        float: left;
+        width: 200px;
+        margin-left: 2em;
+        text-align: center;
+        background: #45aaf2;
+        padding: 0.5em;
+        border-radius: 200pt;
+        border-bottom: 0.15em solid #45CAF2;
+    }
+
+.boxPedido2 {
+    font-family: var(--fort);
+    color: white;
+    font-size: 25px;
+    display: inline-block;
+}
+
+    .boxPedido2 span {
+        float: left;
+        width: 200px;
+        margin-left: 2em;
+        text-align: center;
+        padding: 0.5em;
+        border-bottom: 0.15em solid #45aaf2;
+    }
+
+
+.x {
+    background: rgba(0,0,0,0.7);
 }

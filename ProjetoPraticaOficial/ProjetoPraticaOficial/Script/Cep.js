@@ -4,7 +4,7 @@
             url: "ComprarTeste",
             type: "GET",
             contentType: "application/json",
-            data: {cep: $("#pesquisa").val()},
+            data: {cep: $("#cepC").val()},
             success: function (result) {
                 $("#valor").html("<label> Valor: " + result[0] + "Prazo de entrega:" + result[1] + "</label>");
                 var para = document.createElement("input");

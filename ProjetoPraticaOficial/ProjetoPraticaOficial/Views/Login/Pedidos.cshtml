@@ -9,24 +9,51 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Pedidos</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="~/Script/Cep.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/styleDentroCliente.css" />
 </head>
 <body>
     <div>
+        <div class="header">
+            <a href="Principal"><div class="logo"></div></a>
+            <div class="menu-perfil">
+                <input type="checkbox" id="chk-perfil">
+                <label for="chk-perfil" class="show-menu-btn-perfil">
+                    <img src="~/Imagens/perfil.png">
+                </label>
 
-        @foreach (var a in ViewBag.Produtos)
-        {
-            <span> @a.Nome</span>
-        }
+                <ul class="lateral">
+                    <a href="EditarDadosCli">Editar Dados</a>
+                    <a href="LoginCli">Pesquisa</a>
+                    <a href="#">Pedidos</a>
+                    <a href="Pergunta">Ajuda</a>
+                    <a href="Principal">Sair</a>
+                </ul>
+            </div>
 
-        @foreach (var a in ViewBag.Itens)
-        {
-            <span>@a.Quantidade</span>
-        }
-        @foreach (var a in ViewBag.Pedido)
-        {
-            <span> @a.DataEntrega</span>
-            <span>@a.Endereco</span>
-        }
+        </div>
+        <div class="x">
+            <div class="boxPedido">
+                <span>Nome do Produto</span>
+                <span>Quantidade</span>
+                <span>Data de Entrega</span>
+                <span>CEP</span>
+                <span>Complemento</span>
+            </div>
+            @foreach (var a in ViewBag.Pedido)
+            {
+                <div class="boxPedido2">
+                    <span> @a.Nome</span>
+                    <span>@a.Quantidade</span>
+                    <span> @a.DataEntrega.ToString().Substring(0, 10)</span>
+                    <span>@a.Endereco.Substring(0, 9)</span>
+                    <span>@a.Endereco.Substring(8)</span>
+                </div>
+            }
+        </div>
     </div>
 </body>
 </html>

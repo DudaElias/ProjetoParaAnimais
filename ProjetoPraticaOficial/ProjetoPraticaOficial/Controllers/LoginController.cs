@@ -261,20 +261,26 @@ namespace ProjetoPraticaOficial.Controllers
 
         public ActionResult Pedidos()
         {
+
             PedidoDAO dao = new PedidoDAO();
             ItemPedidoDAO dao2 = new ItemPedidoDAO();
             ProdutoDAO dao3 = new ProdutoDAO();
             List<int> po = new List<int>();
             List<Produto> produtos = new List<Produto>();
             List<Pedido> pedidos = dao.PedidosCliente(Convert.ToInt32(((Cliente)(Session["cli"])).Id), ref po);
-            List<ItemPedido> itens = new List<ItemPedido>();
+            List<PedidoFeito> lista = new List<PedidoFeito>();
             foreach (var a in pedidos)
             {
-                itens.Add(dao2.BuscaPorNome(a.CodPedido));
+                ItemPedido item = dao2.BuscaPorNome(a.CodPedido);
+                Produto p = dao3.BuscaPorId(dao2.BuscaPorNome(a.CodPedido).CodProduto);
+                PedidoFeito x = new PedidoFeito();
+                x.Nome = p.Nome;
+                x.Quantidade = item.Quantidade;
+                x.DataEntrega = a.DataEntrega;
+                x.Endereco = a.Endereco;
+                lista.Add(x);
             }
-            ViewBag.Pedido = pedidos;
-            ViewBag.Produtos = produtos;
-            ViewBag.Itens = itens;
+            ViewBag.Pedido = lista;
             return View();
         }
 
@@ -347,6 +353,7 @@ namespace ProjetoPraticaOficial.Controllers
             }
                 ViewBag.Produto = produtosEncontrados;
                 ViewBag.Filtro = (new FiltroDAO().Lista());
+
             return View();
         }
         [HttpPost]
