@@ -309,6 +309,12 @@ namespace ProjetoPraticaOficial.Controllers
 
         public ActionResult FazerPesquisa(string pesquisa, string b) 
         {
+            if (Session["cli"] == null)
+            {
+                ViewBag.Logado = false;
+            }
+            else
+                ViewBag.Logado = true;
             ProdutoDAO dao = new ProdutoDAO();
             FiltroDAO fDao = new FiltroDAO();
 
@@ -360,11 +366,18 @@ namespace ProjetoPraticaOficial.Controllers
         [HttpPost]
         public ActionResult Comprar(Produto po)
         {
-            ProdutoDAO dao = new ProdutoDAO();
-            Produto x = dao.BuscaPorNome(po.Nome);
-            ViewBag.Produto = x;
-            Session["p"] = x;
-            return View();
+            if (Session["cli"] != null)
+            {
+                ProdutoDAO dao = new ProdutoDAO();
+                Produto x = dao.BuscaPorNome(po.Nome);
+                ViewBag.Produto = x;
+                Session["p"] = x;
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("CadastroCliente","Login");
+            }
         }
         public ActionResult GraficoPareto()
         {
