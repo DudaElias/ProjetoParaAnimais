@@ -21,6 +21,7 @@ namespace ProjetoPraticaOficial.Controllers
         [HttpGet]
         public JsonResult ComprarTeste(string cep)
         {
+            cep = cep.Remove(5,1);
             string nCdEmpresa = string.Empty;
             string sDsSenha = string.Empty;
             string nCdServico = "41106";
@@ -114,6 +115,7 @@ namespace ProjetoPraticaOficial.Controllers
             else
             {
                 //colocar p ficar vermelho
+                //senha ou usuario incorreto
                 return View("CriarLoginCliente");
             }
         }

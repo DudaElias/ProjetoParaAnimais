@@ -30,14 +30,14 @@
                     <a href="Pergunta">Ajuda</a>
                     <a href="Principal">Sair</a>
                 </ul>
-            </div>
+            </div>   cxcdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdd
         </div>
         <div class="boxEditar">
             <form action="EditarDadosCliente" method="post">
                 <label ID="Label1" runat="server" Text="Editar Dados:" class="lblLogin">Editar Dados:</label>
                 <input id="txtNomeUsu" name="u.Nome" type="text" placeholder="Usuário" autocomplete="off"/>
-                <input id="txtCpf" name="u.Cpf" type="text" placeholder="CPF" autocomplete="off"/>
-                <input id="txtEmail" name="u.Email" type="email" placeholder="E-mail" autocomplete="off"/>
+                <input id="txtCpf"  pattern = "[0-9]{3}[\.][0-9]{3}[\.][0-9]{3}[-][0-9]{2}" name="u.Cpf" type="text" placeholder="CPF" autocomplete="off"/>
+                <input id="txtEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="u.Email" type="email" placeholder="E-mail" autocomplete="off"/>
                 <input id="senha" name="u.Senha" type="password" placeholder="Senha" autocomplete="off"/>
                 <input id="Button2" type="button" value="Cancelar" class="btn" />
                 <input id="Button1" type="submit" value="Aplicar" class="btn" />
