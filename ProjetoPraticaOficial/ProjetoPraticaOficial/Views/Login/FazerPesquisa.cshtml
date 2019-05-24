@@ -35,20 +35,42 @@
 
     <div id="header">
         <a href="Principal"><div class="logo"></div></a>
-        <div class="menu-perfil">
-            <input type="checkbox" id="chk-perfil">
-            <label for="chk-perfil" class="show-menu-btn-perfil">
-                <img src="~/Imagens/perfil.png">
-            </label>
+        @if (ViewBag.Logado == true)
+        {
+            <div class="menu-perfil">
+                <input type="checkbox" id="chk-perfil">
+                <label for="chk-perfil" class="show-menu-btn-perfil">
+                    <img src="~/Imagens/perfil.png">
+                </label>
 
-            <ul class="lateral">
-                <a href="EditarDadosCli">Editar Dados</a>
-                <a href="FazerPesquisa">Pesquisa</a>
-                <a href="Pedidos">Pedidos</a>
-                <a href="Pergunta">Ajuda</a>
-                <a href="Principal">Sair</a>
-            </ul>
-        </div>
+                <ul class="lateral">
+                    <a href="EditarDadosCli">Editar Dados</a>
+                    <a href="FazerPesquisa">Pesquisa</a>
+                    <a href="Pedidos">Pedidos</a>
+                    <a href="Pergunta">Ajuda</a>
+                    <a href="Principal">Sair</a>s
+                </ul>
+            </div>
+    }
+    else
+    {
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn-pesquisa">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="menu">
+            <a href="SobreNos">Sobre nós</a>
+            <a href="Pergunta">FAQ</a>
+            <a href="CadastroLoja">Loja</a>
+            <a href="CadastroCliente">Cliente</a>
+            <a href="FazerPesquisa">Produtos</a>
+            <a href="GraficoPareto">Gráfico de Pareto</a>
+            <label for="chk" class="hide-menu-btn-pesquisa">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    }
 
         <div class="search-box">
             <form action="FazerPesquisa" method="post">
