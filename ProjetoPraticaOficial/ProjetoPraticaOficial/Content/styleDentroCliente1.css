@@ -15,6 +15,7 @@
 
 body {
     background-size: cover;
+    background-color: #efefef;
 }
 
 html {
@@ -444,8 +445,9 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
 }
 
 .precoPro {
-    margin-top:10%;
-    color: rgb(29, 185, 36);
+    margin-top: 10%;
+    color: #FF6E00;
+    font-weight: 600;
 }
 
 .produto {
@@ -525,7 +527,6 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
 .boxp h2 {
     font-family: var(--normal);
     max-height: 50px;
-    font-weight: 200;
     height: 50px;
     font-size: 20px;
 }
