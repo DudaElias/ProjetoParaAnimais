@@ -122,7 +122,6 @@ namespace ProjetoPraticaOficial.Controllers
         [HttpPost]
         public ActionResult CadastroEm(Loja e)
         {
-
             LojaDAO dao = new LojaDAO();
             if (dao.BuscaPorNome(e.Nome) != null)
                 return RedirectToAction("CadastroEmpresa", "Login");
@@ -162,7 +161,7 @@ namespace ProjetoPraticaOficial.Controllers
             lo = dao.BuscaPorNome(e.Nome);
             Session["lo"] = lo;
             if (lo != null && lo.CpfDono == e.CpfDono)
-                return View();
+                return RedirectToAction("PedidosARealizar");
             return RedirectToAction("CriarLoginLoja");
         }
 
@@ -189,7 +188,7 @@ namespace ProjetoPraticaOficial.Controllers
             e.Id = ((Loja)Session["lo"]).Id;
             dao.Atualiza(e);
 
-            return RedirectToAction("LoginEm", "Login");
+            return RedirectToAction("PedidosARealizar", "Login");
         }
 
         public ActionResult Principal()
@@ -230,7 +229,7 @@ namespace ProjetoPraticaOficial.Controllers
             u.Id = ((Cliente)Session["cli"]).Id;
             dao.Atualiza(u);
            
-            return RedirectToAction("LoginCli", "Login");
+            return RedirectToAction("FazerPesquisa", "Login");
         }
 
         public ActionResult CadastroLoja()

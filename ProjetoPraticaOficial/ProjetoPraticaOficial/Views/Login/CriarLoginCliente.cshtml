@@ -84,8 +84,8 @@
         <div class="box-btn" id="box2" runat="server">
             <label ID="Label2" value="Quero me cadastrar: " class="lblCadastrar">Quero me cadastrar:</label>
 
-            <input type="text" ID="txtNomeCliente" name="c.Nome" autocomplete="off" placeholder="Digite o nome do cliente" class="txtEmpresa" runat="server" maxlength="30">
-            @Html.ValidationMessage("c.Nome")
+            <input type="text" ID="txtNomeCliente" name="c.Nome" autocomplete="off" placeholder="Digite o usuário do cliente" class="txtEmpresa" runat="server" maxlength="30">
+            @Html.ValidationMessage("c.Nome")<!--n deixar dar espaço-->
             <input type="text" ID="txtEmailCliente" name="c.Email" autocomplete="off" placeholder="Digite o e-mail do cliente" class="txtEmpresa" runat="server" maxlength="100">
             @Html.ValidationMessage("c.Email")
             <input type="text"  pattern = "[0-9]{3}[\.][0-9]{3}[\.][0-9]{3}[-][0-9]{2}" ID="cpf" name="c.Cpf" autocomplete="off" placeholder="Digite o CPF do cliente" class="txtEmpresa" runat="server" maxlength="14">            

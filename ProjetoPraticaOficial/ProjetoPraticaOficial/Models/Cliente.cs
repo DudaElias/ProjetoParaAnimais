@@ -16,7 +16,6 @@ namespace ProjetoPraticaOficial.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Nome obrigatório", AllowEmptyStrings = false)]
-        [RegularExpression(@"^[a-z]|[A-Z]+$", ErrorMessage = "Use apenas caracteres alfabéticos.")]
         //está dando erro quando coloca <><
         public string Nome { get; set; }
         
