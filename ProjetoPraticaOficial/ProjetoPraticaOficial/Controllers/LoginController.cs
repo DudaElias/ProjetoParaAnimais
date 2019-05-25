@@ -63,7 +63,7 @@ namespace ProjetoPraticaOficial.Controllers
             pedido.PrecoEntrega = Convert.ToDecimal(((string[])Session["correios"])[0]);
             pedido.CodPedido = item.Id;
             dao.Adiciona(pedido);
-            return null;
+            return RedirectToAction("Pedidos","Login");
         }
         public ActionResult ComprarDados(Produto p)
         {

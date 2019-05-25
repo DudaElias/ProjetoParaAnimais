@@ -152,23 +152,22 @@ h1 {
     height: 30px;
     position: absolute;
     top: -50%;
-    border-radius: 14px 14px;
+    border-radius: 10px;
     z-index:99;
     font-size:30px;
     padding: 4px 4px 4px 4px;
 }
 
+
 .box {
     background: rgba(255, 255, 255, 0.44);
     width: 450px;
     padding: 40px;
-    margin-top: 25em;
-    margin-left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     padding-bottom: 50px;
-    position: absolute;
-    top: 20%;
+    margin-top: -15em;
+    margin-left: 93%;
     border: 4px solid #efefef;
     height:70px;
 }
@@ -467,7 +466,7 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
 }
 
 .boxCompra {
-    margin-top: 0em;
+    margin-top: -7em;
     margin-left: 5em;
     width: 50em;
     font-family: var(--normal);
@@ -573,7 +572,7 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
 .desc {
     width: 1000px;
     padding: 40px;
-    margin: 200px auto;
+    margin: 100px auto;
     color: black;
     font-size: 20px;
     text-align: justify;
@@ -600,24 +599,23 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
 
 .fundoDesc {
     background-color: #efefef;
-    height: 60%;
+    height: 30%;
     width: 100%;
     position: absolute;
-    top: 95%;
+    top: 83%;
     margin-left: 0em;
     z-index:-10;
 }
 .nomeP{
-    position:absolute;
-    top:27.5%;
+    margin-top: 2em;
     font-size:30px;
     margin-left:40%;
 }
 .preco {
     font-size: 30px;
     color: #FF6E00;
-    margin-left: 60%;
-    margin-top: -40%;
+    margin-left: 80%;
+    margin-top: -50%;
 }
 
 .x{
