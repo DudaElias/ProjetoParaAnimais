@@ -18,9 +18,13 @@
                     para.value = 'Finalizar Compra';
                     para.className = 'btn-compra';
                     var x = document.createElement("input");
+                    document.getElementById("cepC").style.display = 'none';
+                    document.getElementById("btn").style.display = 'none';
                     x.type = 'text';
                     x.placeholder = 'Complemento';
-                    x.name = "complemento"
+                    x.name = "complemento";
+                    x.className = 'cepC';
+                    document.getElementById("form-cep").style.height = '200px';
                     var element = document.getElementById("form-cep");
                     element.appendChild(para);
                     element.appendChild(x);
