@@ -60,7 +60,7 @@
             <div class="produto" name="p.Imagem" style="background-image: url(@ViewBag.Produto.Imagem)"></div>
             <h3 class="preco">@String.Format("{0:c}", ViewBag.Produto.Preco)</h3>
             <form id="form-cep" action="EfetuarCompra" method="POST" class="box">
-                <i class="nomeCep">Receba no seu endereço</i>
+                <i class="nomeCep" id="nomeCep">Receba no seu endereço</i>
                 <span class="qtd">Quantidade:</span>
                 <input type="number" class="numero" name="numero" id="numero" min="1" max="100" />
 

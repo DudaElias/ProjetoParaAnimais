@@ -205,6 +205,12 @@ h1 {
     font-size: 25px;
 }
 
+
+#lblValor{
+    font-family: var(--normal);
+    font-size: 20px;
+}
+
 #cepC{
     float:left;
     position:absolute;
