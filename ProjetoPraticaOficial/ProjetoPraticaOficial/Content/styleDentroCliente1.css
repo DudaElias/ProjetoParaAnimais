@@ -913,4 +913,20 @@ input[type = "text"]:focus, input[ type = "password"]:focus, input[ type = "tel"
 
 .dd{
     color: black;
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left:25%;
+    font-family: var(--normal);
+    font-size: 30px;
+}
+
+.ee {
+    color: black;
+    display: inline;
+    position: absolute;
+    top: 55%;
+    left: 47%;
+    font-family: var(--normal);
+    font-size:100px;
 }

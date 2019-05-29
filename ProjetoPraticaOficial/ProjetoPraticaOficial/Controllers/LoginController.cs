@@ -292,7 +292,7 @@ namespace ProjetoPraticaOficial.Controllers
         [HttpPost]
         public ActionResult AdicionarProdutoVerdade(Produto p, string n)
         {
-
+            
             FiltroDAO fDao = new FiltroDAO();
             ProdutoDAO dao = new ProdutoDAO();
             p.CodLoja = ((Loja)Session["lo"]).Id;
