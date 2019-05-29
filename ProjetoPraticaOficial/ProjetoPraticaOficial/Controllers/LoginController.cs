@@ -154,7 +154,6 @@ namespace ProjetoPraticaOficial.Controllers
                 return RedirectToAction("CriarLoginCliente");
         }
         
-        [HttpPost]
         public ActionResult LoginEm(Loja e)
         {
             LojaDAO dao = new LojaDAO();
@@ -163,11 +162,6 @@ namespace ProjetoPraticaOficial.Controllers
             if (lo != null && lo.CpfDono == e.CpfDono)
                 return RedirectToAction("PedidosARealizar");
             return RedirectToAction("CriarLoginLoja");
-        }
-
-        public ActionResult LoginEm()
-        {
-            return View();
         }
         
 

@@ -351,7 +351,7 @@ p {
     width: 100%;
     height: 150px;
     position: relative;
-    bottom: -1.5em;
+    bottom: -0.5em;
 }
 
 .menuFooterP {
@@ -505,7 +505,7 @@ p {
     .s-mPrincipal {
         width: 100%;
         height: 250px;
-        margin-bottom: -1em;
+        margin-bottom: 2em;
     }
 
     .creditosFooter {
