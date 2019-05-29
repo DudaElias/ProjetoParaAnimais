@@ -21,6 +21,14 @@
                     if (txt.length == 10)
                         this.value += "-";
             }
+            document.getElementById("txtCPFEmpresa").onkeypress = function () {
+                var txt = this.value;
+                if (txt.length == 3 || txt.length == 7)
+                    this.value += ".";
+                else
+                    if (txt.length == 11)
+                        this.value += "-";
+            }
         }
     </script>
 
@@ -53,11 +61,12 @@
         <div class="box-btn" id="box1" runat="server">
             <label ID="Label2" value="Quero me cadastrar: " class="lblCadastrar">Quero me cadastrar:</label>
 
-            <input type="text" ID="txtEmailEmpresa" autocomplete="off" name="e.Email" placeholder="Digite o e-mail da empresa" class="txtEmpresa" runat="server" Visible="false">        <input type="text" ID="txtNomeEmpresa" autocomplete="off" name="e.Nome" placeholder="Digite o nome da empresa" class="txtEmpresa" runat="server" Visible="false">
-            <input type="text" ID="txtCPFEmpresa" autocomplete="off" name="e.CpfDono" placeholder="Digite o CPF do dono da empresa" class="txtEmpresa" runat="server" Visible="false">
-            <input type="text" ID="txtRGEmpresa" autocomplete="off" name="e.RgDono" placeholder="Digite o RG do dono da empresa" class="txtEmpresa" runat="server" Visible="false" maxlength="12">
-            <!--<input type="text" ID="txtCEPEmpresa" name="e.OrgaoEmissor" placeholder="Digite o órgão emissor da empresa" class="txtEmpresa" runat="server" Visible="false">-->
-            <input type="text" ID="txtOrgaoEmpresa" autocomplete="off" name="e.OrgaoEmissor" placeholder="Digite o órgão emissor da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" ID="txtEmailEmpresa" pattern="^[a-zA-Z0-9._+-]+&#64;[a-zA-Z0-9.-]+\.[a-zA-Z]{2,9}$" autocomplete="off" name="e.Email" placeholder="E-mail da empresa" class="txtEmpresa" runat="server" Visible="false">       
+            <input type="text" ID="txtNomeEmpresa" autocomplete="off" name="e.Nome" placeholder="Nome da empresa" class="txtEmpresa" runat="server" Visible="false">
+            <input type="text" pattern = "[0-9]{3}[\.][0-9]{3}[\.][0-9]{3}[-][0-9]{2}" ID="txtCPFEmpresa" autocomplete="off" name="e.CpfDono" placeholder="CPF do dono da empresa" class="txtEmpresa" runat="server" Visible="false" maxlength="14">
+            <input type="text" ID="txtRGEmpresa" autocomplete="off" name="e.RgDono" placeholder="RG do dono da empresa" class="txtEmpresa" runat="server" Visible="false" maxlength="12">
+            
+            <input type="text" ID="txtOrgaoEmpresa" autocomplete="off" name="e.OrgaoEmissor" placeholder="Órgão emissor da empresa" class="txtEmpresa" runat="server" Visible="false">
             <!--<input list="browsers" name="browser">
             <datalist id="browsers">
                 <option value="Internet Explorer">
