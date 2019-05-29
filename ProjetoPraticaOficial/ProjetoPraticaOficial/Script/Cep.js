@@ -26,6 +26,7 @@
                     x.type = 'text';
                     x.placeholder = 'Complemento';
                     x.name = "complemento";
+                    x.autocomplete = 'off';
                     x.className = 'cepC';
                     x.style.position = 'absolute';
                     y.className = 'y';

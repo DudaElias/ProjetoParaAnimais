@@ -659,7 +659,8 @@ aw
 .preco {
     font-size: 30px;
     color: #FF6E00;
-    margin-left: 45%;
+    width: 100%;
+    margin-left: 40%;
     margin-top: -50%;
 }
 
